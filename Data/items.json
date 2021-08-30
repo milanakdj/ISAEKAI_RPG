@@ -1,0 +1,65 @@
+{
+  "coin": {
+    "name": "Royal Coin",
+    "item_category": "Miscellaneous",
+    "stack_size": 999999,
+    "description": "Piece of gold that helps build economy",
+    "texture": "coin"
+  },
+  "wooden_sword": {
+    "name": "Wooden Sword",
+    "item_category": "on_hand",
+    "stack_size": 1,
+    "description": "Taining Sword for child",
+    "stats": {
+      "attack": 5.5,
+      "defense": null,
+      "recover_hp": null,
+      "recover_stamina": null,
+      "block": null
+    },
+    "texture": "woodenSword"
+  },
+  "health_potion": {
+    "name": "Health Potion",
+    "item_category": "Consumable",
+    "stack_size": 25,
+    "stats": {
+      "attack": null,
+      "defense": null,
+      "recover_hp": 15,
+      "recover_stamina": null,
+      "block": null
+    },
+    "description": "Health potion that inceases your health by 15 points",
+    "texture": "healthPotion"
+  },
+  "stamina_potion": {
+    "name": "Stamina Potion",
+    "item_category": "Consumable",
+    "stack_size": 25,
+    "stats": {
+      "attack": null,
+      "defense": null,
+      "recover_hp": null,
+      "recover_stamina": 15,
+      "block": null
+    },
+    "description": "Stamina potion that inceases your stamina by 15 points",
+    "texture": "staminaPotion"
+  },
+  "steel_sword": {
+    "name": "Steel Sword",
+    "item_category": "on_hand",
+    "stack_size": 1,
+    "description": "This sword cuts flesh like butter",
+    "stats": {
+      "attack": 10,
+      "defense": null,
+      "recover_hp": null,
+      "recover_stamina": null,
+      "block": null
+    },
+    "texture": "steelSword"
+  }
+}

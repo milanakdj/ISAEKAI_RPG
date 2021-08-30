@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Buildings/House 3.png" type="Texture" id=1]
+
+[node name="HouseB" type="StaticBody2D"]
+position = Vector2( 6.5, 4 )
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3, 13 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 98, 315, 108, 112 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 4.5, 11.5 )
+build_mode = 1
+polygon = PoolVector2Array( -44, 51.5, -43.5, 21, -46.5, -18, 44.5, -17, 46, 27.5, 27, 28.5, 27.5, 52.5 )

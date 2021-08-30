@@ -1,0 +1,14 @@
+{
+  "Scene2": {
+    "min_loot": 2,
+    "max_loot": 2,
+    "item1name": "coin",
+    "item1min_count": 5,
+    "item1max_count": 10,
+    "item1chance": 50,
+    "item2name": "wooden_sword",
+    "item2min_count": 1,
+    "item2max_count": 1,
+    "item2chance": 50
+  }
+}

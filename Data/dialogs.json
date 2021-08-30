@@ -1,0 +1,70 @@
+{
+  "Start-Cutscene": [
+    {
+      "avatar": "playerAvatar",
+      "convo": "*SIGH*"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "argg, I'm so tired, dont know how many days since I had a good sleep"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "I'm hungry too"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "This sucks!"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "*SIGH*"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "EHH!"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "Am I dying?"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "I lived my life full of regrets. I atleast didn't wanted to die a virgin"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "I should've deleted my browser history"
+    }
+  ],
+  "level": [
+    {
+      "avatar": "playerAvatar",
+      "convo": "Ouch! My head Hurts"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "Where am I? I don't remember anything."
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "I remember getting hit by a truck. Is this what's called heaven?"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "Wait a minute!!"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "Am i maybe reincarnated?"
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "I would've read some Light Novels if I knew this would happen. "
+    },
+    {
+      "avatar": "playerAvatar",
+      "convo": "Well, anyway I've got to get some lead"
+    }
+  ]
+}

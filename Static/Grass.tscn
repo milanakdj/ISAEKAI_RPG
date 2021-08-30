@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Nature/Grass.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Shadows/SmallShadow.png" type="Texture" id=2]
+[ext_resource path="res://Static/Grass.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 6.6585
+
+[sub_resource type="Animation" id=2]
+resource_name = "ready"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GrassSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GrassSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GrassSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.616371 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GrassSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 2.66708 ) ]
+}
+
+[node name="Grass" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( 10.3826, 15.102 )
+scale = Vector2( 1.43495, 1.87692 )
+texture = ExtResource( 2 )
+
+[node name="GrassSprite" type="Sprite" parent="."]
+position = Vector2( 0, 2.66708 )
+scale = Vector2( 0.7, 0.616371 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="GrassHurtBox" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2( 10.944, 11.0843 )
+shape = SubResource( 1 )
+
+[node name="stepArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="stepCollision" type="CollisionShape2D" parent="stepArea"]
+position = Vector2( 10.944, 11.0843 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "ready"
+anims/ready = SubResource( 2 )
+anims/step = SubResource( 3 )
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+[connection signal="area_entered" from="stepArea" to="." method="_on_HurtBox_area_entered"]
+[connection signal="body_entered" from="stepArea" to="." method="_on_stepArea_body_entered"]
+[connection signal="body_exited" from="stepArea" to="." method="_on_stepArea_body_exited"]

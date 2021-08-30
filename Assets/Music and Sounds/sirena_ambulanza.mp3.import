@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sirena_ambulanza.mp3-d2920c6dd69a0e52be7d7a242309e06e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music and Sounds/sirena_ambulanza.mp3"
+dest_files=[ "res://.import/sirena_ambulanza.mp3-d2920c6dd69a0e52be7d7a242309e06e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

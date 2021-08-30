@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/PixelRPG.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Character Sprites/playerAvatar.png" type="Texture" id=2]
+[ext_resource path="res://UI/Dialogs.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 6
+font_data = ExtResource( 1 )
+
+[node name="DialogBox" type="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 26.0
+margin_top = -34.5
+margin_right = -27.0
+margin_bottom = -3.5
+color = Color( 0, 0, 0, 0.25098 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Convo" type="RichTextLabel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.42044
+margin_top = -28.0
+margin_right = -44.5796
+margin_bottom = -3.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatar" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -38.1101
+margin_top = -29.685
+margin_right = -7.11011
+margin_bottom = 0.314972
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

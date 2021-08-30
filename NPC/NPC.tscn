@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Character Sprites/fishingNPC.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.08676
+height = 18.7295
+
+[node name="NPC" type="KinematicBody2D"]
+
+[node name="NPCSprite" type="Sprite" parent="."]
+position = Vector2( -2.47767, -8.14092 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8.14091 )
+rotation = 1.5708
+shape = SubResource( 1 )

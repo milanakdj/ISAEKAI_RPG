@@ -1,0 +1,190 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/UI/Button/buttonPressed.png" type="Texture" id=1]
+[ext_resource path="res://UI/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Music and Sounds/rpg_ambience_-_dungeon.ogg" type="AudioStream" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/Button/buttonHighLight.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/Button/buttonNormal.png" type="Texture" id=6]
+[ext_resource path="res://Assets/PixelRPG.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "background",
+"speed": 13.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.380392 ), Color( 0, 0, 0, 0.713726 ), Color( 0, 0, 0, 0.929412 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_press_play"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.415686 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( 0.0782014, 0.0656455 )
+frames = SubResource( 1 )
+animation = "background"
+frame = 9
+playing = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 32.0
+margin_right = 109.0
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 0.388235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 68.5535, 29.6613 )
+scale = Vector2( 0.216584, 0.216584 )
+texture = ExtResource( 4 )
+
+[node name="NewGame" type="TextureButton" parent="."]
+margin_left = 34.7356
+margin_top = 82.377
+margin_right = 512.736
+margin_bottom = 223.377
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NewGame"]
+margin_left = 149.0
+margin_top = 57.0
+margin_right = 187.0
+margin_bottom = 63.0
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = SubResource( 2 )
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame" type="TextureButton" parent="."]
+margin_left = 34.9856
+margin_top = 109.392
+margin_right = 512.986
+margin_bottom = 250.392
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="LoadGame"]
+margin_left = 149.0
+margin_top = 59.4718
+margin_right = 187.0
+margin_bottom = 65.4718
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = SubResource( 2 )
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitGame" type="TextureButton" parent="."]
+margin_left = 34.7356
+margin_top = 134.751
+margin_right = 512.736
+margin_bottom = 275.751
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ExitGame"]
+margin_left = 149.0
+margin_top = 60.1399
+margin_right = 187.0
+margin_bottom = 66.1399
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = SubResource( 2 )
+text = "Exit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackFade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 3 )
+anims/fadeIn = SubResource( 4 )
+
+[connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
