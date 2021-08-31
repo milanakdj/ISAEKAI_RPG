@@ -10,7 +10,8 @@ signal completed
 var scene_name
 
 func _ready():
-	scene_name = get_tree().current_scene.name
+	#scene_name = get_tree().current_scene.name
+	scene_name = "Start-Cutscene"
 	dialogs = JsonData.loadData("res://Data/dialogs.json");
 	text = dialogs[scene_name][page].convo
 	set_visible_characters(0)

@@ -71,13 +71,14 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+next_scene = "res://Scene/Start-Cutscene.tscn"
 
 [node name="backSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 9
+frame = 8
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -177,7 +178,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 0, 0, 0, 0 )
+color = Color( 0, 0, 0, 0.561764 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -437,6 +437,7 @@ font_data = ExtResource( 6 )
 
 [node name="Start-Cutscene" type="Node2D"]
 script = ExtResource( 5 )
+next_scene = "res://Scene/level.tscn"
 
 [node name="city" type="Sprite" parent="."]
 position = Vector2( 101.842, 9.54916 )
