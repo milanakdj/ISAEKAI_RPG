@@ -31,7 +31,7 @@ PlayerInventory="*res://Inventory/playerInventory.gd"
 PlayerStats="*res://Scripts/PlayerStats.gd"
 Global="*res://Scripts/Global.gd"
 UserInterface="*res://UI/UserInterface.tscn"
-SceneManager="res://SceneManager.tscn"
+SceneManager="*res://SceneManager.tscn"
 
 [display]
 

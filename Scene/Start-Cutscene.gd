@@ -31,6 +31,7 @@ func _on_Timer2_timeout():
 	$Camera.play("cameraOut")
 
 func _on_level_change():
+	pass
 	#get_tree().start_game();
 	#emit_signal("change_to_level")
-	get_node(NodePath("/root/SceneManager")).start_game()
+	#get_node(NodePath("/root/SceneManager")).start_game()
