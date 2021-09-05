@@ -1,6 +1,5 @@
 extends Node2D
 
-export(String, FILE) var next_scene = ""
 var main = preload("res://Main.tscn")
 
 func _ready():
@@ -31,7 +30,5 @@ func _on_Timer2_timeout():
 	$Camera.play("cameraOut")
 
 func _on_level_change():
-	pass
-	#get_tree().start_game();
-	#emit_signal("change_to_level")
-	#get_node(NodePath("/root/SceneManager")).start_game()
+	Global.new_game = true
+	get_tree().change_scene_to(main)

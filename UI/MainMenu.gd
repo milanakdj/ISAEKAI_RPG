@@ -1,17 +1,15 @@
 extends Control
 
-
-export(String, FILE) var next_scene = ""
+var start = preload("res://Scene/level.tscn");
 
 func _ready():
 	$AnimationPlayer.play("fadeIn");
 
 func _on_NewGame_pressed():
-	$AnimationPlayer.play("fade")
+	$AnimationPlayer.play("fade");
 
 func _on_press_play():
-	SceneManager.goto_scene("res://Scene/Start-Cutscene.tscn")
-	#get_node(NodePath("/root/SceneManager")).change_scene_to()
+	get_tree().change_scene_to(start);
 
 func _on_ExitGame_pressed():
 	get_tree().quit(1);

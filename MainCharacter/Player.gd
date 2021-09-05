@@ -1,13 +1,11 @@
 extends KinematicBody2D
 
-signal player_entering_door_signal
-signal player_entered_door_signal
-
 export var FRICTION = 500
 export var ACCELERATION = 350
-export var MAX_SPEED = 500
+export var MAX_SPEED = 50
 
 var velocity = Vector2.ZERO
+
 enum {
 	MOVE,
 	ATTACK
@@ -24,11 +22,9 @@ onready var hitBox = $Gizmo/HitBox
 onready var hurtBox = $HurtBox
 onready var collisionHitbox = $Gizmo/HitBox/CollisionShape2D
 onready var PlayerUI = $UI/PlayerHud
-onready var doorRayCast2D = $DoorRayCast2D
 
 func _ready():
 	randomize()
-	sprite.visible = true
 	animationTree.active = true
 	if Global.player_current_location:
 		global_position = Global.player_current_location
@@ -56,32 +52,18 @@ func move_state(delta):
 	input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	input_vector = input_vector.normalized() 
 	
-	var desire_step : Vector2 = input_vector * 16/2
-	doorRayCast2D.cast_to = desire_step
-	doorRayCast2D.force_raycast_update()
-	
-	if doorRayCast2D.is_colliding():
-		if input_vector != Vector2.ZERO:
-			emit_signal("player_entering_door_signal")
-			velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)	
-			animationPlayer.play("Dissapear")
-			can_move= false
-			emit_signal("player_entered_door_signal")
-			
-		
-		
-	elif input_vector != Vector2.ZERO:
+	if input_vector != Vector2.ZERO:
 		hitBox.knockback_vector = input_vector
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Walk/blend_position", input_vector)
 		animationTree.set("parameters/AttackOneHand/blend_position", input_vector)
 		animationState.travel("Walk")
 		if Input.is_action_pressed("run"):
-			ACCELERATION = 5000
-			MAX_SPEED = 8000
+			ACCELERATION = 5000#500
+			MAX_SPEED = 8000#80
 		else:
-			ACCELERATION = 300
-			MAX_SPEED = 50
+			ACCELERATION = 300#300
+			MAX_SPEED = 50#50
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
@@ -115,7 +97,3 @@ func _on_HurtBox_invincibility_started():
 
 func load_texture(name):
 	return load("res://Assets/Items/" + name + ".png")
-
-
-func entered_door():
-	emit_signal("player_entered_door_signal")
