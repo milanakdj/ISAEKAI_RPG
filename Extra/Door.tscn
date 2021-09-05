@@ -58,7 +58,7 @@ layer = 2
 margin_right = 320.0
 margin_bottom = 181.0
 mouse_filter = 1
-color = Color( 0, 0, 0, 0.027451 )
+color = Color( 0, 0, 0, 0.25098 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

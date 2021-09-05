@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Extra/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Static/Building/Hut.tscn" type="PackedScene" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://Assets/Character Sprites/character.png" type="Texture" id=12]
 [ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=13]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=14]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeOut"
@@ -92,7 +94,7 @@ radius = 16.0
 height = 35.1825
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10, 15 )
+extents = Vector2( 10, 7.763 )
 
 [node name="level" type="Node2D"]
 script = ExtResource( 11 )
@@ -160,6 +162,9 @@ frame = 265
 position = Vector2( -564.408, 576.696 )
 ACCELERATION = 3500
 MAX_SPEED = 2000
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 5 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../MainCamera")
@@ -1440,9 +1445,6 @@ target_spawn_position = Vector2( -120.8, 97.167 )
 position = Vector2( 12.0093, -25.4449 )
 shape = SubResource( 3 )
 
-[node name="ColorRect" parent="Door/CanvasLayer" index="0"]
-color = Color( 0, 0, 0, 0.25098 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -1466,6 +1468,9 @@ visible = false
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 shape = SubResource( 4 )
 
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Gizmo/HitBox"]
+[editable path="YSort/Player/HurtBox"]
 [editable path="MainCamera"]
 [editable path="Door"]
 [editable path="hutDoor"]

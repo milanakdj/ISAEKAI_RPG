@@ -22,9 +22,11 @@ onready var hitBox = $Gizmo/HitBox
 onready var hurtBox = $HurtBox
 onready var collisionHitbox = $Gizmo/HitBox/CollisionShape2D
 onready var PlayerUI = $UI/PlayerHud
+onready var shadow = $Shadow
 
 func _ready():
 	randomize()
+	sprite.visible = true
 	animationTree.active = true
 	if Global.player_current_location:
 		global_position = Global.player_current_location
@@ -97,3 +99,8 @@ func _on_HurtBox_invincibility_started():
 
 func load_texture(name):
 	return load("res://Assets/Items/" + name + ".png")
+
+
+func _on_HutDoorZone_area_entered(area):
+	sprite.visible = false
+	shadow.visible = false

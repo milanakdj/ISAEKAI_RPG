@@ -10,10 +10,15 @@ func _on_hutDoor_body_entered(body):
 		return
 	Global.spawn_position = target_spawn_position
 	$AnimationPlayer.play("opendoor")
+	
 
-func _on_AnimationPlayer_animation_finished(anim_name):
-	get_tree().change_scene(target_scene)
+func fade_animation():
+	$AnimationPlayer.play("FadeToBlack")
+	
 	
 func closeanimation():
 	$AnimationPlayer.play("closedoor")
+
 	
+func changes_the_scene():
+	get_tree().change_scene(target_scene)
