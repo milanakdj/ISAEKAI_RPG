@@ -34,6 +34,9 @@ func _ready():
 		global_position = Global.spawn_position
 	var weapon = sprite.texture.resource_path
 	collisionHitbox.disabled = true
+	$sword.visible = false
+	$glasses.visible = false
+
 
 func _physics_process(delta):
 	if can_move:
@@ -74,6 +77,12 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 		hitBox.damage = 5
+		
+	if Input.is_action_pressed("down") || $AnimationPlayer.current_animation == "IdleDown":
+		$glasses.visible = true
+		
+	else:
+		$glasses.visible = false
 
 func move():
 	velocity = move_and_slide(velocity)
@@ -104,3 +113,9 @@ func load_texture(name):
 func _on_HutDoorZone_area_entered(area):
 	sprite.visible = false
 	shadow.visible = false
+
+func _unhandled_input(event):
+	if event.is_action_pressed("sword_equip"):
+		$sword.visible = true
+
+
