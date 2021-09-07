@@ -1,0 +1,188 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/f44b8ec5281d80d39f1fee75fe3ee946.jpg" type="Texture" id=2]
+[ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/mat.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 26.465, 58.3364 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 10, 58.3364 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 102.536 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 43.2179, 112.869 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 18.4346, 77.8462 )
+
+[sub_resource type="CircleShape2D" id=12]
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 16.3012
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 14.07, 26.5135 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+[node name="TownRoom6" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -218.409
+margin_top = -221.727
+margin_right = 448.591
+margin_bottom = 659.273
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.742324, 0.76384 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 16.9051, 180.404 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 21.4, 34.3193 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 171.05, 138.217 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 138.079, 42.9072 )
+rotation = 1.57079
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 98.1815, 251.626 )
+rotation = 4.71238
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 96.2367, 202.321 )
+rotation = 4.71238
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 151.736, 157.543 )
+rotation = 4.71238
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 93.714, 145.56 )
+rotation = 4.71238
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 150.714, 114.06 )
+rotation = 4.71238
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 154.085, 224.1 )
+rotation = 4.71238
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 38.8685, 223.305 )
+rotation = 4.71238
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 94.7635, 184.07 )
+rotation = 4.71238
+shape = SubResource( 5 )
+
+[node name="mat" type="Sprite" parent="."]
+position = Vector2( 38.0019, 106.342 )
+rotation = -1.57079
+texture = ExtResource( 4 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 57.2812, 109.827 )
+
+[node name="Character" parent="YSort/Player" index="1"]
+frame = 187
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 7 )
+parameters/Idle/blend_position = Vector2( 0.447534, 0.00591707 )
+
+[node name="Gizmo" parent="YSort/Player" index="5"]
+rotation = 1.5708
+
+[node name="CollisionShape2D" parent="YSort/Player/Gizmo/HitBox" index="0"]
+position = Vector2( 7, -4.76837e-07 )
+rotation = 6.27605
+
+[node name="DoorZone" parent="YSort/Player" index="8"]
+visible = true
+
+[node name="HutDoorZone" parent="YSort/Player" index="9"]
+position = Vector2( -0.445969, -24.5274 )
+
+[node name="CollisionShape2D" parent="YSort/Player/HutDoorZone" index="0"]
+position = Vector2( 1.22726, 23.684 )
+
+[node name="glasses" parent="YSort/Player" index="11"]
+visible = true
+position = Vector2( 2, -6 )
+
+[node name="sword" parent="YSort/Player" index="12"]
+position = Vector2( 15, -5 )
+rotation = -3.92959
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+smoothing_enabled = true
+
+[node name="hutDoor" parent="." instance=ExtResource( 3 )]
+position = Vector2( 19.7513, 290.177 )
+target_scene = "res://Scene/Town.tscn"
+target_spawn_position = Vector2( 551, 247 )
+spawn_direction = Vector2( 461, 79 )
+
+[node name="Sprite" parent="hutDoor" index="0"]
+visible = false
+position = Vector2( -22.95, -177.799 )
+rotation = -1.57079
+scale = Vector2( 1, 1.59442 )
+frame = 2
+
+[node name="CollisionShape2D" parent="hutDoor" index="1"]
+position = Vector2( -7.03841, -181.439 )
+shape = SubResource( 8 )
+
+[node name="ColorRect" parent="hutDoor/ScreenTransition" index="0"]
+margin_left = -576.224
+margin_top = -22.4414
+margin_right = 434.773
+margin_bottom = 740.557
+
+[connection signal="area_exited" from="YSort/Player/HutDoorZone" to="YSort/Player" method="_on_HutDoorZone_area_exited"]
+[connection signal="area_exited" from="hutDoor" to="YSort/Player" method="_on_hutDoor_area_exited"]
+
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Gizmo/HitBox"]
+[editable path="YSort/Player/HurtBox"]
+[editable path="hutDoor"]

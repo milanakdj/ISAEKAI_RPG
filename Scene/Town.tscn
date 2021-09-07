@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -593,6 +593,120 @@ tracks/2/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=18]
+resource_name = "FadeToBlack"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "changes_the_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "closedoor"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 1, 0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fade_animation"
+} ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "opendoor"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "closeanimation"
+} ]
+}
+
 [node name="Town" type="Node2D"]
 script = ExtResource( 15 )
 
@@ -1126,10 +1240,35 @@ margin_top = -279.782
 margin_right = 707.323
 margin_bottom = 570.218
 
+[node name="hutDoor7" parent="." instance=ExtResource( 16 )]
+position = Vector2( 549.017, 230.828 )
+target_scene = "res://TownRoom6.tscn"
+
+[node name="Sprite" parent="hutDoor7" index="0"]
+visible = false
+position = Vector2( -4.59332, -22.7407 )
+scale = Vector2( 1, 1.33146 )
+
+[node name="CollisionShape2D" parent="hutDoor7" index="1"]
+position = Vector2( 4.14106, -14.6635 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" parent="hutDoor7" index="2"]
+anims/FadeToBlack = SubResource( 18 )
+anims/closedoor = SubResource( 19 )
+anims/opendoor = SubResource( 20 )
+
+[node name="ColorRect" parent="hutDoor7/ScreenTransition" index="0"]
+margin_left = -221.677
+margin_top = -279.782
+margin_right = 707.323
+margin_bottom = 570.218
+
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 
 [editable path="MainCamera"]
 [editable path="Door"]
@@ -1139,3 +1278,4 @@ margin_bottom = 570.218
 [editable path="hutDoor4"]
 [editable path="hutDoor5"]
 [editable path="hutDoor6"]
+[editable path="hutDoor7"]

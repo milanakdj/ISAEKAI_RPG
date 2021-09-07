@@ -134,9 +134,6 @@ position = Vector2( -0.445969, -24.5274 )
 [node name="CollisionShape2D" parent="YSort/Player/HutDoorZone" index="0"]
 position = Vector2( 1.22726, 23.684 )
 
-[node name="PlayerHud" parent="YSort/Player/UI" index="0"]
-visible = false
-
 [node name="glasses" parent="YSort/Player" index="11"]
 visible = true
 position = Vector2( -3.37558e-09, -5.83905 )
