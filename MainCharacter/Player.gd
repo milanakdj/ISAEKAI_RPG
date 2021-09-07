@@ -4,6 +4,9 @@ export var FRICTION = 500
 export var ACCELERATION = 350
 export var MAX_SPEED = 50
 
+const sword_texture = preload("res://Assets/pngwing.com (2).png")
+const thor_texture = preload("res://Assets/pngwing.com (5).png")
+
 var velocity = Vector2.ZERO
 
 enum {
@@ -111,6 +114,10 @@ func _on_HutDoorZone_area_entered(area):
 
 func _unhandled_input(event):
 	if event.is_action_pressed("sword_equip"):
+		$sword.texture = sword_texture
+		$sword.scale = Vector2(.02,.02)
 		$sword.visible = true
-
-
+	elif event.is_action_pressed("equip_thor"):
+		$sword.texture = thor_texture
+		$sword.scale = Vector2(.02,.04)
+		$sword.visible = true

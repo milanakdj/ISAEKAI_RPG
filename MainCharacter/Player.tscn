@@ -849,10 +849,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.4 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -9 ) ]
+"values": [ Vector2( -1, 8 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
@@ -861,7 +861,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.4 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 90.4017 ]
@@ -1243,9 +1243,10 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 hframes = 13
 vframes = 21
-frame = 200
+frame = 133
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.0624962, 0.793953 )
 rotation = 1.5708
 shape = SubResource( 3 )
@@ -1281,9 +1282,11 @@ collision_layer = 8
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="Gizmo/HitBox" index="0"]
-position = Vector2( 9, 0.999999 )
-rotation = 6.27606
+visible = false
+position = Vector2( -1, 8 )
+rotation = 1.57781
 shape = SubResource( 39 )
+disabled = true
 
 [node name="HurtBox" parent="." instance=ExtResource( 3 )]
 visible = false
@@ -1325,15 +1328,14 @@ shape = SubResource( 42 )
 visible = false
 
 [node name="glasses" type="Sprite" parent="."]
-visible = false
-position = Vector2( 0, -6 )
+position = Vector2( -2.79386e-09, -5.04744 )
 rotation = -3.13412
 scale = Vector2( 0.0070324, -0.0123571 )
 texture = ExtResource( 9 )
 
 [node name="sword" type="Sprite" parent="."]
-position = Vector2( 11, -13 )
-rotation = 1.4415
+position = Vector2( 3, 3 )
+rotation = 4.22069
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 10 )
 
