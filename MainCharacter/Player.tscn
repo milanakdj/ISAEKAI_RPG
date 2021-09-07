@@ -350,6 +350,30 @@ tracks/6/keys = {
 "update": 1,
 "values": [ 150.94, 140.253, 123.359, 103.867, 82.5919 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Gizmo/HitBox/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -4 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 179.058 ]
+}
 
 [sub_resource type="Animation" id=7]
 length = 0.5
@@ -426,6 +450,30 @@ tracks/5/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 45.7481, 33.6581, 50.2025, 62.5709, 86.3961 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Gizmo/HitBox/CollisionShape2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 12, 9.53674e-07 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 179.181 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -572,7 +620,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1, -9 ) ]
+"values": [ Vector2( -9, -4.76837e-07 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
@@ -584,7 +632,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 268.326 ]
+"values": [ 179.181 ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -621,10 +669,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( -9, -2 ) ]
+"values": [ Vector2( -10, -2 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("sword:rotation_degrees")
@@ -633,7 +681,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ -44.443 ]
@@ -648,7 +696,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 10, 2 ) ]
+"values": [ Vector2( 3, -11 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
@@ -660,7 +708,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 179.266 ]
+"values": [ 89.7159 ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -697,7 +745,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 9, -2 ) ]
@@ -709,7 +757,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 135.235 ]
@@ -724,7 +772,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -11, 1 ) ]
+"values": [ Vector2( 4, 10 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
@@ -736,7 +784,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 179.266 ]
+"values": [ 87.9162 ]
 }
 
 [sub_resource type="Animation" id=13]
@@ -785,10 +833,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.999998, 15 ) ]
+"values": [ Vector2( -0.999998, 15 ), Vector2( -0.999998, 15 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Gizmo/HitBox/CollisionShape2D:rotation_degrees")
@@ -797,10 +845,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 90.4017 ]
+"values": [ 90.4017, 90.4017 ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -952,7 +1000,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -5, 1 ), Vector2( -5, -1 ), Vector2( -2, -2 ), Vector2( -2, -1 ), Vector2( -1, 1 ), Vector2( -2, -2.98023e-08 ), Vector2( -3, 0.333333 ), Vector2( -4, 1.19209e-07 ) ]
+"values": [ Vector2( -8, -1 ), Vector2( -9, -2 ), Vector2( -8, -4 ), Vector2( -9, -1 ), Vector2( -10, -2.98023e-07 ), Vector2( -9, -1 ), Vector2( -8, -1 ), Vector2( -9, -1 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("sword:rotation_degrees")
@@ -1028,7 +1076,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 5, -2.68221e-07 ), Vector2( 5, 1 ), Vector2( 2, -1.78814e-07 ), Vector2( 2, -1 ), Vector2( 1, -1 ), Vector2( 2, -2 ), Vector2( 3, -3 ), Vector2( 4, -0.666667 ) ]
+"values": [ Vector2( 9, -1 ), Vector2( 9, -1 ), Vector2( 9, -1 ), Vector2( 9, -1 ), Vector2( 10, -2 ), Vector2( 9, -2 ), Vector2( 9, -4 ), Vector2( 9, -3 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("sword:rotation_degrees")
@@ -1040,7 +1088,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 147.423, 155.35, 149.273, 140.91, 134.683, 129.145, 121.98, 136.334 ]
+"values": [ 147.423, 155.35, 149.273, 140.91, 134.683, 129.145, 121.98, 121.478 ]
 }
 
 [sub_resource type="Animation" id=17]
@@ -1238,12 +1286,12 @@ texture = ExtResource( 4 )
 
 [node name="Character" type="Sprite" parent="."]
 material = SubResource( 2 )
-position = Vector2( 0.00350761, -8.09595 )
+position = Vector2( 2.32831e-10, -8 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 hframes = 13
 vframes = 21
-frame = 133
+frame = 130
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -1272,19 +1320,19 @@ tree_root = SubResource( 37 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 38 )
 parameters/AttackOneHand/blend_position = Vector2( 0, 0 )
-parameters/Idle/blend_position = Vector2( -0.297297, -0.242236 )
+parameters/Idle/blend_position = Vector2( 0.00357783, 0.668639 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
 
 [node name="Gizmo" type="Position2D" parent="."]
+rotation = -1.5708
 
 [node name="HitBox" parent="Gizmo" instance=ExtResource( 5 )]
 collision_layer = 8
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="Gizmo/HitBox" index="0"]
-visible = false
-position = Vector2( -1, 8 )
-rotation = 1.57781
+position = Vector2( -9, -4.76837e-07 )
+rotation = 3.12729
 shape = SubResource( 39 )
 disabled = true
 
@@ -1328,14 +1376,14 @@ shape = SubResource( 42 )
 visible = false
 
 [node name="glasses" type="Sprite" parent="."]
-position = Vector2( -2.79386e-09, -5.04744 )
+position = Vector2( -2.79388e-09, -5.09777 )
 rotation = -3.13412
 scale = Vector2( 0.0070324, -0.0123571 )
 texture = ExtResource( 9 )
 
 [node name="sword" type="Sprite" parent="."]
-position = Vector2( 3, 3 )
-rotation = 4.22069
+position = Vector2( 5, 4 )
+rotation = -2.46091
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 10 )
 

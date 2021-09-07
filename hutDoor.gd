@@ -3,6 +3,7 @@ extends Area2D
 export(String, FILE) var target_scene
 export(Vector2) var target_spawn_position
 
+export(Vector2) var spawn_direction = Vector2(0,0)
 
 func _on_hutDoor_body_entered(body):
 	if !target_scene:

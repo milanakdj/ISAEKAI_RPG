@@ -5,7 +5,7 @@ export var ACCELERATION = 350
 export var MAX_SPEED = 50
 
 const sword_texture = preload("res://Assets/pngwing.com (2).png")
-const thor_texture = preload("res://Assets/pngwing.com (5).png")
+const thor_texture = preload("res://Assets/pngwing.com (12).png")
 
 var velocity = Vector2.ZERO
 
@@ -39,6 +39,8 @@ func _ready():
 	collisionHitbox.disabled = true
 	$sword.visible = false
 	$glasses.visible = false
+	
+
 
 
 func _physics_process(delta):
@@ -111,6 +113,7 @@ func load_texture(name):
 func _on_HutDoorZone_area_entered(area):
 	sprite.visible = false
 	shadow.visible = false
+	$glasses.visible = false
 
 func _unhandled_input(event):
 	if event.is_action_pressed("sword_equip"):
@@ -119,5 +122,5 @@ func _unhandled_input(event):
 		$sword.visible = true
 	elif event.is_action_pressed("equip_thor"):
 		$sword.texture = thor_texture
-		$sword.scale = Vector2(.02,.04)
+		$sword.scale = Vector2(.02,.02)
 		$sword.visible = true
