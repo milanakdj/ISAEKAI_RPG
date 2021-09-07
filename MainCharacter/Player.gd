@@ -78,11 +78,6 @@ func move_state(delta):
 		state = ATTACK
 		hitBox.damage = 5
 		
-	if Input.is_action_pressed("down") || $AnimationPlayer.current_animation == "IdleDown":
-		$glasses.visible = true
-		
-	else:
-		$glasses.visible = false
 
 func move():
 	velocity = move_and_slide(velocity)
