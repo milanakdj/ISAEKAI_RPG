@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -15,10 +15,127 @@
 [ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Extra/Door.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Town.gd" type="Script" id=15]
+[ext_resource path="res://hutDoor.tscn" type="PackedScene" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.7814
 height = 52.0465
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "FadeToBlack"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "changes_the_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "closedoor"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 1, 0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fade_animation"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "opendoor"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "closeanimation"
+} ]
+}
 
 [node name="Town" type="Node2D"]
 script = ExtResource( 15 )
@@ -56,7 +173,7 @@ tile_data = PoolIntArray( -720879, 9, 0, -655352, 10, 0, -327648, 10, 0, -65544,
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -120.8, 97.1674 )
+position = Vector2( -111.667, 95.5243 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../MainCamera")
@@ -411,7 +528,7 @@ position = Vector2( 256.327, 89.1562 )
 position = Vector2( 222.331, -265.512 )
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
-position = Vector2( -120.8, 97.1674 )
+position = Vector2( -111.667, 95.5243 )
 current = true
 
 [node name="TopLeft" parent="MainCamera/Node" index="0"]
@@ -423,11 +540,44 @@ position = Vector2( 656, 815 )
 [node name="Door" parent="." instance=ExtResource( 14 )]
 position = Vector2( -139.3, 98.4216 )
 target_scene = "res://Scene/level.tscn"
-target_spawn_position = Vector2( 2060.35, 335 )
+target_spawn_position = Vector2( 2050, 323 )
 
 [node name="CollisionShape2D" parent="Door" index="0"]
 position = Vector2( 0, -2.24747 )
 shape = SubResource( 1 )
 
+[node name="ColorRect" parent="Door/CanvasLayer" index="0"]
+color = Color( 0, 0, 0, 0.027451 )
+
+[node name="hutDoor" parent="." instance=ExtResource( 16 )]
+position = Vector2( -68.897, 17.8787 )
+target_scene = "res://Apartment.tscn"
+
+[node name="Sprite" parent="hutDoor" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="hutDoor" index="1"]
+position = Vector2( 7.0477, 7.0113 )
+shape = SubResource( 2 )
+
+[node name="hutDoor2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 44.7623, 32.46 )
+target_scene = "res://TownRoom2.tscn"
+
+[node name="Sprite" parent="hutDoor2" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="hutDoor2" index="1"]
+visible = false
+position = Vector2( 9.05222, 8.68174 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" parent="hutDoor2" index="2"]
+anims/FadeToBlack = SubResource( 3 )
+anims/closedoor = SubResource( 4 )
+anims/opendoor = SubResource( 5 )
+
 [editable path="MainCamera"]
 [editable path="Door"]
+[editable path="hutDoor"]
+[editable path="hutDoor2"]

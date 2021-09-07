@@ -1,28 +1,46 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/oaks_lab_interior.png" type="Texture" id=2]
+[ext_resource path="res://Assets/library 2.png" type="Texture" id=2]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/mat.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 125.399 )
+extents = Vector2( 8, 47.6768 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 125.399 )
+extents = Vector2( 8, 47.6768 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 13.2307, 47.6768 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 21.2488, 21.5126 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 29.5803, 9.70822 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 48.9573, 14.1459 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 9.7643, 11.2673 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 23.8894, 179.48 )
+extents = Vector2( 63.7669, 125.399 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8, 77.2941 )
+extents = Vector2( 23.8894, 179.48 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 8, 83.7116 )
+extents = Vector2( 21.4561, 102.388 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 23.8761, 83.7116 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=7]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 
 [node name="LevelHouse" type="Node2D"]
 __meta__ = {
@@ -39,9 +57,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.515574, 0.198191 )
+texture = ExtResource( 2 )
+centered = false
+
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 319.0
-margin_bottom = 208.0
+visible = false
+margin_right = 640.0
+margin_bottom = 960.0
 texture = ExtResource( 2 )
 stretch_mode = 1
 __meta__ = {
@@ -52,45 +76,82 @@ __meta__ = {
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -7.12755, 110.205 )
+position = Vector2( -9.64739, 152.727 )
 rotation = -3.14159
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -7.87963, 34.6405 )
+rotation = -3.14159
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 13.5019, 43.9949 )
+rotation = -3.14159
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 12.8338, 148.453 )
+rotation = -3.14159
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 47.1334, 134.198 )
+rotation = -3.14159
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 212.172, 141.103 )
+rotation = -3.14159
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 183.254, 74.7398 )
+rotation = -3.14159
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 217.518, 64.2268 )
+rotation = -3.14159
+shape = SubResource( 13 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 323.7, 106.704 )
 rotation = -3.14159
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 161.772, 20.5082 )
 rotation = -1.5708
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 59.7771, 188.696 )
 rotation = -1.5708
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 245.381, 187.107 )
 rotation = -1.5708
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="mat" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 148.792, 179.099 )
+position = Vector2( 34.8621, 98.2817 )
+rotation = 1.57079
+scale = Vector2( 0.684308, 1 )
 texture = ExtResource( 4 )
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 147.861, 164.812 )
+position = Vector2( 49.2973, 97.1677 )
 
 [node name="Character" parent="YSort/Player" index="1"]
 frame = 183
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 7 )
-parameters/Idle/blend_position = Vector2( -0.00536674, -0.378698 )
+parameters/Idle/blend_position = Vector2( 0.536673, 0.0414201 )
 
 [node name="Gizmo" parent="YSort/Player" index="5"]
 rotation = 1.5708
@@ -110,17 +171,22 @@ position = Vector2( 1.19209e-07, 3 )
 rotation = -2.06458
 
 [node name="hutDoor" parent="." instance=ExtResource( 3 )]
-position = Vector2( 141.438, 208.714 )
-target_scene = "res://Scene/level.tscn"
+position = Vector2( -9.6901, 107.915 )
+target_scene = "res://Scene/Town.tscn"
 target_spawn_position = Vector2( 1843.94, -402.23 )
 
 [node name="Sprite" parent="hutDoor" index="0"]
 position = Vector2( -1.79762, -21.9662 )
-frame = 2
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 6.10799, -9.65881 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
+
+[node name="ColorRect" parent="hutDoor/ScreenTransition" index="0"]
+margin_left = -37.0
+margin_top = -28.0
+margin_right = 367.0
+margin_bottom = 223.0
 
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]
