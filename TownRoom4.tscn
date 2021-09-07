@@ -1,0 +1,190 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/contain_620x488.png" type="Texture" id=2]
+[ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/mat.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 310, 488 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 310, 0, 310, 488 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 107.261 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 16.7222, 32.7619 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 10, 107.261 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 10, 31.1922 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 38.6205, 59.1354 )
+
+[sub_resource type="CircleShape2D" id=11]
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 15.9044
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+
+[sub_resource type="RectangleShape2D" id=5]
+
+[node name="TownRoom3" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -218.409
+margin_top = -221.727
+margin_right = 448.591
+margin_bottom = 659.273
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.338187, 0.335587 )
+frames = SubResource( 3 )
+frame = 1
+speed_scale = 0.1
+playing = true
+centered = false
+
+[node name="mat" type="Sprite" parent="."]
+position = Vector2( 54.797, 154.745 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1.70095, 88.199 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 105.511, 94.8807 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 82.8531, 89.3185 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 75.7263, -6.68176 )
+rotation = 1.57079
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 97.1079, 167.043 )
+rotation = 1.57079
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 10.2453, 168.38 )
+rotation = 1.57079
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 57.5121, 31.9097 )
+rotation = 1.57079
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 27.0163, 73.103 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 9.53517, 73.103 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 9.2703, 102.503 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 57.4759, 75.4867 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 90.0544, 140.909 )
+shape = SubResource( 12 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 55.6605, 135.066 )
+
+[node name="Character" parent="YSort/Player" index="1"]
+frame = 183
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 4 )
+parameters/Idle/blend_position = Vector2( 0.00715566, 0.704142 )
+
+[node name="Gizmo" parent="YSort/Player" index="5"]
+rotation = 1.5708
+
+[node name="CollisionShape2D" parent="YSort/Player/Gizmo/HitBox" index="0"]
+position = Vector2( 7, -4.76837e-07 )
+rotation = 6.27605
+
+[node name="HutDoorZone" parent="YSort/Player" index="9"]
+position = Vector2( -0.445969, -24.5274 )
+
+[node name="glasses" parent="YSort/Player" index="11"]
+position = Vector2( 0, -6 )
+
+[node name="sword" parent="YSort/Player" index="12"]
+position = Vector2( 1.19209e-07, 3 )
+rotation = -2.06458
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+smoothing_enabled = true
+
+[node name="hutDoor" parent="." instance=ExtResource( 3 )]
+position = Vector2( 43.137, 235.922 )
+target_scene = "res://Scene/Town.tscn"
+target_spawn_position = Vector2( 396, -55 )
+spawn_direction = Vector2( 461, 79 )
+
+[node name="Sprite" parent="hutDoor" index="0"]
+visible = false
+position = Vector2( 2.96459, -76.7315 )
+
+[node name="CollisionShape2D" parent="hutDoor" index="1"]
+position = Vector2( 10.2315, -57.4642 )
+shape = SubResource( 5 )
+
+[node name="ColorRect" parent="hutDoor/ScreenTransition" index="0"]
+margin_left = -352.413
+margin_top = -112.073
+margin_right = 658.587
+margin_bottom = 650.927
+
+[connection signal="area_exited" from="YSort/Player/HutDoorZone" to="YSort/Player" method="_on_HutDoorZone_area_exited"]
+[connection signal="area_exited" from="hutDoor" to="YSort/Player" method="_on_hutDoor_area_exited"]
+
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Gizmo/HitBox"]
+[editable path="YSort/Player/HurtBox"]
+[editable path="hutDoor"]

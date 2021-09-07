@@ -938,6 +938,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ 240.292, 233.345, 241.828, 237.187, 240.292, 236.263, 234.526, 233.336 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("HutDoorZone/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.22726, 23.684 ) ]
+}
 
 [sub_resource type="Animation" id=15]
 length = 0.8
@@ -1166,6 +1178,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [ 66.1916, 73.1226, 79.5408, 77.316, 85.7342, 84.188, 66.7977, 72.0029 ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("HutDoorZone/CollisionShape2D:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 40 ) ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=18]
 animation = "AttackDown"
@@ -1291,7 +1315,7 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 hframes = 13
 vframes = 21
-frame = 130
+frame = 105
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -1331,8 +1355,8 @@ collision_layer = 8
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="Gizmo/HitBox" index="0"]
-position = Vector2( -9, -4.76837e-07 )
-rotation = 3.12729
+position = Vector2( 1.90735e-06, 17 )
+rotation = 4.73307
 shape = SubResource( 39 )
 disabled = true
 
@@ -1363,27 +1387,28 @@ collision_mask = 128
 shape = SubResource( 42 )
 
 [node name="HutDoorZone" type="Area2D" parent="."]
-visible = false
+position = Vector2( 0, -25 )
 collision_layer = 0
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HutDoorZone"]
+position = Vector2( 0, 40 )
 shape = SubResource( 42 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="PlayerHud" parent="UI" instance=ExtResource( 8 )]
-visible = false
 
 [node name="glasses" type="Sprite" parent="."]
-position = Vector2( -2.79388e-09, -5.09777 )
+visible = false
+position = Vector2( -2.79408e-09, -6 )
 rotation = -3.13412
 scale = Vector2( 0.0070324, -0.0123571 )
 texture = ExtResource( 9 )
 
 [node name="sword" type="Sprite" parent="."]
-position = Vector2( 5, 4 )
-rotation = -2.46091
+position = Vector2( 7, -7 )
+rotation = 1.15526
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 10 )
 

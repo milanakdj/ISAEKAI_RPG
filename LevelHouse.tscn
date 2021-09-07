@@ -99,9 +99,6 @@ rotation = 1.5708
 position = Vector2( 7, -4.76837e-07 )
 rotation = 6.27605
 
-[node name="PlayerHud" parent="YSort/Player/UI" index="0"]
-visible = true
-
 [node name="glasses" parent="YSort/Player" index="11"]
 position = Vector2( 0, -6 )
 

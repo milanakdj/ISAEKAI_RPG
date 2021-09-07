@@ -23,7 +23,7 @@ position = Vector2( 33.1513, 0.574934 )
 shape = SubResource( 1 )
 
 [node name="Left B collision" type="CollisionShape2D" parent="."]
-position = Vector2( -53.143, 24.3267 )
+position = Vector2( -51.1587, 18.0432 )
 shape = SubResource( 2 )
 
 [node name="Roof Collision" type="CollisionShape2D" parent="."]

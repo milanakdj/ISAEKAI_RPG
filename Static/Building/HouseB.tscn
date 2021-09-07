@@ -15,4 +15,4 @@ region_rect = Rect2( 98, 315, 108, 112 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 4.5, 11.5 )
 build_mode = 1
-polygon = PoolVector2Array( -44, 51.5, -43.5, 21, -46.5, -18, 44.5, -17, 46, 27.5, 27, 28.5, 27.5, 52.5 )
+polygon = PoolVector2Array( -45.25, 45.25, -43.5, 21, -46.5, -18, 44.5, -17, 46, 27.5, 27, 28.5, 25.5, 45.75 )

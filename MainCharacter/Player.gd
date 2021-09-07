@@ -124,3 +124,10 @@ func _unhandled_input(event):
 		$sword.texture = thor_texture
 		$sword.scale = Vector2(.02,.02)
 		$sword.visible = true
+
+
+
+func _on_hutDoor3_body_entered(body):
+	sprite.visible = false
+	shadow.visible = false
+	$glasses.visible = false
