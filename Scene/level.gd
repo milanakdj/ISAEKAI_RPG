@@ -32,4 +32,15 @@ func _on_done():
 	
 	
 	
+func _input(event):
+	if event.is_action_pressed("open_menu"):
+		$Menu/Control.visible = true
+		$Menu/Control/backMusic.playing = true
+		
+
 	
+
+
+func _on_Exit_pressed():
+	$Menu/Control.visible = false
+	$Menu/Control/backMusic.playing = false

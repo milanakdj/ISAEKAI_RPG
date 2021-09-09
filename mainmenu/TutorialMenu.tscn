@@ -1,0 +1,215 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://mainmenu/TutorialMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/Inventorygui.png" type="Texture" id=2]
+[ext_resource path="res://mainmenu/ExitGame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/PixelFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Assets/UI/button.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/button_pressed.png" type="Texture" id=6]
+
+[node name="TutorialMenu" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 252.0
+margin_bottom = 202.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 16.3337
+margin_right = 225.334
+margin_bottom = 150.0
+texture = ExtResource( 2 )
+patch_margin_left = 35
+patch_margin_top = 35
+patch_margin_right = 35
+patch_margin_bottom = 35
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="NinePatchRect"]
+margin_left = 16.0543
+margin_top = 33.8924
+margin_right = 56.0543
+margin_bottom = 73.8924
+rect_scale = Vector2( 1.85783, 1.22046 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NinePatchRect/TextureButton"]
+margin_left = 6.63873
+margin_top = 2.67958
+margin_right = 46.6387
+margin_bottom = 16.6796
+rect_scale = Vector2( 0.865445, 1.1255 )
+custom_fonts/font = ExtResource( 4 )
+text = "Walk"
+
+[node name="TextureButton2" type="TextureButton" parent="NinePatchRect"]
+margin_left = 15.6339
+margin_top = 66.0567
+margin_right = 55.6339
+margin_bottom = 106.057
+rect_scale = Vector2( 1.85783, 1.22046 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NinePatchRect/TextureButton2"]
+margin_left = 6.63873
+margin_top = 2.67958
+margin_right = 46.6387
+margin_bottom = 16.6796
+rect_scale = Vector2( 0.865445, 1.1255 )
+custom_fonts/font = ExtResource( 4 )
+text = "Run"
+
+[node name="TextureButton3" type="TextureButton" parent="NinePatchRect"]
+margin_left = 16.8952
+margin_top = 100.744
+margin_right = 56.8952
+margin_bottom = 140.744
+rect_scale = Vector2( 1.85783, 1.22046 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NinePatchRect/TextureButton3"]
+margin_left = 6.63873
+margin_top = 2.67958
+margin_right = 46.6387
+margin_bottom = 16.6796
+rect_scale = Vector2( 0.865445, 1.1255 )
+custom_fonts/font = ExtResource( 4 )
+text = "Attack"
+
+[node name="TextureButton4" type="TextureButton" parent="NinePatchRect"]
+margin_left = 95.9395
+margin_top = 33.2617
+margin_right = 135.939
+margin_bottom = 73.2617
+rect_scale = Vector2( 1.85783, 1.22046 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NinePatchRect/TextureButton4"]
+margin_left = 6.63873
+margin_top = 2.67958
+margin_right = 46.6387
+margin_bottom = 16.6796
+rect_scale = Vector2( 0.865445, 1.1255 )
+custom_fonts/font = ExtResource( 4 )
+text = "Story"
+
+[node name="TextureButton5" type="TextureButton" parent="NinePatchRect"]
+margin_left = 96.7804
+margin_top = 67.7385
+margin_right = 136.78
+margin_bottom = 107.738
+rect_scale = Vector2( 1.85783, 1.22046 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NinePatchRect/TextureButton5"]
+margin_left = 6.63873
+margin_top = 2.67958
+margin_right = 46.6387
+margin_bottom = 16.6796
+rect_scale = Vector2( 0.865445, 1.1255 )
+custom_fonts/font = ExtResource( 4 )
+text = "Goals"
+
+[node name="TextureButton6" type="TextureButton" parent="NinePatchRect"]
+margin_left = 94.8884
+margin_top = 101.795
+margin_right = 134.888
+margin_bottom = 141.795
+rect_scale = Vector2( 1.85783, 1.22046 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NinePatchRect/TextureButton6"]
+margin_left = 5.05455
+margin_top = 2.67958
+margin_right = 45.0546
+margin_bottom = 16.6796
+rect_scale = Vector2( 0.865445, 1.1255 )
+custom_fonts/font = ExtResource( 4 )
+text = "Interact"
+
+[node name="ExitGame" parent="NinePatchRect" instance=ExtResource( 3 )]
+anchor_left = 0.577747
+anchor_top = -0.125583
+anchor_right = 1.57774
+anchor_bottom = 0.874417
+margin_left = 43.6933
+margin_top = 120.876
+margin_right = 312.694
+margin_bottom = 111.876
+rect_scale = Vector2( 0.0847957, 0.144607 )
+
+[node name="Label3" parent="NinePatchRect/ExitGame" index="0"]
+margin_left = 111.812
+margin_top = 42.6948
+margin_right = 149.812
+margin_bottom = 48.6948
+rect_scale = Vector2( 7.15775, 8.85677 )
+text = "Exit Menu"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 15.5459
+margin_top = 17.3785
+margin_right = 55.5459
+margin_bottom = 31.3785
+custom_fonts/font = ExtResource( 4 )
+text = " TUTORIAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 179.731
+margin_top = 32.935
+margin_right = 219.731
+margin_bottom = 46.935
+custom_fonts/font = ExtResource( 4 )
+text = "Click on 
+the 
+respective
+boxes to
+open the
+tutorial
+screen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="NinePatchRect/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="NinePatchRect/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="NinePatchRect/ExitGame" to="." method="_on_ExitGame_pressed"]
+
+[editable path="NinePatchRect/ExitGame"]

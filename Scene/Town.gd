@@ -15,5 +15,5 @@ func _input(event):
 		
 
 func _on_Exit_pressed():
-	$Menu/Control.visible = false
+	menu.visible = false
 	$Menu/Control/backMusic.playing = false

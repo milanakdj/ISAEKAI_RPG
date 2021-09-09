@@ -1398,9 +1398,9 @@ anims/closedoor = SubResource( 22 )
 anims/opendoor = SubResource( 23 )
 
 [node name="Menu" parent="." instance=ExtResource( 17 )]
+layer = 2
 
 [node name="Control" parent="Menu" index="0"]
-mouse_filter = 1
 mouse_default_cursor_shape = 2
 
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]

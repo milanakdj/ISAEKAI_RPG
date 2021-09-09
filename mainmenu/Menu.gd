@@ -21,9 +21,10 @@ func _unhandled_input(event):
 	match screenLoaded:
 		ScreenLoaded.NOTHING:
 			if event.is_action_pressed("open_menu"):
-				#var player = find_parent(currentScene).get_children().back().find_node("Player")
-				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
-				player.set_physics_process(false)
+				
+				#var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+				#player.set_physics_process(false)
+				#get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
 					
 				menu.visible = true 
 				screenLoaded = ScreenLoaded.JUST_MENU
@@ -34,6 +35,7 @@ func _unhandled_input(event):
 				screenLoaded = ScreenLoaded.NOTHING
 				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
 				player.set_physics_process(true)
+				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
 			
 			elif event.is_action_pressed("ui_down") or event.is_action_pressed("down"):
 				selected_option +=1
@@ -55,3 +57,12 @@ func _unhandled_input(event):
 
 func _on_Exit_pressed():
 	emit_signal("CloseMenu")
+
+
+func _on_Tutorial_pressed():
+	var tutorial_menu = load("res://mainmenu/TutorialMenu.tscn").instance()
+	$Control.add_child(tutorial_menu)
+	get_node("Control/TutorialMenu").connect("CloseTutorialMenu", self, "CloseTutorialMenus")
+	
+func CloseTutorialMenus():
+	get_node("TutorialMenu").queue_free()

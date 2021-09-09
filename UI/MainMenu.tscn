@@ -18,7 +18,7 @@
 [ext_resource path="res://Assets/UI/back-frames/frame_03_delay-0.1s.jpg" type="Texture" id=22]
 [ext_resource path="res://Assets/UI/back-frames/frame_01_delay-0.1s.jpg" type="Texture" id=24]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 8 ) ],
 "loop": true,
@@ -26,7 +26,7 @@ animations = [ {
 "speed": 13.0
 } ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 6
 font_data = ExtResource( 7 )
 
@@ -85,9 +85,9 @@ __meta__ = {
 [node name="backSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "background"
-frame = 12
+frame = 8
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -129,7 +129,7 @@ margin_top = 59.4718
 margin_right = 187.0
 margin_bottom = 65.4718
 rect_scale = Vector2( 5, 5 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Load Game"
 __meta__ = {
 "_edit_use_anchors_": false
