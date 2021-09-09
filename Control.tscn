@@ -1,0 +1,150 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/PixelRPG.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/UI/Button/buttonPressed.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/Button/buttonNormal.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/Button/buttonHighLight.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Music and Sounds/rpg_ambience_-_dungeon.ogg" type="AudioStream" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://mainmenu/NewGame.tscn" type="PackedScene" id=7]
+[ext_resource path="res://mainmenu/ExitGame.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.380392 ), Color( 0, 0, 0, 0.713726 ), Color( 0, 0, 0, 0.929412 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_press_play"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.415686 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 32.0
+margin_right = 109.0
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 0.388235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 68.5535, 29.6613 )
+scale = Vector2( 0.216584, 0.216584 )
+texture = ExtResource( 6 )
+
+[node name="NewGame" parent="." instance=ExtResource( 7 )]
+
+[node name="LoadGame" type="TextureButton" parent="."]
+margin_left = 34.9856
+margin_top = 109.392
+margin_right = 512.986
+margin_bottom = 250.392
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="LoadGame"]
+margin_left = 149.0
+margin_top = 59.4718
+margin_right = 187.0
+margin_bottom = 65.4718
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = SubResource( 1 )
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveGame" type="TextureButton" parent="."]
+margin_left = 34.9856
+margin_top = 109.392
+margin_right = 512.986
+margin_bottom = 250.392
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveGame" type="Label" parent="SaveGame"]
+margin_left = 149.0
+margin_top = 59.4718
+margin_right = 187.0
+margin_bottom = 65.4718
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = SubResource( 1 )
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitGame" parent="." instance=ExtResource( 8 )]
+
+[node name="BlackFade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 2 )
+anims/fadeIn = SubResource( 3 )

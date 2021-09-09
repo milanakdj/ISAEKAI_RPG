@@ -5,7 +5,7 @@ export var ACCELERATION = 350
 export var MAX_SPEED = 50
 
 const sword_texture = preload("res://Assets/pngwing.com (2).png")
-const thor_texture = preload("res://Assets/pngwing.com (12).png")
+const thor_texture = preload("res://Assets/thor.png")
 
 var velocity = Vector2.ZERO
 

@@ -1315,7 +1315,7 @@ scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 hframes = 13
 vframes = 21
-frame = 105
+frame = 133
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -1355,8 +1355,8 @@ collision_layer = 8
 collision_mask = 16
 
 [node name="CollisionShape2D" parent="Gizmo/HitBox" index="0"]
-position = Vector2( 1.90735e-06, 17 )
-rotation = 4.73307
+position = Vector2( -1, 8 )
+rotation = 1.57781
 shape = SubResource( 39 )
 disabled = true
 
@@ -1392,7 +1392,7 @@ collision_layer = 0
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HutDoorZone"]
-position = Vector2( 0, 40 )
+position = Vector2( 1.22726, 23.684 )
 shape = SubResource( 42 )
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -1400,15 +1400,14 @@ shape = SubResource( 42 )
 [node name="PlayerHud" parent="UI" instance=ExtResource( 8 )]
 
 [node name="glasses" type="Sprite" parent="."]
-visible = false
-position = Vector2( -2.79408e-09, -6 )
+position = Vector2( -2.79386e-09, -5.02159 )
 rotation = -3.13412
 scale = Vector2( 0.0070324, -0.0123571 )
 texture = ExtResource( 9 )
 
 [node name="sword" type="Sprite" parent="."]
-position = Vector2( 7, -7 )
-rotation = 1.15526
+position = Vector2( 3, 3 )
+rotation = 4.2207
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 10 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Extra/Door.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Town.gd" type="Script" id=15]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://mainmenu/Menu.tscn" type="PackedScene" id=17]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.7814
@@ -1396,11 +1397,18 @@ anims/FadeToBlack = SubResource( 21 )
 anims/closedoor = SubResource( 22 )
 anims/opendoor = SubResource( 23 )
 
+[node name="Menu" parent="." instance=ExtResource( 17 )]
+
+[node name="Control" parent="Menu" index="0"]
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="pressed" from="Menu/Control/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 
 [editable path="MainCamera"]
 [editable path="Door"]
@@ -1412,3 +1420,4 @@ anims/opendoor = SubResource( 23 )
 [editable path="hutDoor6"]
 [editable path="hutDoor7"]
 [editable path="hutDoor8"]
+[editable path="Menu"]

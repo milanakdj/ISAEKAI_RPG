@@ -1,0 +1,221 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/PixelFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/UI/Button/buttonPressed.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/Button/buttonNormal.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/Button/buttonHighLight.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Music and Sounds/rpg_ambience_-_dungeon.ogg" type="AudioStream" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://mainmenu/Menu.gd" type="Script" id=7]
+[ext_resource path="res://Assets/pngwing.com (2).png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.380392 ), Color( 0, 0, 0, 0.713726 ), Color( 0, 0, 0, 0.929412 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_press_play"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.415686 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource( 7 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 61.9087
+margin_right = 101.909
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_left = 24.8567
+margin_right = 101.857
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 0.388235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backMusic" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource( 5 )
+
+[node name="Logo" type="Sprite" parent="Control"]
+position = Vector2( 64.0751, 23.4048 )
+scale = Vector2( 0.216584, 0.216584 )
+texture = ExtResource( 6 )
+
+[node name="BlackFade" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -82.0
+margin_top = -27.0
+margin_right = 183.0
+margin_bottom = 151.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+anims/fade = SubResource( 1 )
+anims/fadeIn = SubResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_left = 31.3811
+margin_top = 29.7628
+margin_right = 95.3811
+margin_bottom = 69.7628
+custom_constants/separation = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer"]
+margin_right = 64.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Load Game" type="TextureButton" parent="Control/VBoxContainer"]
+margin_left = 2.0
+margin_top = 26.0
+margin_right = 62.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 60, 15 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Load Game"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Load Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save Game" type="TextureButton" parent="Control/VBoxContainer"]
+margin_left = 2.0
+margin_top = 47.0
+margin_right = 62.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 60, 15 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Save Game"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Save Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial" type="TextureButton" parent="Control/VBoxContainer"]
+margin_left = 2.0
+margin_top = 68.0
+margin_right = 62.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 60, 15 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Tutorial"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Tutorial"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureButton" parent="Control/VBoxContainer"]
+margin_left = 2.0
+margin_top = 89.0
+margin_right = 62.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 60, 15 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Exit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_left = 0.618
+anchor_top = 1.606
+anchor_right = 0.618
+anchor_bottom = 3.188
+margin_top = -0.239998
+margin_right = 512.0
+margin_bottom = 448.48
+rect_rotation = 135.0
+rect_scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}

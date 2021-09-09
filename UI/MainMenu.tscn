@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/UI/Button/buttonPressed.png" type="Texture" id=1]
 [ext_resource path="res://UI/MainMenu.gd" type="Script" id=2]
@@ -8,15 +8,17 @@
 [ext_resource path="res://Assets/UI/Button/buttonNormal.png" type="Texture" id=6]
 [ext_resource path="res://Assets/PixelRPG.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Assets/UI/back-frames/frame_00_delay-0.1s.jpg" type="Texture" id=8]
+[ext_resource path="res://mainmenu/ExitGame.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/UI/back-frames/frame_07_delay-0.1s.jpg" type="Texture" id=10]
 [ext_resource path="res://Assets/UI/back-frames/frame_11_delay-0.1s.jpg" type="Texture" id=11]
 [ext_resource path="res://Assets/UI/back-frames/frame_09_delay-0.1s.jpg" type="Texture" id=12]
+[ext_resource path="res://mainmenu/NewGame.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/UI/back-frames/frame_05_delay-0.1s.jpg" type="Texture" id=15]
 [ext_resource path="res://Assets/UI/back-frames/frame_10_delay-0.1s.jpg" type="Texture" id=20]
 [ext_resource path="res://Assets/UI/back-frames/frame_03_delay-0.1s.jpg" type="Texture" id=22]
 [ext_resource path="res://Assets/UI/back-frames/frame_01_delay-0.1s.jpg" type="Texture" id=24]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 8 ) ],
 "loop": true,
@@ -24,7 +26,7 @@ animations = [ {
 "speed": 13.0
 } ]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 6
 font_data = ExtResource( 7 )
 
@@ -83,9 +85,9 @@ __meta__ = {
 [node name="backSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "background"
-frame = 7
+frame = 12
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -106,30 +108,7 @@ position = Vector2( 68.5535, 29.6613 )
 scale = Vector2( 0.216584, 0.216584 )
 texture = ExtResource( 4 )
 
-[node name="NewGame" type="TextureButton" parent="."]
-margin_left = 34.7356
-margin_top = 82.377
-margin_right = 512.736
-margin_bottom = 223.377
-rect_scale = Vector2( 0.15, 0.15 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 1 )
-texture_hover = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="NewGame"]
-margin_left = 149.0
-margin_top = 57.0
-margin_right = 187.0
-margin_bottom = 63.0
-rect_scale = Vector2( 5, 5 )
-custom_fonts/font = SubResource( 2 )
-text = "New Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="NewGame" parent="." instance=ExtResource( 13 )]
 
 [node name="LoadGame" type="TextureButton" parent="."]
 margin_left = 34.9856
@@ -150,36 +129,13 @@ margin_top = 59.4718
 margin_right = 187.0
 margin_bottom = 65.4718
 rect_scale = Vector2( 5, 5 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Load Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ExitGame" type="TextureButton" parent="."]
-margin_left = 34.7356
-margin_top = 134.751
-margin_right = 512.736
-margin_bottom = 275.751
-rect_scale = Vector2( 0.15, 0.15 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 1 )
-texture_hover = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="ExitGame"]
-margin_left = 149.0
-margin_top = 60.1399
-margin_right = 187.0
-margin_bottom = 66.1399
-rect_scale = Vector2( 5, 5 )
-custom_fonts/font = SubResource( 2 )
-text = "Exit Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ExitGame" parent="." instance=ExtResource( 9 )]
 
 [node name="BlackFade" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -194,5 +150,5 @@ __meta__ = {
 anims/fade = SubResource( 3 )
 anims/fadeIn = SubResource( 4 )
 
-[connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
-[connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
+[editable path="NewGame"]
+[editable path="ExitGame"]
