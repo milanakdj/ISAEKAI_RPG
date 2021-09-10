@@ -7,15 +7,15 @@
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://mainmenu/grass.tscn" type="PackedScene" id=6]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 78.0358 )
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 111.616 )
+extents = Vector2( 10, 78.0358 )
 
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 111.616 )
+
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.66022, 21.1948 )
 
 [node name="Walk" type="Control"]
@@ -94,7 +94,7 @@ position = Vector2( 79.423, 94.4399 )
 MAX_SPEED = 5000
 
 [node name="AnimationTree" parent="Player" index="4"]
-parameters/playback = SubResource( 4 )
+parameters/playback = SubResource( 1 )
 
 [node name="PlayerHud" parent="Player/UI" index="0"]
 visible = false
@@ -104,36 +104,36 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 27.5394, 73.4193 )
 scale = Vector2( 1.62806, 1.07845 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 217.356, 73.3697 )
 scale = Vector2( 1.62806, 1.07845 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 117.434, 8.32447 )
 rotation = 1.57079
 scale = Vector2( 1.62806, 1.07845 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 145.886, 122.239 )
 rotation = 1.57079
 scale = Vector2( 1.62806, 1.07845 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 122.202, 52.8494 )
 rotation = 1.57079
 scale = Vector2( 1.62806, 1.07845 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 203.354, 112.083 )
 rotation = 1.57079
 scale = Vector2( 1.62806, 1.07845 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [connection signal="pressed" from="NinePatchRect/ExitGame" to="." method="_on_ExitGame_pressed"]
 

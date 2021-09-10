@@ -1,6 +1,6 @@
 extends Control
 
-signal CloseWalkMenu
+signal CloseRunMenu
 
 
 func _ready():
@@ -8,5 +8,5 @@ func _ready():
 
 
 func _on_ExitGame_pressed():
-	emit_signal("CloseWalkMenu")
+	emit_signal("CloseRunMenu")
 

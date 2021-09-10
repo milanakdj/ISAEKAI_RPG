@@ -1400,6 +1400,25 @@ layer = 2
 [node name="Control" parent="Menu" index="0"]
 mouse_default_cursor_shape = 2
 
+[node name="MarginContainer" parent="Menu/Control/VBoxContainer" index="0"]
+margin_right = 63.0
+
+[node name="Load Game" parent="Menu/Control/VBoxContainer" index="1"]
+margin_left = 1.0
+margin_right = 61.0
+
+[node name="Save Game" parent="Menu/Control/VBoxContainer" index="2"]
+margin_left = 1.0
+margin_right = 61.0
+
+[node name="Tutorial" parent="Menu/Control/VBoxContainer" index="3"]
+margin_left = 1.0
+margin_right = 61.0
+
+[node name="Exit" parent="Menu/Control/VBoxContainer" index="4"]
+margin_left = 1.0
+margin_right = 61.0
+
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]

@@ -210,6 +210,10 @@ __meta__ = {
 
 [connection signal="pressed" from="NinePatchRect/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="NinePatchRect/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="NinePatchRect/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="NinePatchRect/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="NinePatchRect/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="NinePatchRect/TextureButton6" to="." method="_on_TextureButton6_pressed"]
 [connection signal="pressed" from="NinePatchRect/ExitGame" to="." method="_on_ExitGame_pressed"]
 
 [editable path="NinePatchRect/ExitGame"]
