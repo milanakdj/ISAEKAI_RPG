@@ -9,7 +9,7 @@
 [ext_resource path="res://Inventory/PickupZone.gd" type="Script" id=7]
 [ext_resource path="res://UI/PlayerHud.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/pngwing.com (1).png" type="Texture" id=9]
-[ext_resource path="res://Assets/pngwing.com (2).png" type="Texture" id=10]
+[ext_resource path="res://Assets/pngwing.com.png" type="Texture" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
@@ -1398,6 +1398,7 @@ shape = SubResource( 42 )
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="PlayerHud" parent="UI" instance=ExtResource( 8 )]
+visible = false
 
 [node name="glasses" type="Sprite" parent="."]
 position = Vector2( -2.79386e-09, -5.02159 )
@@ -1406,10 +1407,13 @@ scale = Vector2( 0.0070324, -0.0123571 )
 texture = ExtResource( 9 )
 
 [node name="sword" type="Sprite" parent="."]
-position = Vector2( 3, 3 )
+position = Vector2( 4, 3 )
 rotation = 4.2207
-scale = Vector2( 0.02, 0.02 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 10 )
+hframes = 8
+vframes = 8
+frame = 46
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]
