@@ -20,24 +20,24 @@ extents = Vector2( 52.677, 14.0448 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 26.7936, 85.4808 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 26.7936, 85.4808 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 26.7936, 53.2664 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 26.7936, 87.5015 )
 
-[sub_resource type="CapsuleShape2D" id=8]
+[sub_resource type="CapsuleShape2D" id=9]
 height = 44.7715
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=10]
 height = 10.8303
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=11]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=12]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0.75, 3.75 )
@@ -88,31 +88,31 @@ shape = SubResource( 5 )
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 288.879, 67.3847 )
 rotation = 1.57079
-shape = SubResource( 12 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 57.5262, 249.19 )
 rotation = 1.57079
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 256.202, 250.873 )
 rotation = 1.57079
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 42.0729, 178.191 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 280.014, 208.95 )
 rotation = -0.785397
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 304.41, 182.787 )
 rotation = -0.785397
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 136.94, 227.299 )
@@ -133,7 +133,7 @@ target_spawn_position = Vector2( 53, 70 )
 visible = false
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
-shape = SubResource( 10 )
+shape = SubResource( 12 )
 
 [node name="ColorRect" parent="hutDoor/ScreenTransition" index="0"]
 margin_left = -596.79

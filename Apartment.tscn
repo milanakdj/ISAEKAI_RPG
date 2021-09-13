@@ -11,36 +11,36 @@ extents = Vector2( 8, 47.6768 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 47.6768 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 13.2307, 47.6768 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 21.2488, 21.5126 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 29.5803, 9.70822 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 48.9573, 14.1459 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 9.7643, 11.2673 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 63.7669, 125.399 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 23.8894, 179.48 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 21.4561, 102.388 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 23.8761, 83.7116 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=13]
 
 [node name="LevelHouse" type="Node2D"]
 __meta__ = {
@@ -88,52 +88,52 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 13.5019, 43.9949 )
 rotation = -3.14159
-shape = SubResource( 9 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 12.8338, 148.453 )
 rotation = -3.14159
-shape = SubResource( 9 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 47.1334, 134.198 )
 rotation = -3.14159
-shape = SubResource( 10 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 212.172, 141.103 )
 rotation = -3.14159
-shape = SubResource( 11 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 183.254, 74.7398 )
 rotation = -3.14159
-shape = SubResource( 12 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 217.518, 64.2268 )
 rotation = -3.14159
-shape = SubResource( 13 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 323.7, 106.704 )
 rotation = -3.14159
-shape = SubResource( 3 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 161.772, 20.5082 )
 rotation = -1.5708
-shape = SubResource( 4 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 59.7771, 188.696 )
 rotation = -1.5708
-shape = SubResource( 5 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 245.381, 187.107 )
 rotation = -1.5708
-shape = SubResource( 6 )
+shape = SubResource( 11 )
 
 [node name="mat" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 34.8621, 98.2817 )
@@ -150,7 +150,7 @@ position = Vector2( 49.2973, 97.1677 )
 frame = 183
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
-parameters/playback = SubResource( 7 )
+parameters/playback = SubResource( 12 )
 parameters/Idle/blend_position = Vector2( 0.536673, 0.0414201 )
 
 [node name="Gizmo" parent="YSort/Player" index="5"]
@@ -170,14 +170,15 @@ rotation = -2.06458
 [node name="hutDoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( -9.6901, 107.915 )
 target_scene = "res://Scene/Town.tscn"
-target_spawn_position = Vector2( 1843.94, -402.23 )
+target_spawn_position = Vector2( 55, 79 )
 
 [node name="Sprite" parent="hutDoor" index="0"]
+visible = false
 position = Vector2( -1.79762, -21.9662 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 6.10799, -9.65881 )
-shape = SubResource( 8 )
+shape = SubResource( 13 )
 
 [node name="ColorRect" parent="hutDoor/ScreenTransition" index="0"]
 margin_left = -37.0

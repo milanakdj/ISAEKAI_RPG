@@ -20,9 +20,9 @@ extents = Vector2( 8, 77.2941 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 8, 83.7116 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=6]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 
 [node name="LevelHouse" type="Node2D"]
 __meta__ = {
@@ -89,7 +89,7 @@ position = Vector2( 147.861, 164.812 )
 frame = 183
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
-parameters/playback = SubResource( 7 )
+parameters/playback = SubResource( 6 )
 parameters/Idle/blend_position = Vector2( -0.00536674, -0.378698 )
 
 [node name="Gizmo" parent="YSort/Player" index="5"]
@@ -117,7 +117,7 @@ frame = 2
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 6.10799, -9.65881 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]

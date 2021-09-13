@@ -23,29 +23,29 @@ animations = [ {
 "speed": 1.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 107.261 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 16.7222, 32.7619 )
+
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 10, 107.261 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 16.7222, 32.7619 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 10, 107.261 )
-
-[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 31.1922 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 38.6205, 59.1354 )
 
-[sub_resource type="CircleShape2D" id=11]
+[sub_resource type="CircleShape2D" id=9]
 
-[sub_resource type="CircleShape2D" id=12]
+[sub_resource type="CircleShape2D" id=10]
 radius = 15.9044
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=12]
 
 [node name="TownRoom3" type="Node2D"]
 __meta__ = {
@@ -78,55 +78,55 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -1.70095, 88.199 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 105.511, 94.8807 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 82.8531, 89.3185 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 75.7263, -6.68176 )
 rotation = 1.57079
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 97.1079, 167.043 )
 rotation = 1.57079
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 10.2453, 168.38 )
 rotation = 1.57079
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 57.5121, 31.9097 )
 rotation = 1.57079
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 27.0163, 73.103 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 9.53517, 73.103 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 9.2703, 102.503 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 57.4759, 75.4867 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 90.0544, 140.909 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -137,7 +137,7 @@ position = Vector2( 55.6605, 135.066 )
 frame = 183
 
 [node name="AnimationTree" parent="YSort/Player" index="4"]
-parameters/playback = SubResource( 4 )
+parameters/playback = SubResource( 11 )
 parameters/Idle/blend_position = Vector2( 0.00715566, 0.704142 )
 
 [node name="Gizmo" parent="YSort/Player" index="5"]
@@ -173,7 +173,7 @@ position = Vector2( 2.96459, -76.7315 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 10.2315, -57.4642 )
-shape = SubResource( 5 )
+shape = SubResource( 12 )
 
 [node name="ColorRect" parent="hutDoor/ScreenTransition" index="0"]
 margin_left = -352.413
