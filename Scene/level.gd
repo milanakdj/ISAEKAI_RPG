@@ -14,7 +14,9 @@ func _ready():
 		$AnimationPlayer.play("fadeOut")
 	else:
 		$PlayerSprite.queue_free()
-
+	$Menu.connect("CloseMenu", self, "_on_Exit")	
+	
+	
 func _fade_complete():
 	$AnimationPlayer.play("playerWake")
 
@@ -33,14 +35,15 @@ func _on_done():
 	
 	
 func _input(event):
-	if event.is_action_pressed("open_menu"):
+	if event.is_action_pressed("open_menu") and $Menu/Control.visible == false:
 		$Menu/Control.visible = true
 		$Menu/Control/backMusic.playing = true
-		
+		#$Menu._unhandled_input(event)
+	elif event.is_action_pressed("open_menu") and $Menu/Control.visible == true:
+		pass
 
-	
-
-
-func _on_Exit_pressed():
+func _on_Exit():
 	$Menu/Control.visible = false
 	$Menu/Control/backMusic.playing = false
+
+

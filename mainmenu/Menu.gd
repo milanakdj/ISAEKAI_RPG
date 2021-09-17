@@ -10,7 +10,7 @@ onready var selectedarrow = $Control/TextureRect
 onready var music = $Control/backMusic
 
 enum ScreenLoaded { NOTHING, JUST_MENU, TUTORIAL}
-export var screenLoaded = ScreenLoaded.NOTHING
+var screenLoaded = ScreenLoaded.NOTHING
 
 var selected_option: int = 0
 
@@ -26,6 +26,7 @@ func _unhandled_input(event):
 				player.set_physics_process(false)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
 				menu.visible = true 
+				$Control/backMusic.playing = true
 				screenLoaded = ScreenLoaded.JUST_MENU
 				
 		ScreenLoaded.JUST_MENU:
@@ -57,6 +58,7 @@ func _unhandled_input(event):
 					2:
 						_on_Tutorial_pressed()
 					3:
+						screenLoaded = ScreenLoaded.NOTHING
 						emit_signal("CloseMenu")
 						
 		ScreenLoaded.TUTORIAL:
@@ -64,8 +66,9 @@ func _unhandled_input(event):
 				menu.visible = false
 				screenLoaded = ScreenLoaded.NOTHING
 				
-
+	print(screenLoaded)
 func _on_Exit():
+	screenLoaded = ScreenLoaded.NOTHING
 	emit_signal("CloseMenu")
 
 func _on_Tutorial_pressed():
@@ -78,4 +81,5 @@ func CloseTutorialMenus():
 
 
 func _on_Exit_pressed():
+	screenLoaded = ScreenLoaded.NOTHING
 	emit_signal("CloseMenu")
