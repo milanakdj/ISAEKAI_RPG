@@ -66,7 +66,7 @@ func _unhandled_input(event):
 				menu.visible = false
 				screenLoaded = ScreenLoaded.NOTHING
 				
-	print(screenLoaded)
+
 func _on_Exit():
 	screenLoaded = ScreenLoaded.NOTHING
 	emit_signal("CloseMenu")

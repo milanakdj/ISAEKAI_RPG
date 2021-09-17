@@ -1347,11 +1347,13 @@ shape = SubResource( 1 )
 color = Color( 0, 0, 0, 0.027451 )
 
 [node name="hutDoor" parent="." instance=ExtResource( 16 )]
-position = Vector2( -68.897, 17.8787 )
-target_scene = "res://Apartment.tscn"
+position = Vector2( -67.8363, 18.9394 )
+target_scene = "res://TownRoom1.tscn"
 
 [node name="Sprite" parent="hutDoor" index="0"]
 visible = false
+position = Vector2( 0, -3.18198 )
+scale = Vector2( 1, 1.39775 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 7.0477, 7.0113 )
@@ -1398,7 +1400,7 @@ margin_bottom = 572.836
 
 [node name="hutDoor4" parent="." instance=ExtResource( 16 )]
 position = Vector2( 394.254, -83.615 )
-target_scene = "res://TownRoom3.tscn"
+target_scene = "res://TownRoom4.tscn"
 
 [node name="Sprite" parent="hutDoor4" index="0"]
 visible = false
@@ -1468,7 +1470,7 @@ margin_bottom = 570.218
 
 [node name="hutDoor7" parent="." instance=ExtResource( 16 )]
 position = Vector2( 549.017, 230.828 )
-target_scene = "res://TownRoom6.tscn"
+target_scene = "res://TownRoom7.tscn"
 
 [node name="Sprite" parent="hutDoor7" index="0"]
 visible = false
@@ -1485,10 +1487,10 @@ anims/closedoor = SubResource( 19 )
 anims/opendoor = SubResource( 20 )
 
 [node name="ColorRect" parent="hutDoor7/ScreenTransition" index="0"]
-margin_left = -221.677
-margin_top = -279.782
-margin_right = 707.323
-margin_bottom = 570.218
+margin_left = -223.091
+margin_top = -282.787
+margin_right = 705.909
+margin_bottom = 567.213
 
 [node name="hutDoor8" parent="." instance=ExtResource( 16 )]
 position = Vector2( -126.238, 252.96 )
@@ -1507,6 +1509,10 @@ shape = SubResource( 2 )
 anims/FadeToBlack = SubResource( 21 )
 anims/closedoor = SubResource( 22 )
 anims/opendoor = SubResource( 23 )
+
+[node name="ColorRect" parent="hutDoor8/ScreenTransition" index="0"]
+margin_top = 0.595276
+margin_bottom = 181.595
 
 [node name="Menu" parent="." instance=ExtResource( 17 )]
 layer = 2

@@ -115,7 +115,7 @@ rotation = -0.785397
 shape = SubResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 136.94, 227.299 )
+position = Vector2( 139.768, 214.925 )
 
 [node name="AnimationTree" parent="Player" index="4"]
 parameters/playback = SubResource( 11 )
@@ -127,7 +127,7 @@ current = true
 [node name="hutDoor" parent="." instance=ExtResource( 2 )]
 position = Vector2( 130.402, 258.284 )
 target_scene = "res://Scene/Town.tscn"
-target_spawn_position = Vector2( 53, 70 )
+target_spawn_position = Vector2( -56, 62 )
 
 [node name="Sprite" parent="hutDoor" index="0"]
 visible = false
