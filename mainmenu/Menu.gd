@@ -7,6 +7,7 @@ export var currentScene = "Town"
 
 onready var menu = $Control
 onready var selectedarrow = $Control/TextureRect
+onready var music = $Control/backMusic
 
 enum ScreenLoaded { NOTHING, JUST_MENU, TUTORIAL}
 var screenLoaded = ScreenLoaded.NOTHING
@@ -22,16 +23,16 @@ func _unhandled_input(event):
 		ScreenLoaded.NOTHING:
 			if event.is_action_pressed("open_menu"):
 				
-				#var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
-				#player.set_physics_process(false)
-				#get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
+				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+				player.set_physics_process(false)
+				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
 					
 				menu.visible = true 
 				screenLoaded = ScreenLoaded.JUST_MENU
 				
 		ScreenLoaded.JUST_MENU:
 			if event.is_action_pressed("open_menu") or event.is_action_pressed("x"):
-				menu.visible = false
+				_on_Exit_pressed()
 				screenLoaded = ScreenLoaded.NOTHING
 				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
 				player.set_physics_process(true)
@@ -65,4 +66,4 @@ func _on_Tutorial_pressed():
 	get_node("Control/TutorialMenu").connect("CloseTutorialMenu", self, "CloseTutorialMenus")
 	
 func CloseTutorialMenus():
-	get_node("TutorialMenu").queue_free()
+	get_node("Control/TutorialMenu").queue_free()

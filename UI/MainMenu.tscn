@@ -87,7 +87,7 @@ position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 13
+frame = 6
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -136,6 +136,7 @@ __meta__ = {
 }
 
 [node name="ExitGame" parent="." instance=ExtResource( 9 )]
+rect_scale = Vector2( 0.15, 0.15 )
 
 [node name="BlackFade" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -149,6 +150,9 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fade = SubResource( 3 )
 anims/fadeIn = SubResource( 4 )
+
+[connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
 
 [editable path="NewGame"]
 [editable path="ExitGame"]

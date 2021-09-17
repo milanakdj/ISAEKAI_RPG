@@ -1,6 +1,6 @@
 extends Control
 
-var start = preload("res://Scene/Town.tscn");
+var start = preload("res://Scene/Start-Cutscene.tscn");
 
 func _ready():
 	$AnimationPlayer.play("fadeIn");

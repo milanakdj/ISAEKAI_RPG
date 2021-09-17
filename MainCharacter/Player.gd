@@ -68,8 +68,8 @@ func move_state(delta):
 		animationTree.set("parameters/AttackOneHand/blend_position", input_vector)
 		animationState.travel("Walk")
 		if Input.is_action_pressed("run"):
-			ACCELERATION = 5000#500
-			MAX_SPEED = 8000#80
+			ACCELERATION = 500#500
+			MAX_SPEED = 80#80
 		else:
 			ACCELERATION = 300#300
 			MAX_SPEED = 50#50
