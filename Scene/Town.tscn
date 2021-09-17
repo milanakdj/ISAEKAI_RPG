@@ -1511,15 +1511,11 @@ anims/opendoor = SubResource( 23 )
 [node name="Menu" parent="." instance=ExtResource( 17 )]
 layer = 2
 
-[node name="Control" parent="Menu" index="0"]
-mouse_default_cursor_shape = 2
-
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="pressed" from="Menu/Control/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 
 [editable path="MainCamera"]
 [editable path="Door"]
@@ -1531,4 +1527,3 @@ mouse_default_cursor_shape = 2
 [editable path="hutDoor6"]
 [editable path="hutDoor7"]
 [editable path="hutDoor8"]
-[editable path="Menu"]
