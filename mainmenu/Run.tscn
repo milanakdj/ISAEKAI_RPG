@@ -92,9 +92,6 @@ position = Vector2( 74.2461, 81.6708 )
 [node name="AnimationTree" parent="Player" index="4"]
 parameters/playback = SubResource( 1 )
 
-[node name="PlayerHud" parent="Player/UI" index="0"]
-visible = false
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
