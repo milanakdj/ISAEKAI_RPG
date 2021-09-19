@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/up.png" type="Texture" id=1]
+[ext_resource path="res://Assets/esc.png" type="Texture" id=2]
+[ext_resource path="res://Assets/space.png" type="Texture" id=3]
+
+[node name="MobileContorls" type="CanvasLayer"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2( 0.257088, 149.421 )
+rotation = -1.5708
+scale = Vector2( 0.11553, 0.0900893 )
+normal = ExtResource( 1 )
+action = "left"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2( 67.6883, 123.083 )
+rotation = 1.5708
+scale = Vector2( 0.116, 0.09 )
+normal = ExtResource( 1 )
+action = "right"
+
+[node name="Up" type="TouchScreenButton" parent="."]
+position = Vector2( 20.8754, 109.383 )
+scale = Vector2( 0.116, 0.09 )
+normal = ExtResource( 1 )
+action = "up"
+
+[node name="Down" type="TouchScreenButton" parent="."]
+position = Vector2( 46.8283, 161.915 )
+rotation = 3.14159
+scale = Vector2( 0.116, 0.09 )
+normal = ExtResource( 1 )
+action = "down"
+
+[node name="Esc" type="TouchScreenButton" parent="."]
+scale = Vector2( 0.116, 0.09 )
+normal = ExtResource( 2 )
+action = "escape"
+
+[node name="Space" type="TouchScreenButton" parent="."]
+position = Vector2( 206.03, 127.542 )
+scale = Vector2( 0.116, 0.09 )
+normal = ExtResource( 3 )
+action = "ui_accept"
+
+[node name="j" type="TouchScreenButton" parent="."]
+
+[node name="k" type="TouchScreenButton" parent="."]
