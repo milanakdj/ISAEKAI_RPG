@@ -37,6 +37,7 @@ func _on_TextureButton3_pressed():
 	var attack_menu = load("res://mainmenu/Attack.tscn").instance()
 	add_child(attack_menu)
 	get_node("Attack").connect("CloseAttackMenu", self, "CloseAttackMenu")
+	
 
 
 func CloseAttackMenu():
