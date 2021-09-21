@@ -81,5 +81,8 @@ func CloseTutorialMenus():
 
 
 func _on_Exit_pressed():
-	screenLoaded = ScreenLoaded.NOTHING
 	emit_signal("CloseMenu")
+	screenLoaded = ScreenLoaded.NOTHING
+	var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+	player.set_physics_process(true)
+	get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
