@@ -10,8 +10,10 @@ func can_see_player():
 
 func _on_PlayerDetection_body_entered(body):
 	player = body
-	emit_signal("entered")
+	emit_signal("entered",body)
 
-func _on_PlayerDetection_body_exited(_body):
+func _on_PlayerDetection_body_exited(body):
+	print("hhhh")
 	player = null
-	emit_signal("exited")
+	emit_signal("exited", body)
+	

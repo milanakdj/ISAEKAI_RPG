@@ -3,6 +3,7 @@ extends Node2D
 var cursor = load("res://cursor.png")
 
 func _ready():
+	$Skeleton.visible = false
 	if Global.spawn_position:
 		$YSort/Player.global_position = Global.spawn_position
 	Input.set_custom_mouse_cursor(cursor)
@@ -47,3 +48,11 @@ func _on_Exit():
 	$Menu/Control/backMusic.playing = false
 
 
+
+
+func _on_first_scene_body_entered(body):
+	print('hallow')
+	if body.name.begins_with("Player"):
+		$Skeleton.visible = true
+		$Skeleton/AnimationPlayer.play("WalkDown (follow)")
+	

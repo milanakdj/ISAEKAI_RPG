@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1632381243.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, buddy call me guy"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.6
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.5",
+		"file": "timeline-1632381278.json",
+		"name": "timeline-1"
+	}
+}
