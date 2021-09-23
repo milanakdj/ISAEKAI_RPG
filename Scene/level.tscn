@@ -21,6 +21,35 @@
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
+[sub_resource type="Animation" id=7]
+resource_name = "WalkDown (follow)"
+tracks/0/type = "value"
+tracks/0/path = NodePath("SkeletonSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 131, 132, 133, 134, 135, 136, 137, 138, 138, 125 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SkeletonSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.00350761, -8.09595 ), Vector2( 0.180237, 30.9717 ) ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
+
 [sub_resource type="Animation" id=2]
 length = 6.0
 tracks/0/type = "value"
@@ -100,35 +129,6 @@ extents = Vector2( 10, 7.763 )
 
 [sub_resource type="CapsuleShape2D" id=6]
 height = 84.1604
-
-[sub_resource type="Animation" id=7]
-resource_name = "WalkDown (follow)"
-tracks/0/type = "value"
-tracks/0/path = NodePath("SkeletonSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 131, 132, 133, 134, 135, 136, 137, 138, 138, 125 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("SkeletonSprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.00350761, -8.09595 ), Vector2( 0.180237, 30.9717 ) ]
-}
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
 
 [node name="level" type="Node2D"]
 script = ExtResource( 11 )
@@ -1449,6 +1449,39 @@ position = Vector2( -628.119, 577.584 )
 [node name="Grass12" parent="YSort/Grasses" instance=ExtResource( 8 )]
 position = Vector2( -663.645, 715.057 )
 
+[node name="Skeleton" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -466.482, 756.946 )
+collision_mask = 2
+
+[node name="SkeletonSprite" parent="YSort/Skeleton" index="0"]
+position = Vector2( 0.180237, 30.9717 )
+frame = 125
+
+[node name="AnimationPlayer" parent="YSort/Skeleton" index="1"]
+"anims/WalkDown (follow)" = SubResource( 7 )
+
+[node name="CollisionShape2D" parent="YSort/Skeleton" index="2"]
+position = Vector2( -0.960938, 37.4844 )
+
+[node name="HurtBox" parent="YSort/Skeleton" index="3"]
+position = Vector2( 0, 42.5404 )
+
+[node name="PlayerDetection" parent="YSort/Skeleton" index="4"]
+position = Vector2( -8.0181, 32.7407 )
+scale = Vector2( 0.762539, 0.621752 )
+
+[node name="CollisionShape2D" parent="YSort/Skeleton/PlayerDetection" index="0"]
+position = Vector2( 0, 18.4861 )
+
+[node name="AnimationTree" parent="YSort/Skeleton" index="5"]
+parameters/playback = SubResource( 8 )
+parameters/Idle/blend_position = Vector2( -0.00164205, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="YSort/Skeleton"]
+position = Vector2( 0, 16.4766 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 18 )
+
 [node name="Hut" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 1865.93, -510.653 )
 
@@ -1506,41 +1539,15 @@ collision_mask = 2
 position = Vector2( -495.654, 780.522 )
 shape = SubResource( 6 )
 
-[node name="Skeleton" parent="." instance=ExtResource( 17 )]
-position = Vector2( -467.818, 750.264 )
-collision_mask = 2
-
-[node name="SkeletonSprite" parent="Skeleton" index="0"]
-position = Vector2( 0.180237, 30.9717 )
-frame = 125
-
-[node name="AnimationPlayer" parent="Skeleton" index="1"]
-"anims/WalkDown (follow)" = SubResource( 7 )
-
-[node name="PlayerDetection" parent="Skeleton" index="4"]
-position = Vector2( -8.0181, 32.7407 )
-scale = Vector2( 0.762539, 0.621752 )
-
-[node name="CollisionShape2D" parent="Skeleton/PlayerDetection" index="0"]
-position = Vector2( 0, 18.4861 )
-
-[node name="AnimationTree" parent="Skeleton" index="5"]
-parameters/playback = SubResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="Skeleton"]
-position = Vector2( 0, 16.4766 )
-scale = Vector2( 0.01, 0.01 )
-texture = ExtResource( 18 )
-
 [connection signal="pressed" from="Menu/Control/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="body_entered" from="first_scene" to="." method="_on_first_scene_body_entered"]
 
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]
 [editable path="YSort/Player/HurtBox"]
+[editable path="YSort/Skeleton"]
+[editable path="YSort/Skeleton/PlayerDetection"]
 [editable path="MainCamera"]
 [editable path="Door"]
 [editable path="hutDoor"]
 [editable path="Menu"]
-[editable path="Skeleton"]
-[editable path="Skeleton/PlayerDetection"]

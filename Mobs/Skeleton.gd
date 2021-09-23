@@ -30,7 +30,6 @@ func on_NPC_body_entered(body):
 		active = true		
 	
 func on_NPC_body_exited(body):
-	print("hello")
 	if body.name == 'Player':
 		active = false 
 		
@@ -45,8 +44,11 @@ func _input(event):
 
 func unpause(timeline_name):
 	get_tree().paused = false
+	start_animations()
+	state = ATTACK	
 	
-	
+func start_animations():
+	$AnimationTree.active = true
 	
 func _physics_process(delta):		
 	$Sprite.visible = active 
