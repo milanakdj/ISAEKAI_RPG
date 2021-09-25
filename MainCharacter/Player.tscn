@@ -1417,6 +1417,7 @@ vframes = 8
 frame = 46
 
 [node name="MobileContorls" parent="." instance=ExtResource( 11 )]
+layer = 5
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="invincibility_ended" from="HurtBox" to="." method="_on_HurtBox_invincibility_ended"]

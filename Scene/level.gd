@@ -4,6 +4,8 @@ var cursor = load("res://cursor.png")
 
 func _ready():
 	$YSort/Skeleton.visible = false
+	$YSort/Bat.visible = false
+	$YSort/Bat2.visible = false
 	if Global.spawn_position:
 		$YSort/Player.global_position = Global.spawn_position
 	Input.set_custom_mouse_cursor(cursor)
@@ -56,3 +58,15 @@ func _on_first_scene_body_entered(body):
 		$YSort/Skeleton.visible = true
 		$YSort/Skeleton/AnimationPlayer.play("WalkDown (follow)")
 	
+
+
+func _on_first_scene2_body_entered(body):
+	if body.name.begins_with("Player"):
+		$YSort/Bat.visible = true
+		
+
+
+
+func _on_first_scene3_body_entered(body):
+	if body.name.begins_with("Player"):
+		$YSort/Bat2.visible = true

@@ -36,6 +36,8 @@ func _ready():
 	hitBox.damage = damage
 	wandering_state()
 	health_bar.visible = false
+	
+	
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, 200*delta)
