@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://mainmenu/Menu.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Grass.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Butterfly.tscn" type="PackedScene" id=19]
+[ext_resource path="res://daynightcycle.tscn" type="PackedScene" id=20]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.7814
@@ -1516,6 +1517,8 @@ margin_bottom = 181.595
 
 [node name="Menu" parent="." instance=ExtResource( 17 )]
 layer = 2
+
+[node name="CanvasModulate" parent="." instance=ExtResource( 20 )]
 
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]

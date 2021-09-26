@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Extra/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Static/Building/Hut.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Assets/Shaders/WhiteColor.shader" type="Shader" id=19]
 [ext_resource path="res://Mobs/Bat.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Butterfly.tscn" type="PackedScene" id=21]
+[ext_resource path="res://daynightcycle.tscn" type="PackedScene" id=22]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -1661,7 +1662,7 @@ position = Vector2( -93.9634, 773.132 )
 
 [node name="BatSprite" parent="YSort/Bat" index="0"]
 material = SubResource( 4 )
-frame = 0
+frame = 1
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 81.3231, 772.975 )
@@ -1669,7 +1670,7 @@ script = SubResource( 5 )
 
 [node name="BatSprite" parent="YSort/Bat2" index="0"]
 material = SubResource( 4 )
-frame = 0
+frame = 1
 
 [node name="AnimationPlayer" parent="YSort/Bat2" index="10"]
 anims/Blink = SubResource( 6 )
@@ -1823,6 +1824,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene3"]
 position = Vector2( -495.654, 780.522 )
 shape = SubResource( 12 )
+
+[node name="CanvasModulate" parent="." instance=ExtResource( 22 )]
 
 [connection signal="pressed" from="Menu/Control/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="body_entered" from="first_scene" to="." method="_on_first_scene_body_entered"]
