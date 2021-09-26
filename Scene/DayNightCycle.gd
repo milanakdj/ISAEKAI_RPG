@@ -8,4 +8,4 @@ var time = 0
 
 func _process(delta):
 	self.time  += delta * Time_scale
-	self.color = Night_color.linear_interpolate(Day_color, abs(sin(time))	)
+	self.color = Night_color.linear_interpolate(Day_color, ((sin(time)+1)/2))
