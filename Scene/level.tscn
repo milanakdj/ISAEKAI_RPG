@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Extra/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Static/Building/Hut.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Assets/pngkey.com-super-mario-world-png-1684674.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Shaders/WhiteColor.shader" type="Shader" id=19]
 [ext_resource path="res://Mobs/Bat.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Butterfly.tscn" type="PackedScene" id=21]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -57,7 +58,7 @@ resource_local_to_scene = true
 shader = ExtResource( 19 )
 shader_param/active = false
 
-[sub_resource type="GDScript" id=12]
+[sub_resource type="GDScript" id=5]
 script/source = "extends KinematicBody2D
 
 const FORCE = 120
@@ -190,7 +191,7 @@ func drop_coin():
 		coin_drops.global_position = global_position
 "
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=6]
 resource_name = "Blink"
 length = 0.2
 loop = true
@@ -207,7 +208,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=7]
 resource_name = "Stop"
 length = 0.1
 tracks/0/type = "value"
@@ -223,7 +224,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 length = 6.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
@@ -264,7 +265,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=9]
 length = 0.9
 tracks/0/type = "value"
 tracks/0/path = NodePath("PlayerSprite:frame")
@@ -293,14 +294,14 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=10]
 radius = 16.0
 height = 35.1825
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 10, 7.763 )
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=12]
 height = 84.1604
 
 [node name="level" type="Node2D"]
@@ -1660,26 +1661,101 @@ position = Vector2( -93.9634, 773.132 )
 
 [node name="BatSprite" parent="YSort/Bat" index="0"]
 material = SubResource( 4 )
-frame = 4
+frame = 0
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 81.3231, 772.975 )
-script = SubResource( 12 )
+script = SubResource( 5 )
 
 [node name="BatSprite" parent="YSort/Bat2" index="0"]
 material = SubResource( 4 )
-frame = 4
+frame = 0
 
 [node name="AnimationPlayer" parent="YSort/Bat2" index="10"]
-anims/Blink = SubResource( 10 )
-anims/Stop = SubResource( 11 )
+anims/Blink = SubResource( 6 )
+anims/Stop = SubResource( 7 )
 
 [node name="Hut" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 1865.93, -510.653 )
 
+[node name="Butterfly" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -618.677, 600.871 )
+
+[node name="Butterfly2" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -498.333, 573.027 )
+
+[node name="Butterfly3" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -631.419, 651.368 )
+
+[node name="Butterfly4" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -396.394, 763.218 )
+
+[node name="Butterfly5" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -276.05, 735.373 )
+
+[node name="Butterfly6" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -409.136, 813.715 )
+
+[node name="Butterfly7" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -41.1351, 743.013 )
+
+[node name="Butterfly8" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 79.2089, 715.169 )
+
+[node name="Butterfly9" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -53.8773, 793.51 )
+
+[node name="Butterfly10" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 37.9985, 422.55 )
+
+[node name="Butterfly11" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 96.0457, 293.684 )
+
+[node name="Butterfly12" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 84.1856, 499.987 )
+
+[node name="Butterfly13" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 24.5289, 123.414 )
+
+[node name="Butterfly14" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 82.5762, -5.45187 )
+
+[node name="Butterfly15" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 70.716, 200.85 )
+
+[node name="Butterfly19" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 512.8, 286.732 )
+
+[node name="Butterfly20" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 656.715, 189.295 )
+
+[node name="Butterfly22" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 656.715, 189.295 )
+
+[node name="Butterfly23" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 509.433, 570.154 )
+
+[node name="Butterfly24" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 653.348, 472.717 )
+
+[node name="Butterfly25" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 653.348, 472.717 )
+
+[node name="Butterfly21" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 651.029, 332.74 )
+
+[node name="Butterfly16" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 444.891, 40.352 )
+
+[node name="Butterfly17" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 332.885, -7.69681 )
+
+[node name="Butterfly18" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 601.641, 42.022 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/fadeOut = SubResource( 5 )
-anims/playerWake = SubResource( 6 )
+anims/fadeOut = SubResource( 8 )
+anims/playerWake = SubResource( 9 )
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
 position = Vector2( -564.408, 576.696 )
@@ -1698,7 +1774,7 @@ target_spawn_position = Vector2( -120.8, 97.167 )
 
 [node name="CollisionShape2D" parent="Door" index="0"]
 position = Vector2( 12.0093, -25.4449 )
-shape = SubResource( 7 )
+shape = SubResource( 10 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1718,7 +1794,7 @@ target_scene = "res://LevelHouse.tscn"
 target_spawn_position = Vector2( 147, 164 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
-shape = SubResource( 8 )
+shape = SubResource( 11 )
 
 [node name="Menu" parent="." instance=ExtResource( 15 )]
 layer = 2
@@ -1729,7 +1805,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene"]
 position = Vector2( -495.654, 780.522 )
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="first_scene2" type="Area2D" parent="."]
 position = Vector2( 342.773, -2.89545 )
@@ -1737,7 +1813,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene2"]
 position = Vector2( -495.654, 780.522 )
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="first_scene3" type="Area2D" parent="."]
 position = Vector2( 342.773, -2.89545 )
@@ -1746,7 +1822,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene3"]
 position = Vector2( -495.654, 780.522 )
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [connection signal="pressed" from="Menu/Control/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 [connection signal="body_entered" from="first_scene" to="." method="_on_first_scene_body_entered"]

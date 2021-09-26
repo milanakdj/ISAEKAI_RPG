@@ -1,8 +1,9 @@
-[gd_scene load_steps=126 format=2]
+[gd_scene load_steps=128 format=2]
 
 [ext_resource path="res://Assets/butterfly.png" type="Texture" id=1]
 [ext_resource path="res://AI/WandererController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Butterfly.gd" type="Script" id=3]
+[ext_resource path="res://AI/HurtBox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -614,6 +615,9 @@ animations = [ {
 
 [sub_resource type="CircleShape2D" id=122]
 
+[sub_resource type="CircleShape2D" id=123]
+radius = 3.55931
+
 [node name="Butterfly" type="KinematicBody2D"]
 collision_layer = 0
 collision_mask = 0
@@ -622,7 +626,7 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 121 )
-frame = 74
+frame = 58
 playing = true
 centered = false
 
@@ -631,3 +635,16 @@ shape = SubResource( 122 )
 
 [node name="WandererController" parent="." instance=ExtResource( 2 )]
 wander_range = 10
+
+[node name="HurtBox" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3.71231, 9.10401 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2( -0.26175, -5.91042 )
+shape = SubResource( 123 )
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+
+[editable path="HurtBox"]

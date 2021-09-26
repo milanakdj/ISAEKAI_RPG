@@ -49,3 +49,7 @@ func pick_random_state(state_list):
 func wandering_state():
 	state = pick_random_state([IDLE,WANDER])
 	WandererController.start_wander_timer(rand_range(1,3))
+
+
+func _on_HurtBox_area_entered(area):
+	queue_free()
