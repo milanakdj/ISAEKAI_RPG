@@ -3,7 +3,7 @@
 [ext_resource path="res://LoadingBar.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.188235, 0.858824, 0.929412, 1 )
+bg_color = Color( 0.980392, 0.0705882, 0, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -14,7 +14,15 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.87451, 0.0745098, 0.0745098, 1 )
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="LoadingBar" type="Control"]
 margin_right = 40.0
@@ -28,15 +36,20 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 378.0
 margin_bottom = 267.0
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = 43.423
-margin_top = 51.4412
-margin_right = 215.423
-margin_bottom = 65.4411
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 18.7701
+margin_top = 53.2957
+margin_right = 190.77
+margin_bottom = 71.2957
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
 value = 50.0

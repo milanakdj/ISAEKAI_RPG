@@ -13,7 +13,7 @@ func _on_PlayerDetection_body_entered(body):
 	emit_signal("entered",body)
 
 func _on_PlayerDetection_body_exited(body):
-	print("hhhh")
+	
 	player = null
 	emit_signal("exited", body)
 	

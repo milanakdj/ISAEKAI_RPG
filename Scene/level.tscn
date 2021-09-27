@@ -299,7 +299,7 @@ tracks/1/keys = {
 radius = 16.0
 height = 35.1825
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=11]
 resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
@@ -338,10 +338,10 @@ tracks/2/keys = {
 "values": [ 2, 1 ]
 }
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 10, 7.763 )
 
-[sub_resource type="CapsuleShape2D" id=12]
+[sub_resource type="CapsuleShape2D" id=13]
 height = 84.1604
 
 [node name="level" type="Node2D"]
@@ -1701,7 +1701,6 @@ position = Vector2( -93.9634, 773.132 )
 
 [node name="BatSprite" parent="YSort/Bat" index="0"]
 material = SubResource( 4 )
-frame = 0
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 81.3231, 772.975 )
@@ -1709,7 +1708,6 @@ script = SubResource( 5 )
 
 [node name="BatSprite" parent="YSort/Bat2" index="0"]
 material = SubResource( 4 )
-frame = 0
 
 [node name="AnimationPlayer" parent="YSort/Bat2" index="10"]
 anims/Blink = SubResource( 6 )
@@ -1821,7 +1819,7 @@ position = Vector2( 12.0093, -25.4449 )
 shape = SubResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
-anims/fade = SubResource( 24 )
+anims/fade = SubResource( 11 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Door"]
 layer = 2
@@ -1853,7 +1851,7 @@ target_scene = "res://LevelHouse.tscn"
 target_spawn_position = Vector2( 147, 164 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="Menu" parent="." instance=ExtResource( 15 )]
 layer = 2
@@ -1864,7 +1862,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene"]
 position = Vector2( -495.654, 780.522 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="first_scene2" type="Area2D" parent="."]
 position = Vector2( 342.773, -2.89545 )
@@ -1872,7 +1870,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene2"]
 position = Vector2( -495.654, 780.522 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="first_scene3" type="Area2D" parent="."]
 position = Vector2( 342.773, -2.89545 )
@@ -1881,7 +1879,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="first_scene3"]
 position = Vector2( -495.654, 780.522 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="CanvasModulate" parent="." instance=ExtResource( 22 )]
 

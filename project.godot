@@ -63,6 +63,7 @@ Global="*res://Scripts/Global.gd"
 UserInterface="*res://UI/UserInterface.tscn"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 SceneChanger="res://SceneChanger.gd"
+MusicController="*res://MusicController.tscn"
 
 [display]
 

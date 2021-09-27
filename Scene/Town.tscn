@@ -25,7 +25,7 @@
 radius = 7.7814
 height = 52.0465
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=2]
 resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
@@ -64,10 +64,9 @@ tracks/2/keys = {
 "values": [ 2, 1 ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
-[sub_resource type="Animation" id=3]
-resource_name = "FadeToBlack"
+[sub_resource type="Animation" id=4]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
@@ -93,54 +92,11 @@ tracks/1/keys = {
 "values": [ {
 "args": [  ],
 "method": "changes_the_scene"
-} ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "closedoor"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ true, false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 2, 1, 0 ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "fade_animation"
 } ]
 }
 
 [sub_resource type="Animation" id=5]
-resource_name = "opendoor"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -148,10 +104,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -160,10 +116,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2 ]
+"values": [ 2, 1, 0 ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -172,89 +128,86 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "closeanimation"
+"method": "fade_animation"
 } ]
 }
 
 [sub_resource type="Animation" id=6]
-resource_name = "FadeToBlack"
-length = 1.5
+length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ true ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "changes_the_scene"
+"method": "closeanimation"
 } ]
 }
 
 [sub_resource type="Animation" id=7]
-resource_name = "closedoor"
-length = 0.6
+length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:visible")
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true, false ]
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 2, 1, 0 ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
+"times": PoolRealArray( 1.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "fade_animation"
+"method": "changes_the_scene"
 } ]
 }
 
 [sub_resource type="Animation" id=8]
-resource_name = "opendoor"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -262,10 +215,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -274,10 +227,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2 ]
+"values": [ 2, 1, 0 ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -286,89 +239,86 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "closeanimation"
+"method": "fade_animation"
 } ]
 }
 
 [sub_resource type="Animation" id=9]
-resource_name = "FadeToBlack"
-length = 1.5
+length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ true ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "changes_the_scene"
+"method": "closeanimation"
 } ]
 }
 
 [sub_resource type="Animation" id=10]
-resource_name = "closedoor"
-length = 0.6
+length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:visible")
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true, false ]
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 2, 1, 0 ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
+"times": PoolRealArray( 1.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "fade_animation"
+"method": "changes_the_scene"
 } ]
 }
 
 [sub_resource type="Animation" id=11]
-resource_name = "opendoor"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -376,10 +326,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -388,10 +338,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2 ]
+"values": [ 2, 1, 0 ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -400,89 +350,86 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "closeanimation"
+"method": "fade_animation"
 } ]
 }
 
 [sub_resource type="Animation" id=12]
-resource_name = "FadeToBlack"
-length = 1.5
+length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ true ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "changes_the_scene"
+"method": "closeanimation"
 } ]
 }
 
 [sub_resource type="Animation" id=13]
-resource_name = "closedoor"
-length = 0.6
+length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:visible")
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true, false ]
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 2, 1, 0 ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
+"times": PoolRealArray( 1.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "fade_animation"
+"method": "changes_the_scene"
 } ]
 }
 
 [sub_resource type="Animation" id=14]
-resource_name = "opendoor"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -490,10 +437,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -502,10 +449,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2 ]
+"values": [ 2, 1, 0 ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -514,89 +461,86 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "closeanimation"
+"method": "fade_animation"
 } ]
 }
 
 [sub_resource type="Animation" id=15]
-resource_name = "FadeToBlack"
-length = 1.5
+length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ true ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "changes_the_scene"
+"method": "closeanimation"
 } ]
 }
 
 [sub_resource type="Animation" id=16]
-resource_name = "closedoor"
-length = 0.6
+length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:visible")
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true, false ]
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 2, 1, 0 ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
+"times": PoolRealArray( 1.5 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "fade_animation"
+"method": "changes_the_scene"
 } ]
 }
 
 [sub_resource type="Animation" id=17]
-resource_name = "opendoor"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -604,10 +548,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -616,10 +560,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2 ]
+"values": [ 2, 1, 0 ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -628,88 +572,15 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "closeanimation"
+"method": "fade_animation"
 } ]
 }
 
 [sub_resource type="Animation" id=18]
-resource_name = "FadeToBlack"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "changes_the_scene"
-} ]
-}
-
-[sub_resource type="Animation" id=19]
-resource_name = "closedoor"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ true, false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 2, 1, 0 ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "fade_animation"
-} ]
-}
-
-[sub_resource type="Animation" id=20]
-resource_name = "opendoor"
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -750,8 +621,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=21]
-resource_name = "FadeToBlack"
+[sub_resource type="Animation" id=19]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
@@ -780,8 +650,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=22]
-resource_name = "closedoor"
+[sub_resource type="Animation" id=20]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -822,8 +691,118 @@ tracks/2/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=21]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "closeanimation"
+} ]
+}
+
+[sub_resource type="Animation" id=22]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScreenTransition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "changes_the_scene"
+} ]
+}
+
 [sub_resource type="Animation" id=23]
-resource_name = "opendoor"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 1, 0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fade_animation"
+} ]
+}
+
+[sub_resource type="Animation" id=24]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -1584,8 +1563,8 @@ position = Vector2( 289.782, -173.777 )
 position = Vector2( 85.855, -166.138 )
 
 [node name="Butterfly53" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -30.3334, 100.055 )
-rotation = -0.523598
+position = Vector2( -34.0042, 104.06 )
+rotation = -0.261799
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
 position = Vector2( -92.1895, 92.5276 )
@@ -1611,7 +1590,7 @@ position = Vector2( 0, -2.24747 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
-anims/fade = SubResource( 24 )
+anims/fade = SubResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Door"]
 layer = 2
@@ -1636,7 +1615,7 @@ scale = Vector2( 1, 1.39775 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 7.0477, 7.0113 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="hutDoor2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 214.748, -198.76 )
@@ -1647,12 +1626,12 @@ visible = false
 
 [node name="CollisionShape2D" parent="hutDoor2" index="1"]
 position = Vector2( 9.05222, 8.68174 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor2" index="2"]
-anims/FadeToBlack = SubResource( 3 )
-anims/closedoor = SubResource( 4 )
-anims/opendoor = SubResource( 5 )
+anims/FadeToBlack = SubResource( 4 )
+anims/closedoor = SubResource( 5 )
+anims/opendoor = SubResource( 6 )
 
 [node name="hutDoor3" parent="." instance=ExtResource( 16 )]
 position = Vector2( 459.898, 52.4826 )
@@ -1664,12 +1643,12 @@ position = Vector2( -6.34961, -11.7071 )
 
 [node name="CollisionShape2D" parent="hutDoor3" index="1"]
 position = Vector2( 1.1161, -4.48576 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor3" index="2"]
-anims/FadeToBlack = SubResource( 6 )
-anims/closedoor = SubResource( 7 )
-anims/opendoor = SubResource( 8 )
+anims/FadeToBlack = SubResource( 7 )
+anims/closedoor = SubResource( 8 )
+anims/opendoor = SubResource( 9 )
 
 [node name="ColorRect" parent="hutDoor3/ScreenTransition" index="0"]
 margin_left = -222.518
@@ -1687,12 +1666,12 @@ position = Vector2( -6.34961, -11.7071 )
 
 [node name="CollisionShape2D" parent="hutDoor4" index="1"]
 position = Vector2( 2.42612, -3.78566 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor4" index="2"]
-anims/FadeToBlack = SubResource( 9 )
-anims/closedoor = SubResource( 10 )
-anims/opendoor = SubResource( 11 )
+anims/FadeToBlack = SubResource( 10 )
+anims/closedoor = SubResource( 11 )
+anims/opendoor = SubResource( 12 )
 
 [node name="ColorRect" parent="hutDoor4/ScreenTransition" index="0"]
 margin_left = -221.677
@@ -1710,12 +1689,12 @@ position = Vector2( -5.71893, -17.3831 )
 
 [node name="CollisionShape2D" parent="hutDoor5" index="1"]
 position = Vector2( 1.4654, -9.75805 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor5" index="2"]
-anims/FadeToBlack = SubResource( 12 )
-anims/closedoor = SubResource( 13 )
-anims/opendoor = SubResource( 14 )
+anims/FadeToBlack = SubResource( 13 )
+anims/closedoor = SubResource( 14 )
+anims/opendoor = SubResource( 15 )
 
 [node name="ColorRect" parent="hutDoor5/ScreenTransition" index="0"]
 margin_left = -221.677
@@ -1734,12 +1713,12 @@ scale = Vector2( 1, 1.33146 )
 
 [node name="CollisionShape2D" parent="hutDoor6" index="1"]
 position = Vector2( 1.4654, -9.75805 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor6" index="2"]
-anims/FadeToBlack = SubResource( 15 )
-anims/closedoor = SubResource( 16 )
-anims/opendoor = SubResource( 17 )
+anims/FadeToBlack = SubResource( 16 )
+anims/closedoor = SubResource( 17 )
+anims/opendoor = SubResource( 18 )
 
 [node name="ColorRect" parent="hutDoor6/ScreenTransition" index="0"]
 margin_left = -221.677
@@ -1758,18 +1737,18 @@ scale = Vector2( 1, 1.33146 )
 
 [node name="CollisionShape2D" parent="hutDoor7" index="1"]
 position = Vector2( 4.14106, -14.6635 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor7" index="2"]
-anims/FadeToBlack = SubResource( 18 )
-anims/closedoor = SubResource( 19 )
-anims/opendoor = SubResource( 20 )
+anims/FadeToBlack = SubResource( 19 )
+anims/closedoor = SubResource( 20 )
+anims/opendoor = SubResource( 21 )
 
 [node name="ColorRect" parent="hutDoor7/ScreenTransition" index="0"]
-margin_left = -251.697
-margin_top = -60.8295
-margin_right = 677.303
-margin_bottom = 789.171
+margin_left = -259.539
+margin_top = -70.7365
+margin_right = 669.461
+margin_bottom = 779.264
 
 [node name="hutDoor8" parent="." instance=ExtResource( 16 )]
 position = Vector2( -126.238, 252.96 )
@@ -1782,12 +1761,12 @@ scale = Vector2( 1, 1.24549 )
 
 [node name="CollisionShape2D" parent="hutDoor8" index="1"]
 position = Vector2( 178.311, -211.056 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" parent="hutDoor8" index="2"]
-anims/FadeToBlack = SubResource( 21 )
-anims/closedoor = SubResource( 22 )
-anims/opendoor = SubResource( 23 )
+anims/FadeToBlack = SubResource( 22 )
+anims/closedoor = SubResource( 23 )
+anims/opendoor = SubResource( 24 )
 
 [node name="ColorRect" parent="hutDoor8/ScreenTransition" index="0"]
 margin_top = 0.595276
