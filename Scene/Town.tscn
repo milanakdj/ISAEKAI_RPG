@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -13,7 +13,7 @@
 [ext_resource path="res://Static/Building/Townhall.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Tileset/Background2.tres" type="TileSet" id=12]
 [ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Extra/Door.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Extra/Door.gd" type="Script" id=14]
 [ext_resource path="res://Scene/Town.gd" type="Script" id=15]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=16]
 [ext_resource path="res://mainmenu/Menu.tscn" type="PackedScene" id=17]
@@ -24,6 +24,45 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.7814
 height = 52.0465
+
+[sub_resource type="Animation" id=24]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.027451 ), Color( 0, 0, 0, 0.25098 ), Color( 0, 0, 0, 0.521569 ), Color( 0, 0, 0, 0.94902 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer:layer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 1 ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -1286,6 +1325,18 @@ position = Vector2( 390.67, -278.47 )
 [node name="Butterfly29" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 284.836, 303.613 )
 
+[node name="Butterfly54" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 213.146, 508.364 )
+
+[node name="Butterfly55" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 533.165, 398.751 )
+
+[node name="Butterfly56" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 591.122, 349.614 )
+
+[node name="Butterfly57" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 485.288, 931.697 )
+
 [node name="Butterfly30" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 144.985, 399.367 )
 
@@ -1347,7 +1398,40 @@ position = Vector2( 180.482, 209.349 )
 position = Vector2( 331.673, 326.522 )
 
 [node name="Butterfly46" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 331.673, 326.522 )
+position = Vector2( 355.457, 396.09 )
+
+[node name="Butterfly58" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 368.538, 531.66 )
+
+[node name="Butterfly59" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 430.377, 563.174 )
+
+[node name="Butterfly60" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 464.269, 305.116 )
+
+[node name="Butterfly61" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 477.351, 440.686 )
+
+[node name="Butterfly62" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 539.189, 472.2 )
+
+[node name="Butterfly63" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 430.377, 377.658 )
+
+[node name="Butterfly64" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 443.458, 513.228 )
+
+[node name="Butterfly65" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 505.297, 544.741 )
+
+[node name="Butterfly66" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 511.243, 435.929 )
+
+[node name="Butterfly67" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 524.324, 571.499 )
+
+[node name="Butterfly68" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 586.163, 603.013 )
 
 [node name="Butterfly47" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 434.986, 165.252 )
@@ -1361,151 +1445,147 @@ position = Vector2( 276.539, -38.6953 )
 [node name="Butterfly50" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 289.782, -173.777 )
 
+[node name="Butterfly69" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 511.243, 435.929 )
+
+[node name="Butterfly70" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 524.324, 571.499 )
+
+[node name="Butterfly71" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 586.163, 603.013 )
+
+[node name="Butterfly76" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -5.46753, 407.388 )
+
+[node name="Butterfly77" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 7.61377, 542.958 )
+
+[node name="Butterfly78" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 69.4525, 574.472 )
+
+[node name="Butterfly79" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -42.3329, 343.171 )
+
+[node name="Butterfly80" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -29.2516, 478.74 )
+
+[node name="Butterfly81" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 32.5871, 510.254 )
+
+[node name="Butterfly82" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -91.8329, 253.171 )
+
+[node name="Butterfly83" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -78.7516, 388.74 )
+
+[node name="Butterfly84" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -16.9129, 420.254 )
+
+[node name="Butterfly85" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 64.2484, 442.74 )
+
+[node name="Butterfly86" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 126.087, 474.254 )
+
+[node name="Butterfly87" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -114.752, 535.74 )
+
+[node name="Butterfly88" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -52.9129, 567.254 )
+
+[node name="Butterfly89" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -112.252, 466.74 )
+
+[node name="Butterfly90" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -50.4129, 498.254 )
+
+[node name="Butterfly91" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 135.748, 532.74 )
+
+[node name="Butterfly92" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 197.587, 564.254 )
+
+[node name="Butterfly93" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 288.748, 555.24 )
+
+[node name="Butterfly94" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 350.587, 586.754 )
+
+[node name="Butterfly95" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 567.248, 411.74 )
+
+[node name="Butterfly96" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 629.087, 443.254 )
+
+[node name="Butterfly97" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 342.248, 443.24 )
+
+[node name="Butterfly98" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 404.087, 474.754 )
+
+[node name="Butterfly99" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 214.748, 113.24 )
+
+[node name="Butterfly100" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 276.587, 144.754 )
+
+[node name="Butterfly101" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 310.748, 35.2405 )
+
+[node name="Butterfly102" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 372.587, 66.7544 )
+
+[node name="Butterfly103" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 153.248, -26.2595 )
+
+[node name="Butterfly104" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 215.087, 5.25439 )
+
+[node name="Butterfly105" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 547.248, 89.2405 )
+
+[node name="Butterfly106" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 609.087, 120.754 )
+
+[node name="Butterfly107" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 446.748, -125.76 )
+
+[node name="Butterfly108" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 508.587, -94.2456 )
+
+[node name="Butterfly109" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 411.248, -247.26 )
+
+[node name="Butterfly110" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 473.087, -215.746 )
+
+[node name="Butterfly111" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 108.248, -169.26 )
+
+[node name="Butterfly112" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 170.087, -137.746 )
+
+[node name="Butterfly72" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 434.986, 165.252 )
+
+[node name="Butterfly73" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 417.977, 118.635 )
+
+[node name="Butterfly74" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 276.539, -38.6953 )
+
+[node name="Butterfly75" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 289.782, -173.777 )
+
 [node name="Butterfly51" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 289.782, -173.777 )
 
 [node name="Butterfly52" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 68.8844, -207.15 )
+position = Vector2( 85.855, -166.138 )
 
 [node name="Butterfly53" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -60.3701, 325.23 )
-rotation = -2.09439
-
-[node name="Butterfly54" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -14.2834, -23.3331 )
-rotation = -2.09439
-
-[node name="Butterfly56" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 483.134, -77.3657 )
-rotation = -2.09439
-
-[node name="Butterfly57" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 196.756, 498.926 )
-rotation = -2.09439
-
-[node name="Butterfly58" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 283.023, 528.625 )
-rotation = -2.09439
-
-[node name="Butterfly59" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 195.342, 537.11 )
-rotation = -2.09439
-
-[node name="Butterfly60" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 320.5, 568.93 )
-rotation = -2.09439
-
-[node name="Butterfly61" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -83.2581, 520.14 )
-rotation = -2.09439
-
-[node name="Butterfly62" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 3.00888, 549.838 )
-rotation = -2.09439
-
-[node name="Butterfly63" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -84.6723, 558.323 )
-rotation = -2.09439
-
-[node name="Butterfly64" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 40.4856, 590.143 )
-rotation = -2.09439
-
-[node name="Butterfly65" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 460.507, 504.583 )
-rotation = -2.09439
-
-[node name="Butterfly66" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 546.774, 534.282 )
-rotation = -2.09439
-
-[node name="Butterfly67" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 459.093, 542.767 )
-rotation = -2.09439
-
-[node name="Butterfly68" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 584.251, 574.587 )
-rotation = -2.09439
-
-[node name="Butterfly69" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 523.439, 396.396 )
-rotation = -2.09439
-
-[node name="Butterfly70" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 609.707, 426.094 )
-rotation = -2.09439
-
-[node name="Butterfly71" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 522.025, 434.58 )
-rotation = -2.09439
-
-[node name="Butterfly72" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 647.183, 466.399 )
-rotation = -2.09439
-
-[node name="Butterfly73" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -93.8648, 392.153 )
-rotation = -2.09439
-
-[node name="Butterfly74" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -7.59772, 421.852 )
-rotation = -2.09439
-
-[node name="Butterfly75" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -95.279, 430.337 )
-rotation = -2.09439
-
-[node name="Butterfly76" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 29.879, 462.157 )
-rotation = -2.09439
-
-[node name="Butterfly77" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 448.486, -329.096 )
-rotation = -2.09439
-
-[node name="Butterfly78" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 534.753, -299.397 )
-rotation = -2.09439
-
-[node name="Butterfly79" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 447.072, -290.912 )
-rotation = -2.09439
-
-[node name="Butterfly80" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 572.23, -259.092 )
-rotation = -2.09439
-
-[node name="Butterfly81" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -98.1074, -206.059 )
-rotation = -2.09439
-
-[node name="Butterfly86" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -292.562, 976.93 )
-rotation = -2.09439
-
-[node name="Butterfly87" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -380.243, 985.416 )
-rotation = -2.09439
-
-[node name="Butterfly88" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -255.085, 1017.24 )
-rotation = -2.09439
-
-[node name="Butterfly89" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -232.421, 2891.13 )
-rotation = -2.09439
-
-[node name="Butterfly90" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -146.154, 2920.83 )
-rotation = -2.09439
-
-[node name="Butterfly91" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -233.836, 2929.31 )
-rotation = -2.09439
-
-[node name="Butterfly92" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -108.678, 2961.13 )
-rotation = -2.09439
+position = Vector2( -30.3334, 100.055 )
+rotation = -0.523598
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
 position = Vector2( -92.1895, 92.5276 )
@@ -1517,18 +1597,33 @@ position = Vector2( -142.66, -383.368 )
 [node name="BottomRight" parent="MainCamera/Node" index="1"]
 position = Vector2( 656, 815 )
 
-[node name="Door" parent="." instance=ExtResource( 14 )]
+[node name="Door" type="Area2D" parent="."]
 position = Vector2( -139.3, 98.4216 )
-target_scene = "res://Scene/level.tscn"
+collision_layer = 128
+collision_mask = 2
+script = ExtResource( 14 )
+target_scene = "res://LoadingBar.tscn"
 current_scene = "res://Scene/Town.tscn"
 target_spawn_position = Vector2( 2050, 323 )
 
-[node name="CollisionShape2D" parent="Door" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2( 0, -2.24747 )
 shape = SubResource( 1 )
 
-[node name="ColorRect" parent="Door/CanvasLayer" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
+anims/fade = SubResource( 24 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Door"]
+layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="Door/CanvasLayer"]
+margin_right = 320.0
+margin_bottom = 181.0
+mouse_filter = 1
 color = Color( 0, 0, 0, 0.027451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="hutDoor" parent="." instance=ExtResource( 16 )]
 position = Vector2( -67.8363, 18.9394 )
@@ -1703,6 +1798,8 @@ layer = 2
 
 [node name="CanvasModulate" parent="." instance=ExtResource( 20 )]
 
+[connection signal="body_entered" from="Door" to="Door" method="_on_Door_body_entered"]
+[connection signal="animation_finished" from="Door/AnimationPlayer" to="Door" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 [connection signal="body_entered" from="hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
@@ -1710,7 +1807,6 @@ layer = 2
 [connection signal="body_entered" from="hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 
 [editable path="MainCamera"]
-[editable path="Door"]
 [editable path="hutDoor"]
 [editable path="hutDoor2"]
 [editable path="hutDoor3"]

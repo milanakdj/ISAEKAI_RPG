@@ -3,6 +3,7 @@ extends Node2D
 var cursor = load("res://cursor.png")
 
 func _ready():
+	Global.next_scene= "res://Scene/Town.tscn"
 	$YSort/Skeleton.visible = false
 	$YSort/Bat.visible = false
 	$YSort/Bat2.visible = false

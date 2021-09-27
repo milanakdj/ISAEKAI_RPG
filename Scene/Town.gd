@@ -4,6 +4,7 @@ onready var menu = $Menu/Control
 onready var top_menu = $Menu
 
 func _ready():
+	Global.next_scene= "res://Scene/level.tscn"
 	menu.visible = false
 	
 	if Global.spawn_position:
