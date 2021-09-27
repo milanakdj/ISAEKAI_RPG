@@ -62,6 +62,7 @@ PlayerStats="*res://Scripts/PlayerStats.gd"
 Global="*res://Scripts/Global.gd"
 UserInterface="*res://UI/UserInterface.tscn"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
+SceneChanger="*res://SceneChanger.gd"
 
 [display]
 

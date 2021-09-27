@@ -1662,7 +1662,6 @@ position = Vector2( -93.9634, 773.132 )
 
 [node name="BatSprite" parent="YSort/Bat" index="0"]
 material = SubResource( 4 )
-frame = 1
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( 81.3231, 772.975 )
@@ -1670,7 +1669,6 @@ script = SubResource( 5 )
 
 [node name="BatSprite" parent="YSort/Bat2" index="0"]
 material = SubResource( 4 )
-frame = 1
 
 [node name="AnimationPlayer" parent="YSort/Bat2" index="10"]
 anims/Blink = SubResource( 6 )
@@ -1771,11 +1769,15 @@ position = Vector2( 2064, 976 )
 [node name="Door" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2084.01, 353.372 )
 target_scene = "res://Scene/Town.tscn"
+current_scene = "level.tscn"
 target_spawn_position = Vector2( -120.8, 97.167 )
 
 [node name="CollisionShape2D" parent="Door" index="0"]
 position = Vector2( 12.0093, -25.4449 )
 shape = SubResource( 10 )
+
+[node name="ColorRect" parent="Door/CanvasLayer" index="0"]
+color = Color( 0, 0, 0, 0.027451 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

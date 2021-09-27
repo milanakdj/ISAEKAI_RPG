@@ -1223,6 +1223,9 @@ position = Vector2( 262.233, -115.942 )
 [node name="Butterfly5" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 262.233, -115.942 )
 
+[node name="Butterfly39" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -118.129, 130.607 )
+
 [node name="Butterfly7" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 97.1082, 380.468 )
 
@@ -1325,6 +1328,185 @@ position = Vector2( 15.6404, 43.6181 )
 [node name="Butterfly4" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 295.238, -127.504 )
 
+[node name="Butterfly40" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -86.1745, 143.958 )
+
+[node name="Butterfly41" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 49.5755, 105.958 )
+
+[node name="Butterfly42" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 223.326, 48.4583 )
+
+[node name="Butterfly43" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 287.576, 64.4583 )
+
+[node name="Butterfly44" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 180.482, 209.349 )
+
+[node name="Butterfly45" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 331.673, 326.522 )
+
+[node name="Butterfly46" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 331.673, 326.522 )
+
+[node name="Butterfly47" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 434.986, 165.252 )
+
+[node name="Butterfly48" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 417.977, 118.635 )
+
+[node name="Butterfly49" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 276.539, -38.6953 )
+
+[node name="Butterfly50" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 289.782, -173.777 )
+
+[node name="Butterfly51" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 289.782, -173.777 )
+
+[node name="Butterfly52" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 68.8844, -207.15 )
+
+[node name="Butterfly53" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -60.3701, 325.23 )
+rotation = -2.09439
+
+[node name="Butterfly54" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -14.2834, -23.3331 )
+rotation = -2.09439
+
+[node name="Butterfly56" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 483.134, -77.3657 )
+rotation = -2.09439
+
+[node name="Butterfly57" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 196.756, 498.926 )
+rotation = -2.09439
+
+[node name="Butterfly58" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 283.023, 528.625 )
+rotation = -2.09439
+
+[node name="Butterfly59" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 195.342, 537.11 )
+rotation = -2.09439
+
+[node name="Butterfly60" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 320.5, 568.93 )
+rotation = -2.09439
+
+[node name="Butterfly61" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -83.2581, 520.14 )
+rotation = -2.09439
+
+[node name="Butterfly62" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 3.00888, 549.838 )
+rotation = -2.09439
+
+[node name="Butterfly63" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -84.6723, 558.323 )
+rotation = -2.09439
+
+[node name="Butterfly64" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 40.4856, 590.143 )
+rotation = -2.09439
+
+[node name="Butterfly65" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 460.507, 504.583 )
+rotation = -2.09439
+
+[node name="Butterfly66" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 546.774, 534.282 )
+rotation = -2.09439
+
+[node name="Butterfly67" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 459.093, 542.767 )
+rotation = -2.09439
+
+[node name="Butterfly68" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 584.251, 574.587 )
+rotation = -2.09439
+
+[node name="Butterfly69" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 523.439, 396.396 )
+rotation = -2.09439
+
+[node name="Butterfly70" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 609.707, 426.094 )
+rotation = -2.09439
+
+[node name="Butterfly71" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 522.025, 434.58 )
+rotation = -2.09439
+
+[node name="Butterfly72" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 647.183, 466.399 )
+rotation = -2.09439
+
+[node name="Butterfly73" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -93.8648, 392.153 )
+rotation = -2.09439
+
+[node name="Butterfly74" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -7.59772, 421.852 )
+rotation = -2.09439
+
+[node name="Butterfly75" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -95.279, 430.337 )
+rotation = -2.09439
+
+[node name="Butterfly76" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 29.879, 462.157 )
+rotation = -2.09439
+
+[node name="Butterfly77" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 448.486, -329.096 )
+rotation = -2.09439
+
+[node name="Butterfly78" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 534.753, -299.397 )
+rotation = -2.09439
+
+[node name="Butterfly79" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 447.072, -290.912 )
+rotation = -2.09439
+
+[node name="Butterfly80" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( 572.23, -259.092 )
+rotation = -2.09439
+
+[node name="Butterfly81" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -98.1074, -206.059 )
+rotation = -2.09439
+
+[node name="Butterfly86" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -292.562, 976.93 )
+rotation = -2.09439
+
+[node name="Butterfly87" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -380.243, 985.416 )
+rotation = -2.09439
+
+[node name="Butterfly88" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -255.085, 1017.24 )
+rotation = -2.09439
+
+[node name="Butterfly89" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -232.421, 2891.13 )
+rotation = -2.09439
+
+[node name="Butterfly90" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -146.154, 2920.83 )
+rotation = -2.09439
+
+[node name="Butterfly91" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -233.836, 2929.31 )
+rotation = -2.09439
+
+[node name="Butterfly92" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -108.678, 2961.13 )
+rotation = -2.09439
+
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
 position = Vector2( -92.1895, 92.5276 )
 current = true
@@ -1338,6 +1520,7 @@ position = Vector2( 656, 815 )
 [node name="Door" parent="." instance=ExtResource( 14 )]
 position = Vector2( -139.3, 98.4216 )
 target_scene = "res://Scene/level.tscn"
+current_scene = "res://Scene/Town.tscn"
 target_spawn_position = Vector2( 2050, 323 )
 
 [node name="CollisionShape2D" parent="Door" index="0"]
@@ -1488,10 +1671,10 @@ anims/closedoor = SubResource( 19 )
 anims/opendoor = SubResource( 20 )
 
 [node name="ColorRect" parent="hutDoor7/ScreenTransition" index="0"]
-margin_left = -223.091
-margin_top = -282.787
-margin_right = 705.909
-margin_bottom = 567.213
+margin_left = -251.697
+margin_top = -60.8295
+margin_right = 677.303
+margin_bottom = 789.171
 
 [node name="hutDoor8" parent="." instance=ExtResource( 16 )]
 position = Vector2( -126.238, 252.96 )

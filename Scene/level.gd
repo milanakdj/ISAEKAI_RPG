@@ -66,7 +66,6 @@ func _on_first_scene2_body_entered(body):
 		
 
 
-
 func _on_first_scene3_body_entered(body):
 	if body.name.begins_with("Player"):
 		$YSort/Bat2.visible = true
