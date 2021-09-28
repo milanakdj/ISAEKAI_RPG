@@ -22,6 +22,7 @@ func _unhandled_input(event):
 	match screenLoaded:
 		ScreenLoaded.NOTHING:
 			if event.is_action_pressed("open_menu"):
+				MusicController.play_stop()
 				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
 				player.set_physics_process(false)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
@@ -33,7 +34,7 @@ func _unhandled_input(event):
 			if event.is_action_pressed("open_menu") or event.is_action_pressed("x"):
 				emit_signal("CloseMenu")
 				screenLoaded = ScreenLoaded.NOTHING
-				
+				MusicController.play_music()
 				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
 				player.set_physics_process(true)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
@@ -60,6 +61,7 @@ func _unhandled_input(event):
 					3:
 						screenLoaded = ScreenLoaded.NOTHING
 						emit_signal("CloseMenu")
+						MusicController.play_music()
 						
 		ScreenLoaded.TUTORIAL:
 			if event.is_action_pressed("open_menu") or event.is_action_pressed("x"):
@@ -70,6 +72,7 @@ func _unhandled_input(event):
 func _on_Exit():
 	screenLoaded = ScreenLoaded.NOTHING
 	emit_signal("CloseMenu")
+	MusicController.play_music()
 
 func _on_Tutorial_pressed():
 	var tutorial_menu = load("res://mainmenu/TutorialMenu.tscn").instance()
@@ -83,6 +86,7 @@ func CloseTutorialMenus():
 func _on_Exit_pressed():
 	emit_signal("CloseMenu")
 	screenLoaded = ScreenLoaded.NOTHING
+	MusicController.play_music()
 	var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
 	player.set_physics_process(true)
 	get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)

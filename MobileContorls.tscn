@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/up.png" type="Texture" id=1]
-[ext_resource path="res://Assets/esc.png" type="Texture" id=2]
-[ext_resource path="res://Assets/space.png" type="Texture" id=3]
+[ext_resource path="res://onscreenControls/flatDark43.png" type="Texture" id=1]
+[ext_resource path="res://onscreenControls/flatDark25.png" type="Texture" id=2]
+[ext_resource path="res://onscreenControls/flatDark24.png" type="Texture" id=3]
+[ext_resource path="res://onscreenControls/flatDark23.png" type="Texture" id=4]
+[ext_resource path="res://onscreenControls/flatDark28.png" type="Texture" id=5]
+[ext_resource path="res://onscreenControls/flatDark48.png" type="Texture" id=6]
 
 [node name="MobileContorls" type="CanvasLayer"]
 __meta__ = {
@@ -10,51 +13,49 @@ __meta__ = {
 }
 
 [node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2( 0.257088, 149.421 )
-rotation = -1.5708
-scale = Vector2( 0.11553, 0.0900893 )
-normal = ExtResource( 1 )
+position = Vector2( 8.26487, 120.795 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 4 )
 passby_press = true
 action = "left"
 
 [node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2( 67.6883, 123.083 )
-rotation = 1.5708
-scale = Vector2( 0.116, 0.09 )
-normal = ExtResource( 1 )
+position = Vector2( 40, 120 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 3 )
 passby_press = true
 action = "right"
 
 [node name="Up" type="TouchScreenButton" parent="."]
-position = Vector2( 20.8754, 109.383 )
-scale = Vector2( 0.116, 0.09 )
-normal = ExtResource( 1 )
+position = Vector2( 24, 104 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 2 )
 passby_press = true
 action = "up"
 
 [node name="Down" type="TouchScreenButton" parent="."]
-position = Vector2( 46.8283, 161.915 )
+position = Vector2( 46.4108, 158.808 )
 rotation = 3.14159
-scale = Vector2( 0.116, 0.09 )
-normal = ExtResource( 1 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 2 )
 passby_press = true
 action = "down"
 
 [node name="Esc" type="TouchScreenButton" parent="."]
-scale = Vector2( 0.116, 0.09 )
-normal = ExtResource( 2 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 1 )
 action = "open_menu"
 
 [node name="Space" type="TouchScreenButton" parent="."]
 position = Vector2( 206.03, 127.542 )
-scale = Vector2( 0.116, 0.09 )
-normal = ExtResource( 3 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 5 )
 action = "equip_thor"
 
 [node name="Space2" type="TouchScreenButton" parent="."]
 position = Vector2( 161.435, 128.434 )
-scale = Vector2( 0.116, 0.09 )
-normal = ExtResource( 3 )
+scale = Vector2( 0.272, 0.272 )
+normal = ExtResource( 6 )
 action = "attack"
 
 [node name="j" type="TouchScreenButton" parent="."]

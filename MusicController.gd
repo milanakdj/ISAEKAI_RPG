@@ -7,3 +7,5 @@ func _ready():
 func play_music():
 	$Music.stream = battle_music
 	$Music.play()
+func play_stop():
+	$Music.stop()
