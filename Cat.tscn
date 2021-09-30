@@ -184,9 +184,10 @@ collision_mask = 0
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -11.6374, -17.1498 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 33 )
-frame = 13
+frame = 31
 playing = true
 centered = false
 
