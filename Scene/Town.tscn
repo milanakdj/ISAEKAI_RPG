@@ -1232,343 +1232,6 @@ position = Vector2( 256.327, 89.1562 )
 [node name="Townhall" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 222.331, -265.512 )
 
-[node name="Butterfly" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 195.382, -114.681 )
-
-[node name="Butterfly2" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 139.86, -153.257 )
-
-[node name="Butterfly3" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 262.233, -115.942 )
-
-[node name="Butterfly5" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 262.233, -115.942 )
-
-[node name="Butterfly39" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -118.129, 130.607 )
-
-[node name="Butterfly7" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 97.1082, 380.468 )
-
-[node name="Butterfly8" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 41.5863, 341.892 )
-
-[node name="Butterfly9" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 163.959, 379.207 )
-
-[node name="Butterfly10" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 163.959, 379.207 )
-
-[node name="Butterfly11" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 522.962, 316.212 )
-
-[node name="Butterfly12" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 467.44, 277.636 )
-
-[node name="Butterfly13" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 589.813, 314.951 )
-
-[node name="Butterfly14" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 589.813, 314.951 )
-
-[node name="Butterfly15" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 393.19, 220.458 )
-
-[node name="Butterfly16" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 337.668, 181.882 )
-
-[node name="Butterfly17" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 460.041, 219.197 )
-
-[node name="Butterfly18" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 460.041, 219.197 )
-
-[node name="Butterfly19" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 510.362, -158.778 )
-
-[node name="Butterfly20" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 454.84, -197.354 )
-
-[node name="Butterfly21" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 577.214, -160.039 )
-
-[node name="Butterfly22" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 577.214, -160.039 )
-
-[node name="Butterfly23" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 12.6935, -119.72 )
-
-[node name="Butterfly27" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 332.713, -229.333 )
-
-[node name="Butterfly28" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 390.67, -278.47 )
-
-[node name="Butterfly29" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 284.836, 303.613 )
-
-[node name="Butterfly54" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 213.146, 508.364 )
-
-[node name="Butterfly55" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 533.165, 398.751 )
-
-[node name="Butterfly56" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 591.122, 349.614 )
-
-[node name="Butterfly57" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 485.288, 931.697 )
-
-[node name="Butterfly30" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 144.985, 399.367 )
-
-[node name="Butterfly31" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -49.0427, 240.617 )
-
-[node name="Butterfly32" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -120.858, 293.534 )
-
-[node name="Butterfly33" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 457.445, 341.411 )
-
-[node name="Butterfly34" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 179.799, 274.669 )
-
-[node name="Butterfly35" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -48.4588, 194.578 )
-
-[node name="Butterfly36" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 47.6497, 163.877 )
-
-[node name="Butterfly37" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 329.301, 246.637 )
-
-[node name="Butterfly38" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 401.382, -8.31725 )
-
-[node name="Butterfly24" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -42.8285, -158.297 )
-
-[node name="Butterfly25" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 79.5446, -120.982 )
-
-[node name="Butterfly26" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 79.5446, -120.982 )
-
-[node name="Butterfly6" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 15.6404, 43.6181 )
-
-[node name="Butterfly4" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 295.238, -127.504 )
-
-[node name="Butterfly40" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -86.1745, 143.958 )
-
-[node name="Butterfly41" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 49.5755, 105.958 )
-
-[node name="Butterfly42" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 223.326, 48.4583 )
-
-[node name="Butterfly43" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 287.576, 64.4583 )
-
-[node name="Butterfly44" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 180.482, 209.349 )
-
-[node name="Butterfly45" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 331.673, 326.522 )
-
-[node name="Butterfly46" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 355.457, 396.09 )
-
-[node name="Butterfly58" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 368.538, 531.66 )
-
-[node name="Butterfly59" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 430.377, 563.174 )
-
-[node name="Butterfly60" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 464.269, 305.116 )
-
-[node name="Butterfly61" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 477.351, 440.686 )
-
-[node name="Butterfly62" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 539.189, 472.2 )
-
-[node name="Butterfly63" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 430.377, 377.658 )
-
-[node name="Butterfly64" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 443.458, 513.228 )
-
-[node name="Butterfly65" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 505.297, 544.741 )
-
-[node name="Butterfly66" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 511.243, 435.929 )
-
-[node name="Butterfly67" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 524.324, 571.499 )
-
-[node name="Butterfly68" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 586.163, 603.013 )
-
-[node name="Butterfly47" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 434.986, 165.252 )
-
-[node name="Butterfly48" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 417.977, 118.635 )
-
-[node name="Butterfly49" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 276.539, -38.6953 )
-
-[node name="Butterfly50" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 289.782, -173.777 )
-
-[node name="Butterfly69" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 511.243, 435.929 )
-
-[node name="Butterfly70" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 524.324, 571.499 )
-
-[node name="Butterfly71" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 586.163, 603.013 )
-
-[node name="Butterfly76" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -5.46753, 407.388 )
-
-[node name="Butterfly77" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 7.61377, 542.958 )
-
-[node name="Butterfly78" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 69.4525, 574.472 )
-
-[node name="Butterfly79" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -42.3329, 343.171 )
-
-[node name="Butterfly80" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -29.2516, 478.74 )
-
-[node name="Butterfly81" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 32.5871, 510.254 )
-
-[node name="Butterfly82" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -91.8329, 253.171 )
-
-[node name="Butterfly83" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -78.7516, 388.74 )
-
-[node name="Butterfly84" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -16.9129, 420.254 )
-
-[node name="Butterfly85" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 64.2484, 442.74 )
-
-[node name="Butterfly86" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 126.087, 474.254 )
-
-[node name="Butterfly87" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -114.752, 535.74 )
-
-[node name="Butterfly88" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -52.9129, 567.254 )
-
-[node name="Butterfly89" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -112.252, 466.74 )
-
-[node name="Butterfly90" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -50.4129, 498.254 )
-
-[node name="Butterfly91" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 135.748, 532.74 )
-
-[node name="Butterfly92" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 197.587, 564.254 )
-
-[node name="Butterfly93" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 288.748, 555.24 )
-
-[node name="Butterfly94" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 350.587, 586.754 )
-
-[node name="Butterfly95" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 567.248, 411.74 )
-
-[node name="Butterfly96" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 629.087, 443.254 )
-
-[node name="Butterfly97" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 342.248, 443.24 )
-
-[node name="Butterfly98" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 404.087, 474.754 )
-
-[node name="Butterfly99" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 214.748, 113.24 )
-
-[node name="Butterfly100" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 276.587, 144.754 )
-
-[node name="Butterfly101" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 310.748, 35.2405 )
-
-[node name="Butterfly102" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 372.587, 66.7544 )
-
-[node name="Butterfly103" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 153.248, -26.2595 )
-
-[node name="Butterfly104" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 215.087, 5.25439 )
-
-[node name="Butterfly105" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 547.248, 89.2405 )
-
-[node name="Butterfly106" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 609.087, 120.754 )
-
-[node name="Butterfly107" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 446.748, -125.76 )
-
-[node name="Butterfly108" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 508.587, -94.2456 )
-
-[node name="Butterfly109" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 411.248, -247.26 )
-
-[node name="Butterfly110" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 473.087, -215.746 )
-
-[node name="Butterfly111" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 108.248, -169.26 )
-
-[node name="Butterfly112" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 170.087, -137.746 )
-
-[node name="Butterfly72" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 434.986, 165.252 )
-
-[node name="Butterfly73" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 417.977, 118.635 )
-
-[node name="Butterfly74" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 276.539, -38.6953 )
-
-[node name="Butterfly75" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 289.782, -173.777 )
-
-[node name="Butterfly51" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 289.782, -173.777 )
-
-[node name="Butterfly52" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 85.855, -166.138 )
-
-[node name="Butterfly53" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( -34.0042, 104.06 )
-rotation = -0.261799
-
 [node name="cat" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( -62.07, 55.5627 )
 
@@ -1577,6 +1240,345 @@ position = Vector2( -60.5445, 95.8622 )
 
 [node name="NPC_2" parent="YSort" instance=ExtResource( 23 )]
 position = Vector2( -14.4433, 94.7741 )
+
+[node name="Butterflies" type="YSort" parent="YSort"]
+
+[node name="Butterfly" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 195.382, -114.681 )
+
+[node name="Butterfly2" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 139.86, -153.257 )
+
+[node name="Butterfly3" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 262.233, -115.942 )
+
+[node name="Butterfly5" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 262.233, -115.942 )
+
+[node name="Butterfly39" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -118.129, 130.607 )
+
+[node name="Butterfly7" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 97.1082, 380.468 )
+
+[node name="Butterfly8" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 41.5863, 341.892 )
+
+[node name="Butterfly9" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 163.959, 379.207 )
+
+[node name="Butterfly10" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 163.959, 379.207 )
+
+[node name="Butterfly11" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 522.962, 316.212 )
+
+[node name="Butterfly12" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 467.44, 277.636 )
+
+[node name="Butterfly13" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 589.813, 314.951 )
+
+[node name="Butterfly14" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 589.813, 314.951 )
+
+[node name="Butterfly15" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 393.19, 220.458 )
+
+[node name="Butterfly16" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 337.668, 181.882 )
+
+[node name="Butterfly17" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 460.041, 219.197 )
+
+[node name="Butterfly18" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 460.041, 219.197 )
+
+[node name="Butterfly19" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 510.362, -158.778 )
+
+[node name="Butterfly20" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 454.84, -197.354 )
+
+[node name="Butterfly21" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 577.214, -160.039 )
+
+[node name="Butterfly22" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 577.214, -160.039 )
+
+[node name="Butterfly23" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 12.6935, -119.72 )
+
+[node name="Butterfly27" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 332.713, -229.333 )
+
+[node name="Butterfly28" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 390.67, -278.47 )
+
+[node name="Butterfly29" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 284.836, 303.613 )
+
+[node name="Butterfly54" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 213.146, 508.364 )
+
+[node name="Butterfly55" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 533.165, 398.751 )
+
+[node name="Butterfly56" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 591.122, 349.614 )
+
+[node name="Butterfly57" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 485.288, 931.697 )
+
+[node name="Butterfly30" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 144.985, 399.367 )
+
+[node name="Butterfly31" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -49.0427, 240.617 )
+
+[node name="Butterfly32" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -120.858, 293.534 )
+
+[node name="Butterfly33" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 457.445, 341.411 )
+
+[node name="Butterfly34" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 179.799, 274.669 )
+
+[node name="Butterfly35" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -48.4588, 194.578 )
+
+[node name="Butterfly36" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 47.6497, 163.877 )
+
+[node name="Butterfly37" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 329.301, 246.637 )
+
+[node name="Butterfly38" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 401.382, -8.31725 )
+
+[node name="Butterfly24" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -42.8285, -158.297 )
+
+[node name="Butterfly25" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 79.5446, -120.982 )
+
+[node name="Butterfly26" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 79.5446, -120.982 )
+
+[node name="Butterfly6" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 15.6404, 43.6181 )
+
+[node name="Butterfly4" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 295.238, -127.504 )
+
+[node name="Butterfly40" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -86.1745, 143.958 )
+
+[node name="Butterfly41" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 49.5755, 105.958 )
+
+[node name="Butterfly42" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 223.326, 48.4583 )
+
+[node name="Butterfly43" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 287.576, 64.4583 )
+
+[node name="Butterfly44" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 180.482, 209.349 )
+
+[node name="Butterfly45" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 331.673, 326.522 )
+
+[node name="Butterfly46" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 355.457, 396.09 )
+
+[node name="Butterfly58" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 368.538, 531.66 )
+
+[node name="Butterfly59" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 430.377, 563.174 )
+
+[node name="Butterfly60" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 464.269, 305.116 )
+
+[node name="Butterfly61" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 477.351, 440.686 )
+
+[node name="Butterfly62" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 539.189, 472.2 )
+
+[node name="Butterfly63" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 430.377, 377.658 )
+
+[node name="Butterfly64" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 443.458, 513.228 )
+
+[node name="Butterfly65" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 505.297, 544.741 )
+
+[node name="Butterfly66" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 511.243, 435.929 )
+
+[node name="Butterfly67" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 524.324, 571.499 )
+
+[node name="Butterfly68" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 586.163, 603.013 )
+
+[node name="Butterfly47" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 434.986, 165.252 )
+
+[node name="Butterfly48" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 417.977, 118.635 )
+
+[node name="Butterfly49" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 276.539, -38.6953 )
+
+[node name="Butterfly50" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 289.782, -173.777 )
+
+[node name="Butterfly69" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 511.243, 435.929 )
+
+[node name="Butterfly70" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 524.324, 571.499 )
+
+[node name="Butterfly71" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 586.163, 603.013 )
+
+[node name="Butterfly76" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -5.46753, 407.388 )
+
+[node name="Butterfly77" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 7.61377, 542.958 )
+
+[node name="Butterfly78" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 69.4525, 574.472 )
+
+[node name="Butterfly79" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -42.3329, 343.171 )
+
+[node name="Butterfly80" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -29.2516, 478.74 )
+
+[node name="Butterfly81" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 32.5871, 510.254 )
+
+[node name="Butterfly82" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -91.8329, 253.171 )
+
+[node name="Butterfly83" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -78.7516, 388.74 )
+
+[node name="Butterfly84" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -16.9129, 420.254 )
+
+[node name="Butterfly85" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 64.2484, 442.74 )
+
+[node name="Butterfly86" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 126.087, 474.254 )
+
+[node name="Butterfly87" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -114.752, 535.74 )
+
+[node name="Butterfly88" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -52.9129, 567.254 )
+
+[node name="Butterfly89" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -112.252, 466.74 )
+
+[node name="Butterfly90" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -50.4129, 498.254 )
+
+[node name="Butterfly91" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 135.748, 532.74 )
+
+[node name="Butterfly92" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 197.587, 564.254 )
+
+[node name="Butterfly93" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 288.748, 555.24 )
+
+[node name="Butterfly94" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 350.587, 586.754 )
+
+[node name="Butterfly95" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 567.248, 411.74 )
+
+[node name="Butterfly96" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 629.087, 443.254 )
+
+[node name="Butterfly97" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 342.248, 443.24 )
+
+[node name="Butterfly98" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 404.087, 474.754 )
+
+[node name="Butterfly99" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 214.748, 113.24 )
+
+[node name="Butterfly100" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 276.587, 144.754 )
+
+[node name="Butterfly101" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 310.748, 35.2405 )
+
+[node name="Butterfly102" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 372.587, 66.7544 )
+
+[node name="Butterfly103" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 153.248, -26.2595 )
+
+[node name="Butterfly104" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 215.087, 5.25439 )
+
+[node name="Butterfly105" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 547.248, 89.2405 )
+
+[node name="Butterfly106" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 609.087, 120.754 )
+
+[node name="Butterfly107" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 446.748, -125.76 )
+
+[node name="Butterfly108" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 508.587, -94.2456 )
+
+[node name="Butterfly109" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 411.248, -247.26 )
+
+[node name="Butterfly110" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 473.087, -215.746 )
+
+[node name="Butterfly111" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 108.248, -169.26 )
+
+[node name="Butterfly112" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 170.087, -137.746 )
+
+[node name="Butterfly72" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 434.986, 165.252 )
+
+[node name="Butterfly73" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 417.977, 118.635 )
+
+[node name="Butterfly74" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 276.539, -38.6953 )
+
+[node name="Butterfly75" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 289.782, -173.777 )
+
+[node name="Butterfly51" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 289.782, -173.777 )
+
+[node name="Butterfly52" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( 85.855, -166.138 )
+
+[node name="Butterfly53" parent="YSort/Butterflies" instance=ExtResource( 19 )]
+position = Vector2( -34.0042, 104.06 )
+rotation = -0.261799
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
 position = Vector2( -92.1895, 92.5276 )

@@ -8,7 +8,7 @@ export var currentScene = "Town"
 onready var menu = $Control
 onready var selectedarrow = $Control/TextureRect
 onready var music = $Control/backMusic
-
+onready var save_path = "user://save.dat"
 enum ScreenLoaded { NOTHING, JUST_MENU, TUTORIAL}
 var screenLoaded = ScreenLoaded.NOTHING
 
@@ -90,3 +90,26 @@ func _on_Exit_pressed():
 	var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
 	player.set_physics_process(true)
 	get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
+
+
+func _on_Save_Game_pressed():
+	var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+	var data = {
+		#"name": player.friction,
+		"Player_location": player.position 
+	}
+	var file = File.new()
+	var error = file.open(save_path, File.WRITE)
+	if error == OK:
+		file.store_var(data)
+		file.close()
+
+
+func _on_Load_Game_pressed():
+	var file = File.new()
+	if file.file_exists(save_path):
+		var error = file.open(save_path, File.READ)
+		if error == OK:
+			var player_data = file.get_var()
+			file.close()
+			print(player_data)
