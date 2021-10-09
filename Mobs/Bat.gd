@@ -30,7 +30,7 @@ onready var hurtBox = $HurtBox
 onready var animationPlayer = $AnimationPlayer
 
 var velocity = Vector2.ZERO
-
+signal death
 func _ready():
 	Stats.MAX_HEALTH = MAX_HEALTH
 	hitBox.damage = damage
@@ -85,12 +85,13 @@ func pick_random_state(state_list):
 
 func _on_HurtBox_area_entered(area):
 	knockback = area.knockback_vector * FORCE
-	Stats.health -= area.damage
+	Stats.health -= area.damage 
 	hurtBox.create_hit_effect()
 	hurtBox.start_invincibility(0.3)
 	health_bar._on_health_updated(Stats.health)
 
 func _on_Stats_no_health():
+	emit_signal("death")
 	var effect = DeathEffect.instance()
 	get_parent().add_child(effect)
 	effect.global_position = global_position
