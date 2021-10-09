@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://Cat.tscn" type="PackedScene" id=21]
 [ext_resource path="res://MainCharacter/NPC_1.tscn" type="PackedScene" id=22]
 [ext_resource path="res://MainCharacter/NPC_2.tscn" type="PackedScene" id=23]
+[ext_resource path="res://MainCharacter/NPC_3.tscn" type="PackedScene" id=24]
+[ext_resource path="res://MainCharacter/NPC_4.tscn" type="PackedScene" id=25]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.7814
@@ -1579,6 +1581,12 @@ position = Vector2( 85.855, -166.138 )
 [node name="Butterfly53" parent="YSort/Butterflies" instance=ExtResource( 19 )]
 position = Vector2( -34.0042, 104.06 )
 rotation = -0.261799
+
+[node name="NPC_3" parent="YSort" instance=ExtResource( 24 )]
+position = Vector2( 36.8506, 86.5154 )
+
+[node name="NPC_4" parent="YSort" instance=ExtResource( 25 )]
+position = Vector2( 199.327, 74.7295 )
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
 position = Vector2( -92.1895, 92.5276 )

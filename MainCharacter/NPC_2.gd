@@ -5,7 +5,7 @@ const FORCE = 120
 const MAX_SPEED = 40
 const ACCELERATION = 200
 
-
+var quest_UI = preload("res://Quest_UI.tscn")
 onready var WandererController = $WandererController
 onready var playerDetection = $PlayerDetection
 
@@ -45,12 +45,17 @@ func _input(event):
 			var dialog = Dialogic.start('timeline-1')
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 			dialog.connect('timeline_end', self, 'unpause')
+			dialog.connect('dialogic_signal', self, 'quest_dialogic_event')
 			add_child(dialog)
 
 func unpause(timeline_name):
 	get_tree().paused = false
 	start_animations()
 	state = WANDER	
+	
+func quest_dialogic_event(param):
+	if( param == "quest_instance"):
+		get_parent().get_parent().add_child(quest_UI.instance())
 	
 func start_animations():
 	$AnimationTree.active = true

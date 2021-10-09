@@ -23,7 +23,7 @@ var active = false
 
 func _ready():
 	wandering_state()
-	$Sprite.frame = rand_range(1,19)
+	$Sprite.frame = rand_range(1,5)
 	playerDetection.connect("entered", self, "on_NPC_body_entered")
 	playerDetection.connect("exited", self, "on_NPC_body_exited")
 

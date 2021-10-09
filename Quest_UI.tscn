@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/PixelFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Quest_UI.gd" type="Script" id=2]
+
+[node name="Quest_UI" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 114.0
+margin_right = 241.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Objective: 0 of 10 completed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
