@@ -20,6 +20,7 @@ enum {
 
 var state = IDLE
 var active = false
+export var quest_active = false
 
 func _ready():
 	wandering_state()
@@ -40,7 +41,7 @@ func on_NPC_body_exited(body):
 		
 func _input(event):
 	if get_node_or_null('DialogNode') == null:
-		if event.is_action_pressed('ui_accept') and active:
+		if event.is_action_pressed('ui_accept') and active and not quest_active:
 			get_tree().paused = true
 			var dialog = Dialogic.start('timeline-1')
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS

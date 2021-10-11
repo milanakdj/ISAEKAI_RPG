@@ -869,7 +869,7 @@ tile_data = PoolIntArray( -786430, 6, 0, -786429, 6, 0, -786428, 6, 0, -786427, 
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -1507327, 12, 0, -1507326, 12, 0, -1507325, 12, 0, -1507320, 12, 0, -1507315, 15, 0, -1507314, 15, 0, -1507293, 12, 65536, -1507292, 12, 65537, -1376257, 12, 0, -1441792, 12, 0, -1441791, 33, 0, -1441785, 12, 0, -1441782, 15, 0, -1441767, 33, 0, -1441766, 33, 0, -1441764, 15, 0, -1310723, 12, 0, -1310722, 12, 0, -1310721, 33, 0, -1376250, 12, 0, -1376248, 15, 0, -1376247, 15, 0, -1376238, 33, 0, -1376223, 15, 0, -1245191, 12, 0, -1245190, 12, 0, -1245189, 12, 0, -1245188, 12, 0, -1245187, 12, 0, -1245186, 12, 0, -1310716, 12, 0, -1310715, 12, 0, -1310713, 12, 0, -1310712, 12, 0, -1310697, 12, 131072, -1310696, 12, 131073, -1310691, 12, 196608, -1310690, 12, 196609, -1310684, 15, 0, -1179649, 12, 0, -1245184, 12, 0, -1245181, 12, 0, -1245180, 12, 0, -1245178, 12, 0, -1245153, 33, 0, -1245148, 15, 0, -1114118, 15, 0, -1114117, 15, 0, -1179647, 12, 0, -1179646, 12, 0, -1179643, 15, 0, -1179641, 12, 0, -1179613, 15, 0, -1048580, 15, 0, -1048579, 15, 0, -1114089, 12, 0, -1114088, 12, 0, -1114084, 12, 196608, -1114083, 12, 196609, -983042, 12, 0, -1048573, 15, 0, -1048559, 12, 0, -1048558, 12, 0, -1048557, 12, 0, -1048539, 33, 0, -917508, 12, 0, -917507, 12, 0, -983037, 15, 0, -983022, 12, 0, -983008, 33, 0, -983007, 33, 0, -851974, 12, 0, -851973, 12, 0, -851969, 15, 0, -917477, 15, 0, -917476, 15, 0, -786436, 12, 0, -851968, 15, 0, -851965, 15, 1, -851955, 6, 0, -851943, 15, 0, -851942, 15, 0, -720899, 12, 0, -786427, 15, 0, -786423, 6, 0, -786422, 7, 0, -786416, 8, 0, -786408, 15, 0, -786404, 15, 1, -720895, 15, 0, -720894, 15, 0, -720893, 15, 0, -720892, 15, 0, -720886, 7, 0, -720880, 8, 0, -720867, 15, 1, -720858, 15, 1, -589832, 12, 0, -589825, 15, 1, -655359, 12, 0, -655350, 2, 0, -655349, 11, 196613, -655348, 11, 5, -655345, 22, 0, -655344, 3, 0, -655328, 23, 0, -655322, 15, 1, -524295, 12, 0, -589822, 12, 0, -589821, 12, 0, -589813, 2, 0, -589812, 11, 65541, -589811, 4, 0, -589810, 22, 0, -589809, 3, 0, -589793, 15, 1, -458755, 12, 0, -524283, 6, 0, -524276, 15, 1, -524256, 15, 1, -524255, 12, 0, -393219, 6, 0, -458747, 6, 0, -458740, 15, 1, -327685, 12, 0, -393201, 11, 131077, -393182, 15, 1, -393178, 12, 0, -327665, 11, 196613, -327664, 11, 196615, -327659, 12, 65536, -327658, 12, 65537, -327654, 11, 131074, -262134, 11, 2, -262133, 11, 3, -262130, 4, 0, -262119, 11, 196609, -262118, 11, 196610, -196608, 15, 0, -196600, 11, 0, -196599, 45, 0, -196598, 11, 196610, -196584, 12, 1, -196582, 12, 196608, -196581, 12, 196609, -131064, 11, 65536, -131049, 11, 196613, -131048, 11, 5, -8, 15, 0, -1, 38, 0, -65529, 45, 0, 65528, 15, 0, 65535, 38, 0, 131071, 15, 0, 65542, 45, 0, 65561, 11, 131077, 65572, 11, 131074, 196602, 11, 196613, 196603, 11, 196614, 196605, 11, 196609, 196606, 11, 196610, 131078, 11, 65536, 131097, 11, 131077, 131103, 11, 196614, 131108, 11, 131074, 196613, 11, 196608, 196614, 11, 131072, 196633, 11, 196613, 196639, 11, 196614, 196640, 11, 196614, 196641, 11, 196609, 196642, 11, 196609, 196643, 11, 196614, 196644, 11, 196610, 524292, 536870923, 3, 524293, 11, 131077, 524315, 11, 196609, 524316, 11, 196609, 524317, 11, 196609, 655355, 14, 0, 655356, 14, 1, 655357, 14, 2, 589829, 11, 196613, 589830, 11, 196614, 720891, 14, 65536, 720892, 14, 65537, 720893, 14, 65538, 720925, 15, 1, 720926, 38, 0, 786439, 11, 131077, 786457, 40, 0, 786458, 40, 196609, 786459, 40, 196609, 786460, 40, 196609, 786461, 40, 196609, 786462, 38, 0, 786469, 11, 65538, 917500, 15, 1, 917501, 15, 1, 851975, 11, 196613, 851976, 11, 5, 851990, 11, 2, 851991, 11, 3, 851994, 40, 65536, 852005, 11, 131074, 983035, 15, 1, 917512, 11, 196613, 917513, 11, 196614, 917514, 11, 196615, 917525, 11, 196609, 917526, 11, 196610, 917528, 12, 196608, 917529, 12, 196609, 917530, 40, 196608, 917531, 40, 196609, 917532, 40, 196609, 917533, 40, 196612, 917540, 11, 196609, 917541, 11, 196610, 983040, 39, 0, 983073, 11, 131077, 983079, 11, 131074, 1114105, 12, 0, 1048576, 39, 0, 1048586, 15, 1, 1048609, 11, 196613, 1048610, 11, 196614, 1048615, 11, 196610, 1179643, 23, 0, 1114112, 39, 0, 1114119, 12, 65536, 1114120, 12, 65537, 1114126, 11, 131074, 1245181, 12, 0, 1179661, 11, 196609, 1179662, 11, 196610, 1179685, 15, 1, 1179686, 15, 1, 1245186, 11, 131077, 1245213, 15, 1, 1245214, 15, 1, 1245218, 12, 0, 1245219, 15, 1, 1245220, 15, 1, 1310722, 11, 196613, 1310723, 11, 196614, 1310751, 15, 1, 1310754, 15, 1, 1376269, 11, 4, 1376270, 11, 5, 1376288, 15, 1, 1441806, 11, 65541, 1441825, 15, 1, 1572861, 15, 1, 1507335, 15, 1, 1507336, 15, 1, 1507337, 15, 1, 1507338, 15, 1, 1507350, 11, 196608, 1507351, 11, 196609, 1507352, 11, 196610, 1507359, 12, 0 )
+tile_data = PoolIntArray( -1507327, 12, 0, -1507326, 12, 0, -1507325, 12, 0, -1507320, 12, 0, -1507315, 15, 0, -1507314, 15, 0, -1507293, 12, 65536, -1507292, 12, 65537, -1376257, 12, 0, -1441792, 12, 0, -1441791, 33, 0, -1441785, 12, 0, -1441782, 15, 0, -1441767, 33, 0, -1441766, 33, 0, -1441764, 15, 0, -1310723, 12, 0, -1310722, 12, 0, -1310721, 33, 0, -1376250, 12, 0, -1376248, 15, 0, -1376247, 15, 0, -1376238, 33, 0, -1376223, 15, 0, -1245191, 12, 0, -1245190, 12, 0, -1245189, 12, 0, -1245188, 12, 0, -1245187, 12, 0, -1245186, 12, 0, -1310716, 12, 0, -1310715, 12, 0, -1310713, 12, 0, -1310712, 12, 0, -1310697, 12, 131072, -1310696, 12, 131073, -1310691, 12, 196608, -1310690, 12, 196609, -1310684, 15, 0, -1179649, 12, 0, -1245184, 12, 0, -1245181, 12, 0, -1245180, 12, 0, -1245178, 12, 0, -1245153, 33, 0, -1245148, 15, 0, -1114118, 15, 0, -1114117, 15, 0, -1179647, 12, 0, -1179646, 12, 0, -1179643, 15, 0, -1179641, 12, 0, -1179613, 15, 0, -1048580, 15, 0, -1048579, 15, 0, -1114089, 12, 0, -1114088, 12, 0, -1114084, 12, 196608, -1114083, 12, 196609, -983042, 12, 0, -1048573, 15, 0, -1048559, 12, 0, -1048558, 12, 0, -1048557, 12, 0, -1048539, 33, 0, -917508, 12, 0, -917507, 12, 0, -983037, 15, 0, -983022, 12, 0, -983008, 33, 0, -983007, 33, 0, -851974, 12, 0, -851973, 12, 0, -851969, 15, 0, -917477, 15, 0, -917476, 15, 0, -786436, 12, 0, -851968, 15, 0, -851965, 15, 1, -851955, 6, 0, -851943, 15, 0, -851942, 15, 0, -720899, 12, 0, -786427, 15, 0, -786423, 6, 0, -786422, 7, 0, -786416, 8, 0, -786408, 15, 0, -786404, 15, 1, -720895, 15, 0, -720894, 15, 0, -720893, 15, 0, -720892, 15, 0, -720886, 7, 0, -720880, 8, 0, -720867, 15, 1, -720858, 15, 1, -589832, 12, 0, -589825, 15, 1, -655359, 12, 0, -655350, 2, 0, -655349, 11, 196613, -655348, 11, 5, -655345, 22, 0, -655344, 3, 0, -655328, 23, 0, -655322, 15, 1, -524295, 12, 0, -589822, 12, 0, -589821, 12, 0, -589813, 2, 0, -589812, 11, 65541, -589811, 4, 0, -589810, 22, 0, -589809, 3, 0, -589793, 15, 1, -458755, 12, 0, -524283, 6, 0, -524276, 15, 1, -524256, 15, 1, -524255, 12, 0, -393219, 6, 0, -458747, 6, 0, -458740, 15, 1, -327685, 12, 0, -393201, 11, 131077, -393182, 15, 1, -393178, 12, 0, -327665, 11, 196613, -327664, 11, 196615, -327659, 12, 65536, -327658, 12, 65537, -327654, 11, 131074, -262134, 11, 2, -262133, 11, 3, -262130, 4, 0, -262119, 11, 196609, -262118, 11, 196610, -196608, 15, 0, -196600, 11, 0, -196599, 45, 0, -196598, 11, 196610, -196584, 12, 1, -196582, 12, 196608, -196581, 12, 196609, -131064, 11, 65536, -131049, 11, 196613, -131048, 11, 5, -8, 15, 0, -1, 38, 0, -65529, 45, 0, 65528, 15, 0, 65535, 38, 0, 131071, 15, 0, 65542, 45, 0, 65561, 11, 131077, 65572, 11, 131074, 131078, 11, 65536, 131097, 11, 131077, 131103, 11, 196614, 131108, 11, 131074, 196613, 11, 196608, 196614, 11, 131072, 196633, 11, 196613, 196639, 11, 196614, 196640, 11, 196614, 196641, 11, 196609, 196642, 11, 196609, 196643, 11, 196614, 196644, 11, 196610, 524292, 536870923, 3, 524293, 11, 131077, 524315, 11, 196609, 524316, 11, 196609, 524317, 11, 196609, 655355, 14, 0, 655356, 14, 1, 655357, 14, 2, 589829, 11, 196613, 589830, 11, 196614, 720891, 14, 65536, 720892, 14, 65537, 720893, 14, 65538, 720925, 15, 1, 720926, 38, 0, 786439, 11, 131077, 786457, 40, 0, 786458, 40, 196609, 786459, 40, 196609, 786460, 40, 196609, 786461, 40, 196609, 786462, 38, 0, 786469, 11, 65538, 917500, 15, 1, 917501, 15, 1, 851975, 11, 196613, 851976, 11, 5, 851990, 11, 2, 851991, 11, 3, 851994, 40, 65536, 852005, 11, 131074, 983035, 15, 1, 917512, 11, 196613, 917513, 11, 196614, 917514, 11, 196615, 917525, 11, 196609, 917526, 11, 196610, 917528, 12, 196608, 917529, 12, 196609, 917530, 40, 196608, 917531, 40, 196609, 917532, 40, 196609, 917533, 40, 196612, 917540, 11, 196609, 917541, 11, 196610, 983040, 39, 0, 983073, 11, 131077, 983079, 11, 131074, 1114105, 12, 0, 1048576, 39, 0, 1048586, 15, 1, 1048609, 11, 196613, 1048610, 11, 196614, 1048615, 11, 196610, 1179643, 23, 0, 1114112, 39, 0, 1114119, 12, 65536, 1114120, 12, 65537, 1114126, 11, 131074, 1245181, 12, 0, 1179661, 11, 196609, 1179662, 11, 196610, 1179685, 15, 1, 1179686, 15, 1, 1245186, 11, 131077, 1245213, 15, 1, 1245214, 15, 1, 1245218, 12, 0, 1245219, 15, 1, 1245220, 15, 1, 1310722, 11, 196613, 1310723, 11, 196614, 1310751, 15, 1, 1310754, 15, 1, 1376269, 11, 4, 1376270, 11, 5, 1376288, 15, 1, 1441806, 11, 65541, 1441825, 15, 1, 1572861, 15, 1, 1507335, 15, 1, 1507336, 15, 1, 1507337, 15, 1, 1507338, 15, 1, 1507350, 11, 196608, 1507351, 11, 196609, 1507352, 11, 196610, 1507359, 12, 0 )
 
 [node name="Water and Decoration" type="TileMap" parent="."]
 tile_set = ExtResource( 12 )
@@ -898,7 +898,7 @@ position = Vector2( 387.672, 280.534 )
 position = Vector2( 56.0829, 241.667 )
 
 [node name="HouseC3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( -60.4594, -14.013 )
+position = Vector2( -55.8632, -15.9575 )
 
 [node name="HouseC2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 396.171, -125.967 )
@@ -1236,12 +1236,6 @@ position = Vector2( 222.331, -265.512 )
 
 [node name="cat" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( -62.07, 55.5627 )
-
-[node name="NPC_1" parent="YSort" instance=ExtResource( 22 )]
-position = Vector2( -60.5445, 95.8622 )
-
-[node name="NPC_2" parent="YSort" instance=ExtResource( 23 )]
-position = Vector2( -14.4433, 94.7741 )
 
 [node name="Butterflies" type="YSort" parent="YSort"]
 
@@ -1582,10 +1576,18 @@ position = Vector2( 85.855, -166.138 )
 position = Vector2( -34.0042, 104.06 )
 rotation = -0.261799
 
-[node name="NPC_3" parent="YSort" instance=ExtResource( 24 )]
+[node name="NPC" type="YSort" parent="YSort"]
+
+[node name="NPC_1" parent="YSort/NPC" instance=ExtResource( 22 )]
+position = Vector2( -60.5445, 95.8622 )
+
+[node name="NPC_2" parent="YSort/NPC" instance=ExtResource( 23 )]
+position = Vector2( -14.4433, 94.7741 )
+
+[node name="NPC_3" parent="YSort/NPC" instance=ExtResource( 24 )]
 position = Vector2( 36.8506, 86.5154 )
 
-[node name="NPC_4" parent="YSort" instance=ExtResource( 25 )]
+[node name="NPC_4" parent="YSort/NPC" instance=ExtResource( 25 )]
 position = Vector2( 199.327, 74.7295 )
 
 [node name="MainCamera" parent="." instance=ExtResource( 13 )]
@@ -1598,7 +1600,14 @@ position = Vector2( -142.66, -383.368 )
 [node name="BottomRight" parent="MainCamera/Node" index="1"]
 position = Vector2( 656, 815 )
 
-[node name="Door" type="Area2D" parent="."]
+[node name="Menu" parent="." instance=ExtResource( 17 )]
+layer = 2
+
+[node name="CanvasModulate" parent="." instance=ExtResource( 20 )]
+
+[node name="Door2" type="YSort" parent="."]
+
+[node name="Door" type="Area2D" parent="Door2"]
 position = Vector2( -139.3, 98.4216 )
 collision_layer = 128
 collision_mask = 2
@@ -1607,17 +1616,17 @@ target_scene = "res://LoadingBar.tscn"
 current_scene = "res://Scene/Town.tscn"
 target_spawn_position = Vector2( 2050, 323 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2/Door"]
 position = Vector2( 0, -2.24747 )
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door2/Door"]
 anims/fade = SubResource( 2 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Door"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Door2/Door"]
 layer = 2
 
-[node name="ColorRect" type="ColorRect" parent="Door/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="Door2/Door/CanvasLayer"]
 margin_right = 320.0
 margin_bottom = 181.0
 mouse_filter = 1
@@ -1626,193 +1635,188 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="hutDoor" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( -67.8363, 18.9394 )
 target_scene = "res://TownRoom1.tscn"
 
-[node name="Sprite" parent="hutDoor" index="0"]
+[node name="Sprite" parent="Door2/hutDoor" index="0"]
 visible = false
-position = Vector2( 0, -3.18198 )
+position = Vector2( 4.06586, -8.13173 )
 scale = Vector2( 1, 1.39775 )
 
-[node name="CollisionShape2D" parent="hutDoor" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor" index="1"]
 position = Vector2( 7.0477, 7.0113 )
 shape = SubResource( 3 )
 
-[node name="hutDoor2" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor2" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( 214.748, -198.76 )
 target_scene = "res://TownRoom2.tscn"
 
-[node name="Sprite" parent="hutDoor2" index="0"]
+[node name="Sprite" parent="Door2/hutDoor2" index="0"]
 visible = false
 
-[node name="CollisionShape2D" parent="hutDoor2" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor2" index="1"]
 position = Vector2( 9.05222, 8.68174 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor2" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor2" index="2"]
 anims/FadeToBlack = SubResource( 4 )
 anims/closedoor = SubResource( 5 )
 anims/opendoor = SubResource( 6 )
 
-[node name="hutDoor3" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor3" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( 459.898, 52.4826 )
 target_scene = "res://TownRoom3.tscn"
 
-[node name="Sprite" parent="hutDoor3" index="0"]
+[node name="Sprite" parent="Door2/hutDoor3" index="0"]
 visible = false
 position = Vector2( -6.34961, -11.7071 )
 
-[node name="CollisionShape2D" parent="hutDoor3" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor3" index="1"]
 position = Vector2( 1.1161, -4.48576 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor3" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor3" index="2"]
 anims/FadeToBlack = SubResource( 7 )
 anims/closedoor = SubResource( 8 )
 anims/opendoor = SubResource( 9 )
 
-[node name="ColorRect" parent="hutDoor3/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Door2/hutDoor3/ScreenTransition" index="0"]
 margin_left = -222.518
 margin_top = -277.164
 margin_right = 706.482
 margin_bottom = 572.836
 
-[node name="hutDoor4" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor4" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( 394.254, -83.615 )
 target_scene = "res://TownRoom4.tscn"
 
-[node name="Sprite" parent="hutDoor4" index="0"]
+[node name="Sprite" parent="Door2/hutDoor4" index="0"]
 visible = false
 position = Vector2( -6.34961, -11.7071 )
 
-[node name="CollisionShape2D" parent="hutDoor4" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor4" index="1"]
 position = Vector2( 2.42612, -3.78566 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor4" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor4" index="2"]
 anims/FadeToBlack = SubResource( 10 )
 anims/closedoor = SubResource( 11 )
 anims/opendoor = SubResource( 12 )
 
-[node name="ColorRect" parent="hutDoor4/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Door2/hutDoor4/ScreenTransition" index="0"]
 margin_left = -221.677
 margin_top = -281.373
 margin_right = 707.323
 margin_bottom = 568.627
 
-[node name="hutDoor5" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor5" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( 380.9, 342.837 )
 target_scene = "res://TownRoom5.tscn"
 
-[node name="Sprite" parent="hutDoor5" index="0"]
+[node name="Sprite" parent="Door2/hutDoor5" index="0"]
 visible = false
 position = Vector2( -5.71893, -17.3831 )
 
-[node name="CollisionShape2D" parent="hutDoor5" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor5" index="1"]
 position = Vector2( 1.4654, -9.75805 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor5" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor5" index="2"]
 anims/FadeToBlack = SubResource( 13 )
 anims/closedoor = SubResource( 14 )
 anims/opendoor = SubResource( 15 )
 
-[node name="ColorRect" parent="hutDoor5/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Door2/hutDoor5/ScreenTransition" index="0"]
 margin_left = -221.677
 margin_top = -281.373
 margin_right = 707.323
 margin_bottom = 568.627
 
-[node name="hutDoor6" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor6" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( 52.7703, 291.054 )
 target_scene = "res://TownRoom6.tscn"
 
-[node name="Sprite" parent="hutDoor6" index="0"]
+[node name="Sprite" parent="Door2/hutDoor6" index="0"]
 visible = false
 position = Vector2( -4.59332, -22.7407 )
 scale = Vector2( 1, 1.33146 )
 
-[node name="CollisionShape2D" parent="hutDoor6" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor6" index="1"]
 position = Vector2( 1.4654, -9.75805 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor6" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor6" index="2"]
 anims/FadeToBlack = SubResource( 16 )
 anims/closedoor = SubResource( 17 )
 anims/opendoor = SubResource( 18 )
 
-[node name="ColorRect" parent="hutDoor6/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Door2/hutDoor6/ScreenTransition" index="0"]
 margin_left = -221.677
 margin_top = -279.782
 margin_right = 707.323
 margin_bottom = 570.218
 
-[node name="hutDoor7" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor7" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( 549.017, 230.828 )
 target_scene = "res://TownRoom7.tscn"
 
-[node name="Sprite" parent="hutDoor7" index="0"]
+[node name="Sprite" parent="Door2/hutDoor7" index="0"]
 visible = false
 position = Vector2( -4.59332, -22.7407 )
 scale = Vector2( 1, 1.33146 )
 
-[node name="CollisionShape2D" parent="hutDoor7" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor7" index="1"]
 position = Vector2( 4.14106, -14.6635 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor7" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor7" index="2"]
 anims/FadeToBlack = SubResource( 19 )
 anims/closedoor = SubResource( 20 )
 anims/opendoor = SubResource( 21 )
 
-[node name="ColorRect" parent="hutDoor7/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Door2/hutDoor7/ScreenTransition" index="0"]
 margin_left = -259.539
 margin_top = -70.7365
 margin_right = 669.461
 margin_bottom = 779.264
 
-[node name="hutDoor8" parent="." instance=ExtResource( 16 )]
+[node name="hutDoor8" parent="Door2" instance=ExtResource( 16 )]
 position = Vector2( -126.238, 252.96 )
 target_scene = "res://Apartment.tscn"
 
-[node name="Sprite" parent="hutDoor8" index="0"]
+[node name="Sprite" parent="Door2/hutDoor8" index="0"]
 visible = false
 position = Vector2( 171.567, -224.687 )
 scale = Vector2( 1, 1.24549 )
 
-[node name="CollisionShape2D" parent="hutDoor8" index="1"]
+[node name="CollisionShape2D" parent="Door2/hutDoor8" index="1"]
 position = Vector2( 178.311, -211.056 )
 shape = SubResource( 3 )
 
-[node name="AnimationPlayer" parent="hutDoor8" index="2"]
+[node name="AnimationPlayer" parent="Door2/hutDoor8" index="2"]
 anims/FadeToBlack = SubResource( 22 )
 anims/closedoor = SubResource( 23 )
 anims/opendoor = SubResource( 24 )
 
-[node name="ColorRect" parent="hutDoor8/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Door2/hutDoor8/ScreenTransition" index="0"]
 margin_top = 0.595276
 margin_bottom = 181.595
 
-[node name="Menu" parent="." instance=ExtResource( 17 )]
-layer = 2
-
-[node name="CanvasModulate" parent="." instance=ExtResource( 20 )]
-
-[connection signal="body_entered" from="Door" to="Door" method="_on_Door_body_entered"]
-[connection signal="animation_finished" from="Door/AnimationPlayer" to="Door" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="body_entered" from="hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Door2/Door" to="Door2/Door" method="_on_Door_body_entered"]
+[connection signal="animation_finished" from="Door2/Door/AnimationPlayer" to="Door2/Door" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="Door2/hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Door2/hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Door2/hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Door2/hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Door2/hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 
 [editable path="MainCamera"]
-[editable path="hutDoor"]
-[editable path="hutDoor2"]
-[editable path="hutDoor3"]
-[editable path="hutDoor4"]
-[editable path="hutDoor5"]
-[editable path="hutDoor6"]
-[editable path="hutDoor7"]
-[editable path="hutDoor8"]
+[editable path="Door2/hutDoor"]
+[editable path="Door2/hutDoor2"]
+[editable path="Door2/hutDoor3"]
+[editable path="Door2/hutDoor4"]
+[editable path="Door2/hutDoor5"]
+[editable path="Door2/hutDoor6"]
+[editable path="Door2/hutDoor7"]
+[editable path="Door2/hutDoor8"]

@@ -20,6 +20,7 @@ enum {
 
 var state = IDLE
 var active = false
+export var quest_active = false
 
 func _ready():
 	wandering_state()
