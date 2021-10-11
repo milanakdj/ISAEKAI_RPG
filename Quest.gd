@@ -31,7 +31,7 @@ func _ready():
 		i.connect("death", self, "update_label")
 	
 	for i in get_tree().get_root().get_node("Town").find_node("Door2").get_children():
-		i.get_node("CollisionShape2D").disabled = true
+		i.get_node("CollisionShape2D").set_deferred("disabled", true)
 	
 	for i in get_tree().get_root().get_node("Town").find_node("NPC").get_children():
 		i.quest_active = true
@@ -42,7 +42,8 @@ func update_label():
 	
 	if death_count == 10:
 		for i in get_tree().get_root().get_node("Town").find_node("Door2").get_children():
-			i.get_node("CollisionShape2D").disabled = false
+			i.get_node("CollisionShape2D").set_deferred("disabled", false)
+
 		for i in get_tree().get_root().get_node("Town").find_node("NPC").get_children():
 			i.quest_active  =  false
 		self.queue_free()

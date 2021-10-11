@@ -144,7 +144,7 @@ tracks/3/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 4 )
 } ],
-"times": PoolRealArray( 0 )
+"times": PoolRealArray( -0.1 )
 }
 
 [node name="hutDoor" type="Area2D"]
@@ -156,6 +156,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 centered = false
 vframes = 3
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 8, 8 )
@@ -176,5 +177,6 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_hutDoor_body_entered"]

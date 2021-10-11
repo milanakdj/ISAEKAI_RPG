@@ -30,7 +30,7 @@ func _ready():
 
 
 func on_NPC_body_entered(body):
-	if body.name == 'Player':
+	if body.name == 'Player' and not quest_active:
 		$Sprite.visible= true
 		active = true		
 	

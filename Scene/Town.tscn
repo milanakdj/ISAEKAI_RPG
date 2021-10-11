@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -25,6 +25,8 @@
 [ext_resource path="res://MainCharacter/NPC_2.tscn" type="PackedScene" id=23]
 [ext_resource path="res://MainCharacter/NPC_3.tscn" type="PackedScene" id=24]
 [ext_resource path="res://MainCharacter/NPC_4.tscn" type="PackedScene" id=25]
+[ext_resource path="res://resources/doorOpen_1.ogg" type="AudioStream" id=26]
+[ext_resource path="res://resources/doorClose_4.ogg" type="AudioStream" id=27]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.7814
@@ -181,6 +183,20 @@ tracks/2/keys = {
 "method": "closeanimation"
 } ]
 }
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 27 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=7]
 length = 1.5
@@ -292,6 +308,20 @@ tracks/2/keys = {
 "method": "closeanimation"
 } ]
 }
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=10]
 length = 1.5
@@ -320,6 +350,20 @@ tracks/1/keys = {
 "args": [  ],
 "method": "changes_the_scene"
 } ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=11]
@@ -514,6 +558,20 @@ tracks/2/keys = {
 "method": "closeanimation"
 } ]
 }
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=16]
 length = 1.5
@@ -624,6 +682,20 @@ tracks/2/keys = {
 "args": [  ],
 "method": "closeanimation"
 } ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=19]
@@ -736,6 +808,20 @@ tracks/2/keys = {
 "method": "closeanimation"
 } ]
 }
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 27 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=22]
 length = 1.5
@@ -847,6 +933,20 @@ tracks/2/keys = {
 "method": "closeanimation"
 } ]
 }
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [node name="Town" type="Node2D"]
 script = ExtResource( 15 )
@@ -885,26 +985,31 @@ position = Vector2( -92.1895, 92.5276 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../MainCamera")
 
-[node name="HouseA" parent="YSort" instance=ExtResource( 7 )]
+[node name="Houses" type="YSort" parent="YSort"]
+
+[node name="HouseA" parent="YSort/Houses" instance=ExtResource( 7 )]
 position = Vector2( 46.6427, -24.8056 )
 
-[node name="HouseA2" parent="YSort" instance=ExtResource( 7 )]
+[node name="HouseA2" parent="YSort/Houses" instance=ExtResource( 7 )]
 position = Vector2( 546.138, 157.033 )
 
-[node name="HouseB" parent="YSort" instance=ExtResource( 8 )]
+[node name="HouseB" parent="YSort/Houses" instance=ExtResource( 8 )]
 position = Vector2( 387.672, 280.534 )
 
-[node name="HouseC" parent="YSort" instance=ExtResource( 9 )]
+[node name="HouseC" parent="YSort/Houses" instance=ExtResource( 9 )]
 position = Vector2( 56.0829, 241.667 )
 
-[node name="HouseC3" parent="YSort" instance=ExtResource( 9 )]
+[node name="HouseC3" parent="YSort/Houses" instance=ExtResource( 9 )]
 position = Vector2( -55.8632, -15.9575 )
 
-[node name="HouseC2" parent="YSort" instance=ExtResource( 9 )]
+[node name="HouseC2" parent="YSort/Houses" instance=ExtResource( 9 )]
 position = Vector2( 396.171, -125.967 )
 
-[node name="Inn" parent="YSort" instance=ExtResource( 3 )]
+[node name="Inn" parent="YSort/Houses" instance=ExtResource( 3 )]
 position = Vector2( 525.671, -10.542 )
+
+[node name="Townhall" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 222.331, -265.512 )
 
 [node name="Trees" type="YSort" parent="YSort"]
 
@@ -1230,9 +1335,6 @@ position = Vector2( 225.082, 375.302 )
 
 [node name="Redtree" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 256.327, 89.1562 )
-
-[node name="Townhall" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 222.331, -265.512 )
 
 [node name="cat" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( -62.07, 55.5627 )
@@ -1643,6 +1745,7 @@ target_scene = "res://TownRoom1.tscn"
 visible = false
 position = Vector2( 4.06586, -8.13173 )
 scale = Vector2( 1, 1.39775 )
+frame = 0
 
 [node name="CollisionShape2D" parent="Door2/hutDoor" index="1"]
 position = Vector2( 7.0477, 7.0113 )
@@ -1654,6 +1757,7 @@ target_scene = "res://TownRoom2.tscn"
 
 [node name="Sprite" parent="Door2/hutDoor2" index="0"]
 visible = false
+frame = 0
 
 [node name="CollisionShape2D" parent="Door2/hutDoor2" index="1"]
 position = Vector2( 9.05222, 8.68174 )
@@ -1671,6 +1775,7 @@ target_scene = "res://TownRoom3.tscn"
 [node name="Sprite" parent="Door2/hutDoor3" index="0"]
 visible = false
 position = Vector2( -6.34961, -11.7071 )
+frame = 0
 
 [node name="CollisionShape2D" parent="Door2/hutDoor3" index="1"]
 position = Vector2( 1.1161, -4.48576 )
@@ -1717,6 +1822,7 @@ target_scene = "res://TownRoom5.tscn"
 [node name="Sprite" parent="Door2/hutDoor5" index="0"]
 visible = false
 position = Vector2( -5.71893, -17.3831 )
+frame = 0
 
 [node name="CollisionShape2D" parent="Door2/hutDoor5" index="1"]
 position = Vector2( 1.4654, -9.75805 )
@@ -1741,6 +1847,7 @@ target_scene = "res://TownRoom6.tscn"
 visible = false
 position = Vector2( -4.59332, -22.7407 )
 scale = Vector2( 1, 1.33146 )
+frame = 0
 
 [node name="CollisionShape2D" parent="Door2/hutDoor6" index="1"]
 position = Vector2( 1.4654, -9.75805 )
@@ -1765,6 +1872,7 @@ target_scene = "res://TownRoom7.tscn"
 visible = false
 position = Vector2( -4.59332, -22.7407 )
 scale = Vector2( 1, 1.33146 )
+frame = 0
 
 [node name="CollisionShape2D" parent="Door2/hutDoor7" index="1"]
 position = Vector2( 4.14106, -14.6635 )
