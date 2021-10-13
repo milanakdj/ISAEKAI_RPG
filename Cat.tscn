@@ -195,7 +195,9 @@ graph_offset = Vector2( -78.5, 55 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
-[node name="Cat" type="KinematicBody2D"]
+[node name="Cat" type="KinematicBody2D" groups=[
+"Persists",
+]]
 collision_mask = 0
 script = ExtResource( 3 )
 
@@ -204,7 +206,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 hframes = 4
 vframes = 8
-frame = 23
+frame = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.125, 4.875 )

@@ -19,16 +19,38 @@ var can_move = true
 var state = IDLE
 
 func _physics_process(delta):
-	var target_global_position: Vector2 = player.global_position
+	var target_global_position: Vector2
+	if (is_instance_valid(player)):
+		target_global_position = player.global_position
+	else:
+		pass
+		
 	if can_move:
 		match state:
 			MOVE:
 				move_state(delta, target_global_position)
 			IDLE:
 				animationState.travel("Idle")
-				if(player.animationState.get_current_node() != "Idle"):
-					state = MOVE
+				if (is_instance_valid(player)):
+					if(player.animationState.get_current_node() != "Idle"):
+						state = MOVE
 	#look_at(player.global_position)
+	if Input.is_action_just_pressed("save"):
+		SaverAndLoader.save_game()
+	
+	if Input.is_action_just_pressed("loads"):
+		SaverAndLoader.load_game()
+
+func save():
+	var save_dictionary = {
+		"filename" : get_filename(),
+		"parent" : get_parent().get_path(),
+		"position_x": position.x,
+		"position_y": position.y,
+		"target_global_position_x": player.global_position.x,
+		"target_global_position_y": player.global_position.y
+	}
+	return save_dictionary
 	
 	
 

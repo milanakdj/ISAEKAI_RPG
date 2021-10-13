@@ -57,6 +57,9 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("save"):
 		SaverAndLoader.save_game()
+	
+	if Input.is_action_just_pressed("loads"):
+		SaverAndLoader.load_game()
 
 func save():
 	var save_dictionary = {
