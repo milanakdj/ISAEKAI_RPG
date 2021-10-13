@@ -8,6 +8,7 @@ const ACCELERATION = 200
 
 onready var WandererController = $WandererController
 onready var playerDetection = $PlayerDetection
+var MainInstances = ResourceLoader.MainInstances
 
 onready var sprite = $Character
 

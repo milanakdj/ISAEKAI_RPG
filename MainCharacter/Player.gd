@@ -42,11 +42,15 @@ func _ready():
 	$sword.visible = false
 	$glasses.visible = false
 	MainInstances.player = self
+	print(MainInstances.player)
 	remoteTransform2d.remote_path = MainInstances.WorldCamera.get_path()
 	
 func _exit_tree():
-	MainInstances.player = null
+	pass
+	#MainInstances.player = null
 
+func assign_world_camera():
+	remoteTransform2d.remote_path = MainInstances.WorldCamera.get_path()
 
 func _physics_process(delta):
 	if can_move:

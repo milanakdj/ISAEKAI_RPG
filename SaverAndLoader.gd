@@ -31,10 +31,8 @@ func load_game():
 					or property == "parent"
 					or property == "position_x"
 					or property == "position_y"
-					or property == "target_global_position_x"
-					or property == "target_global_position_y"
 					):
 						continue
-				newNode.set(property, current_line[property])
+				newNode.set(property, current_line[property])		
 	save_game.close()
 		

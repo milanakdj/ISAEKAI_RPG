@@ -983,7 +983,7 @@ position = Vector2( -92.1895, 92.5276 )
 current = true
 
 [node name="TopLeft" parent="MainCamera/Node" index="0"]
-position = Vector2( -142.66, -383.368 )
+position = Vector2( -108.199, -365.388 )
 
 [node name="BottomRight" parent="MainCamera/Node" index="1"]
 position = Vector2( 656, 815 )
@@ -1001,9 +1001,6 @@ remote_path = NodePath("../../../MainCamera")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../MainCamera")
-
-[node name="cat" parent="YSort" instance=ExtResource( 21 )]
-position = Vector2( -62.07, 55.5627 )
 
 [node name="Houses" type="YSort" parent="YSort"]
 
@@ -1708,6 +1705,9 @@ position = Vector2( 36.8506, 86.5154 )
 
 [node name="NPC_4" parent="YSort/NPC" instance=ExtResource( 25 )]
 position = Vector2( 199.327, 74.7295 )
+
+[node name="cat" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( -62.07, 55.5627 )
 
 [node name="Menu" parent="." instance=ExtResource( 17 )]
 layer = 2

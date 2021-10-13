@@ -3,7 +3,7 @@ extends KinematicBody2D
 const DEFAULT_MASS : = 2.0
 const DEFAULT_MAX_SPEED : = 25.0
 
-onready var player = get_tree().get_root().get_node("Town").find_node("YSort").find_node("Player")
+var MainInstances = ResourceLoader.MainInstances
 
 onready var sprite = $Sprite
 onready var animationplayer = $AnimationPlayer
@@ -17,14 +17,12 @@ var speed = 100
 var velocity= Vector2.ZERO
 var can_move = true
 var state = IDLE
+var target_global_position: Vector2
 
 func _physics_process(delta):
-	var target_global_position: Vector2
-	if (is_instance_valid(player)):
-		target_global_position = player.global_position
-	else:
-		pass
-		
+	var player =  MainInstances.player
+	call_deferred("player_position")
+	
 	if can_move:
 		match state:
 			MOVE:
@@ -42,20 +40,22 @@ func _physics_process(delta):
 		SaverAndLoader.load_game()
 
 func save():
+	var player =  MainInstances.player
 	var save_dictionary = {
 		"filename" : get_filename(),
 		"parent" : get_parent().get_path(),
 		"position_x": position.x,
-		"position_y": position.y,
-		"target_global_position_x": player.global_position.x,
-		"target_global_position_y": player.global_position.y
+		"position_y": position.y
 	}
 	return save_dictionary
 	
+func player_position():
+	var player =  MainInstances.player
+	target_global_position = player.global_position
 	
 
 func move_state(delta, target_global_position):
-		
+	var player =  MainInstances.player
 	var input_vector = Vector2.ZERO
 	input_vector.x = target_global_position.x - global_position.x
 	input_vector.y = target_global_position.y - global_position.y

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/dbz0p93-b668049d-5a19-4341-a936-cba10aa334ea.png" type="Texture" id=1]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/mat.png" type="Texture" id=4]
+[ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.5302, 127.907 )
@@ -114,15 +115,26 @@ position = Vector2( 304.41, 182.787 )
 rotation = -0.785397
 shape = SubResource( 10 )
 
+[node name="MainCamera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 137.647, 212.097 )
+offset = Vector2( 10, 10 )
+current = true
+
+[node name="TopLeft" parent="MainCamera/Node" index="0"]
+position = Vector2( -1.6058, -2.01093 )
+
+[node name="BottomRight" parent="MainCamera/Node" index="1"]
+position = Vector2( 397.376, 283.023 )
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 139.768, 214.925 )
+position = Vector2( 137.647, 212.097 )
 
 [node name="AnimationTree" parent="Player" index="4"]
 parameters/playback = SubResource( 11 )
 parameters/Idle/blend_position = Vector2( -0.0224215, -0.526627 )
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
+[node name="RemoteTransform2D" parent="Player" index="16"]
+remote_path = NodePath("../../MainCamera")
 
 [node name="hutDoor" parent="." instance=ExtResource( 2 )]
 position = Vector2( 130.402, 258.284 )
@@ -145,6 +157,7 @@ margin_bottom = 468.248
 position = Vector2( 139.415, 247.115 )
 texture = ExtResource( 4 )
 
+[editable path="MainCamera"]
 [editable path="Player"]
 [editable path="Player/Gizmo/HitBox"]
 [editable path="Player/HurtBox"]
