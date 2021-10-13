@@ -54,7 +54,19 @@ func _physics_process(delta):
 		var pickup_item = $PickupZone.items_in_range.values()[0]
 		pickup_item.pick_up_item(self)
 		$PickupZone.items_in_range.erase(pickup_item)
+		
+	if Input.is_action_just_pressed("save"):
+		SaverAndLoader.save_game()
 
+func save():
+	var save_dictionary = {
+		"filename" : get_filename(),
+		"parent" : get_parent().get_path(),
+		"position_x": position.x,
+		"position_y": position.y
+	}
+	return save_dictionary
+	
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")
