@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends ResourcePreloader
+
+
+var MainInstances = preload(\"res://MainInstances.tres\")
+"
+
+[node name="ResourcePreloader" type="ResourcePreloader"]
+script = SubResource( 1 )

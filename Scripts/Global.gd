@@ -5,3 +5,4 @@ var player_current_location : Vector2
 var new_game : bool = false 
 var next_scene =""
 
+

@@ -35,6 +35,11 @@ _global_script_classes=[ {
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
 "base": "Resource",
+"class": "MainInstances",
+"language": "GDScript",
+"path": "res://MainInstances.gd"
+}, {
+"base": "Resource",
 "class": "SaveInfo",
 "language": "GDScript",
 "path": "res://MainCharacter/SaveInfo.gd"
@@ -45,6 +50,7 @@ _global_script_class_icons={
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
 "DialogicUtil": "",
+"MainInstances": "",
 "SaveInfo": ""
 }
 
@@ -65,6 +71,8 @@ DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 SceneChanger="res://SceneChanger.gd"
 MusicController="*res://MusicController.tscn"
 SaverAndLoader="*res://SaverAndLoader.gd"
+GlobalResourcePreloader="*res://ResourcePreloader.gd"
+ResourceLoader="*res://ResourceLoader.gd"
 
 [display]
 

@@ -6,6 +6,8 @@ export var MAX_SPEED = 50
 
 const thor_texture = preload("res://Assets/pngwing.com.png")
 
+var MainInstances = ResourceLoader.MainInstances
+
 var velocity = Vector2.ZERO
 
 enum {
@@ -25,6 +27,7 @@ onready var hurtBox = $HurtBox
 onready var collisionHitbox = $Gizmo/HitBox/CollisionShape2D
 onready var PlayerUI = $UI/PlayerHud
 onready var shadow = $Shadow
+onready var remoteTransform2d = $RemoteTransform2D
 
 func _ready():
 	randomize()
@@ -38,8 +41,11 @@ func _ready():
 	collisionHitbox.disabled = true
 	$sword.visible = false
 	$glasses.visible = false
+	MainInstances.player = self
+	remoteTransform2d.remote_path = MainInstances.WorldCamera.get_path()
 	
-
+func _exit_tree():
+	MainInstances.player = null
 
 
 func _physics_process(delta):
