@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/dbexf54-de604999-3713-4ee6-a659-10f31dae2474.png" type="Texture" id=2]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/mat.png" type="Texture" id=4]
+[ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 154.257 )
@@ -106,6 +107,16 @@ shape = SubResource( 6 )
 position = Vector2( 172.396, 103.741 )
 texture = ExtResource( 4 )
 
+[node name="MainCamera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 172.917, 100.818 )
+current = true
+
+[node name="TopLeft" parent="MainCamera/Node" index="0"]
+position = Vector2( -16.837, -28.0616 )
+
+[node name="BottomRight" parent="MainCamera/Node" index="1"]
+position = Vector2( 250.309, 347.963 )
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
@@ -117,9 +128,6 @@ frame = 136
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 7 )
 parameters/Idle/blend_position = Vector2( 0.00715566, 0.704142 )
-
-[node name="Gizmo" parent="YSort/Player" index="5"]
-rotation = 1.5708
 
 [node name="DoorZone" parent="YSort/Player" index="8"]
 visible = true
@@ -134,9 +142,8 @@ position = Vector2( -3.37558e-09, -5.83905 )
 position = Vector2( 4, 4 )
 rotation = 4.12357
 
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
-smoothing_enabled = true
+[node name="RemoteTransform2D" parent="YSort/Player" index="16"]
+remote_path = NodePath("../../../MainCamera")
 
 [node name="hutDoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( 172.095, 261.981 )
@@ -148,7 +155,6 @@ spawn_direction = Vector2( 461, 79 )
 visible = false
 position = Vector2( -7.05801, -194.486 )
 scale = Vector2( 1, 1.59442 )
-frame = 2
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 0.907563, -186.207 )
@@ -163,6 +169,7 @@ margin_bottom = 686.118
 [connection signal="area_exited" from="YSort/Player/HutDoorZone" to="YSort/Player" method="_on_HutDoorZone_area_exited"]
 [connection signal="area_exited" from="hutDoor" to="YSort/Player" method="_on_hutDoor_area_exited"]
 
+[editable path="MainCamera"]
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]
 [editable path="YSort/Player/HurtBox"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/266403d4cefaa2b28a79c926081af932.jpg" type="Texture" id=2]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/mat.png" type="Texture" id=4]
+[ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -89,38 +90,30 @@ centered = false
 position = Vector2( 140.593, 323.036 )
 texture = ExtResource( 4 )
 
+[node name="MainCamera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 141.777, 306.108 )
+current = true
+
+[node name="TopLeft" parent="MainCamera/Node" index="0"]
+position = Vector2( -10.1021, -51.6333 )
+
+[node name="BottomRight" parent="MainCamera/Node" index="1"]
+position = Vector2( 388.372, 387.249 )
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 141.777, 306.108 )
 
-[node name="Character" parent="YSort/Player" index="1"]
-frame = 183
-
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 1 )
 parameters/Idle/blend_position = Vector2( 0.00715566, 0.704142 )
 
-[node name="Gizmo" parent="YSort/Player" index="5"]
-rotation = 1.5708
-
-[node name="CollisionShape2D" parent="YSort/Player/Gizmo/HitBox" index="0"]
-position = Vector2( 7, -4.76837e-07 )
-rotation = 6.27605
-
 [node name="HutDoorZone" parent="YSort/Player" index="9"]
 position = Vector2( -0.445969, -24.5274 )
 
-[node name="glasses" parent="YSort/Player" index="11"]
-position = Vector2( 0, -6 )
-
-[node name="sword" parent="YSort/Player" index="12"]
-position = Vector2( 1.19209e-07, 3 )
-rotation = -2.06458
-
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
-smoothing_enabled = true
+[node name="RemoteTransform2D" parent="YSort/Player" index="16"]
+remote_path = NodePath("../../../MainCamera")
 
 [node name="hutDoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( 128.637, 414.422 )
@@ -264,6 +257,7 @@ shape = SubResource( 21 )
 [connection signal="area_exited" from="YSort/Player/HutDoorZone" to="YSort/Player" method="_on_HutDoorZone_area_exited"]
 [connection signal="area_exited" from="hutDoor" to="YSort/Player" method="_on_hutDoor_area_exited"]
 
+[editable path="MainCamera"]
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]
 [editable path="YSort/Player/HurtBox"]

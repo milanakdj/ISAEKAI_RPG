@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/library 2.png" type="Texture" id=2]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/mat.png" type="Texture" id=4]
+[ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 47.6768 )
@@ -141,31 +142,27 @@ rotation = 1.57079
 scale = Vector2( 0.684308, 1 )
 texture = ExtResource( 4 )
 
+[node name="MainCamera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 49.2973, 97.1677 )
+current = true
+
+[node name="TopLeft" parent="MainCamera/Node" index="0"]
+position = Vector2( -24.9733, -14.8651 )
+
+[node name="BottomRight" parent="MainCamera/Node" index="1"]
+position = Vector2( 381.735, 237.247 )
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 49.2973, 97.1677 )
 
-[node name="Character" parent="YSort/Player" index="1"]
-frame = 183
-
 [node name="AnimationTree" parent="YSort/Player" index="4"]
 parameters/playback = SubResource( 12 )
 parameters/Idle/blend_position = Vector2( 0.536673, 0.0414201 )
 
-[node name="Gizmo" parent="YSort/Player" index="5"]
-rotation = 1.5708
-
-[node name="CollisionShape2D" parent="YSort/Player/Gizmo/HitBox" index="0"]
-position = Vector2( 7, -4.76837e-07 )
-rotation = 6.27605
-
-[node name="glasses" parent="YSort/Player" index="11"]
-position = Vector2( 0, -6 )
-
-[node name="sword" parent="YSort/Player" index="12"]
-position = Vector2( 1.19209e-07, 3 )
-rotation = -2.06458
+[node name="RemoteTransform2D" parent="YSort/Player" index="16"]
+remote_path = NodePath("../../../MainCamera")
 
 [node name="hutDoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( -9.6901, 107.915 )
@@ -186,6 +183,7 @@ margin_top = -28.0
 margin_right = 367.0
 margin_bottom = 223.0
 
+[editable path="MainCamera"]
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]
 [editable path="YSort/Player/HurtBox"]

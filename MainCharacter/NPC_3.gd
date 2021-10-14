@@ -8,7 +8,7 @@ const ACCELERATION = 200
 
 onready var WandererController = $WandererController
 onready var playerDetection = $PlayerDetection
-
+var MainInstances = ResourceLoader.MainInstances
 onready var sprite = $Character
 
 var velocity = Vector2.ZERO
@@ -30,12 +30,12 @@ func _ready():
 
 
 func on_NPC_body_entered(body):
-	if body.name == 'Player' and not quest_active:
+	if body.get_filename() == MainInstances.player.get_filename() and not quest_active:
 		$Sprite.visible= true
 		active = true		
 	
 func on_NPC_body_exited(body):
-	if body.name == 'Player':
+	if body.get_filename() == MainInstances.player.get_filename():
 		$Sprite.visible= false
 		active = false 
 		
