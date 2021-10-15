@@ -6,3 +6,4 @@ var new_game : bool = false
 var next_scene =""
 
 
+var loading_screen_load = false

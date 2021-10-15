@@ -16,4 +16,5 @@ func _on_ExitGame_pressed():
 
 
 func _on_LoadGame_pressed():
-	SaverAndLoader.load_game()
+	get_tree().change_scene_to(start);
+	Global.loading_screen_load = true
