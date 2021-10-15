@@ -57,6 +57,10 @@ __meta__ = {
 texture = ExtResource( 1 )
 centered = false
 
+[node name="mat" type="Sprite" parent="."]
+position = Vector2( 139.415, 247.115 )
+texture = ExtResource( 4 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -152,10 +156,6 @@ margin_left = -596.79
 margin_top = -84.7521
 margin_right = 567.21
 margin_bottom = 468.248
-
-[node name="mat" type="Sprite" parent="."]
-position = Vector2( 139.415, 247.115 )
-texture = ExtResource( 4 )
 
 [editable path="MainCamera"]
 [editable path="Player"]

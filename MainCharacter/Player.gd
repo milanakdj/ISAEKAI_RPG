@@ -65,11 +65,7 @@ func _physics_process(delta):
 		pickup_item.pick_up_item(self)
 		$PickupZone.items_in_range.erase(pickup_item)
 		
-	if Input.is_action_just_pressed("save"):
-		SaverAndLoader.save_game()
 	
-	if Input.is_action_just_pressed("loads"):
-		SaverAndLoader.load_game()
 
 func save():
 	var save_dictionary = {

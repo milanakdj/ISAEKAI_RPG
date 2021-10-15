@@ -13,7 +13,7 @@ enum ScreenLoaded { NOTHING, JUST_MENU, TUTORIAL}
 var screenLoaded = ScreenLoaded.NOTHING
 
 var selected_option: int = 0
-
+var MainInstances = ResourceLoader.MainInstances
 func _ready():
 	menu.visible = false 
 	selectedarrow.rect_position.y = 64 + (selected_option % 4) * 20
@@ -23,7 +23,7 @@ func _unhandled_input(event):
 		ScreenLoaded.NOTHING:
 			if event.is_action_pressed("open_menu"):
 				MusicController.play_stop()
-				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+				var player = MainInstances.player
 				player.set_physics_process(false)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
 				menu.visible = true 
@@ -35,7 +35,7 @@ func _unhandled_input(event):
 				emit_signal("CloseMenu")
 				screenLoaded = ScreenLoaded.NOTHING
 				MusicController.play_music()
-				var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+				var player = MainInstances.player
 				player.set_physics_process(true)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
 			
@@ -87,29 +87,14 @@ func _on_Exit_pressed():
 	emit_signal("CloseMenu")
 	screenLoaded = ScreenLoaded.NOTHING
 	MusicController.play_music()
-	var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
+	var player = MainInstances.player
 	player.set_physics_process(true)
 	get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
 
 
 func _on_Save_Game_pressed():
-	var player = get_tree().get_root().get_node(currentScene).find_node("YSort").find_node("Player")
-	var data = {
-		#"name": player.friction,
-		"Player_location": player.position 
-	}
-	var file = File.new()
-	var error = file.open(save_path, File.WRITE)
-	if error == OK:
-		file.store_var(data)
-		file.close()
+	SaverAndLoader.save_game()
 
 
 func _on_Load_Game_pressed():
-	var file = File.new()
-	if file.file_exists(save_path):
-		var error = file.open(save_path, File.READ)
-		if error == OK:
-			var player_data = file.get_var()
-			file.close()
-			print(player_data)
+	SaverAndLoader.load_game()

@@ -13,3 +13,7 @@ func _on_press_play():
 
 func _on_ExitGame_pressed():
 	get_tree().quit(1);
+
+
+func _on_LoadGame_pressed():
+	SaverAndLoader.load_game()

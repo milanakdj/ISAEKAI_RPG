@@ -87,7 +87,7 @@ position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 3
+frame = 14
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -152,6 +152,7 @@ anims/fade = SubResource( 3 )
 anims/fadeIn = SubResource( 4 )
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="LoadGame" to="." method="_on_LoadGame_pressed"]
 [connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
 
 [editable path="NewGame"]
