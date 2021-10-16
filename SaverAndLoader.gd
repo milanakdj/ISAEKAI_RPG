@@ -24,7 +24,10 @@ func load_game():
 		var current_line = parse_json(save_game.get_line())# returns a dictionary
 		if current_line != null:
 			var newNode = load(current_line["filename"]).instance()
-			get_node(current_line["parent"]).add_child(newNode, true)
+			if get_node(current_line["parent"]) == null:
+				get_node(current_line["parent'sparent"]).add_child(newNode, true)
+			else:
+				get_node(current_line["parent"]).add_child(newNode, true)
 			newNode.position = Vector2(current_line["position_x"], current_line["position_y"])
 			for property in current_line.keys():
 				if (property == "filename" 

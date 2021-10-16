@@ -148,9 +148,6 @@ position = Vector2( 130.402, 258.284 )
 target_scene = "res://Scene/Town.tscn"
 target_spawn_position = Vector2( -56, 62 )
 
-[node name="Sprite" parent="hutDoor" index="0"]
-visible = false
-
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 shape = SubResource( 12 )
 

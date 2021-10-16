@@ -1711,6 +1711,7 @@ position = Vector2( -62.07, 55.5627 )
 
 [node name="Menu" parent="." instance=ExtResource( 17 )]
 layer = 5
+currentScene = "Town"
 
 [node name="CanvasModulate" parent="." instance=ExtResource( 20 )]
 

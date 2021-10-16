@@ -26,6 +26,7 @@ func _unhandled_input(event):
 				var player = MainInstances.player
 				player.set_physics_process(false)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
+				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
 				menu.visible = true 
 				$Control/backMusic.playing = true
 				screenLoaded = ScreenLoaded.JUST_MENU
@@ -84,6 +85,13 @@ func CloseTutorialMenus():
 
 
 func _on_Exit_pressed():
+	get_tree().change_scene("res://UI/MainMenu.tscn")
+
+func _on_Save_Game_pressed():
+	SaverAndLoader.save_game()
+
+
+func _on_Load_Game_pressed():
 	emit_signal("CloseMenu")
 	screenLoaded = ScreenLoaded.NOTHING
 	MusicController.play_music()
@@ -91,10 +99,3 @@ func _on_Exit_pressed():
 	player.set_physics_process(true)
 	get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
 
-
-func _on_Save_Game_pressed():
-	SaverAndLoader.save_game()
-
-
-func _on_Load_Game_pressed():
-	SaverAndLoader.load_game()

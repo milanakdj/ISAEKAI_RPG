@@ -87,7 +87,7 @@ position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 7
+frame = 10
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
