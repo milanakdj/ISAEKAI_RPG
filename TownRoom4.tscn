@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/contain_620x488.png" type="Texture" id=2]
 [ext_resource path="res://hutDoor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/mat.png" type="Texture" id=4]
 [ext_resource path="res://MainCharacter/MainCamera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TownRoom4.gd" type="Script" id=6]
+[ext_resource path="res://mainmenu/Menu.tscn" type="PackedScene" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -48,7 +50,8 @@ radius = 15.9044
 
 [sub_resource type="RectangleShape2D" id=12]
 
-[node name="TownRoom3" type="Node2D"]
+[node name="TownRoom4" type="Node2D"]
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
@@ -173,6 +176,9 @@ margin_left = -352.413
 margin_top = -112.073
 margin_right = 658.587
 margin_bottom = 650.927
+
+[node name="Menu" parent="." instance=ExtResource( 7 )]
+currentScene = "TownRoom4"
 
 [connection signal="area_exited" from="YSort/Player/HutDoorZone" to="YSort/Player" method="_on_HutDoorZone_area_exited"]
 [connection signal="area_exited" from="hutDoor" to="YSort/Player" method="_on_hutDoor_area_exited"]
