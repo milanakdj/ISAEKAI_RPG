@@ -29,6 +29,7 @@ func load_game():
 			for property in current_line.keys():
 				if (property == "filename" 
 					or property == "parent"
+					or property == "parent'sparent"
 					or property == "position_x"
 					or property == "position_y"
 					):

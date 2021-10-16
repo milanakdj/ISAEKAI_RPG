@@ -13,4 +13,5 @@ func _ready():
 	MainInstances.WorldCamera = self
 	
 func _exit_tree():
-	MainInstances.WorldCamera = null
+	pass
+	#MainInstances.WorldCamera = null

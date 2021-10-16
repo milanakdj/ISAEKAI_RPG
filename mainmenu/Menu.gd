@@ -3,7 +3,7 @@ extends CanvasLayer
 
 signal CloseMenu
 
-export var currentScene = "Town"
+export var currentScene = ""
 
 onready var menu = $Control
 onready var selectedarrow = $Control/TextureRect

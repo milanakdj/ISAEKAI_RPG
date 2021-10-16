@@ -20,7 +20,7 @@ func _ready():
 	else:
 		$PlayerSprite.queue_free()
 	$Menu.connect("CloseMenu", self, "_on_Exit")	
-	
+	loading_screen_load()
 	
 func _fade_complete():
 	$AnimationPlayer.play("playerWake")
@@ -71,3 +71,10 @@ func _on_first_scene2_body_entered(body):
 func _on_first_scene3_body_entered(body):
 	if body.name.begins_with("Player"):
 		$YSort/Bat2.visible = true
+
+
+
+func loading_screen_load():
+	if Global.loading_screen_load:
+		SaverAndLoader.load_game()
+		Global.loading_screen_load = false

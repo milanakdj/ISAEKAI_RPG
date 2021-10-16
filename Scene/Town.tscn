@@ -1714,9 +1714,9 @@ layer = 5
 
 [node name="CanvasModulate" parent="." instance=ExtResource( 20 )]
 
-[node name="Door2" type="YSort" parent="."]
+[node name="Doors" type="YSort" parent="."]
 
-[node name="Door" type="Area2D" parent="Door2"]
+[node name="Door" type="Area2D" parent="Doors"]
 position = Vector2( -139.3, 98.4216 )
 collision_layer = 128
 collision_mask = 2
@@ -1725,17 +1725,17 @@ target_scene = "res://LoadingBar.tscn"
 current_scene = "res://Scene/Town.tscn"
 target_spawn_position = Vector2( 2050, 323 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2/Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door"]
 position = Vector2( 0, -2.24747 )
 shape = SubResource( 2 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door2/Door"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Doors/Door"]
 anims/fade = SubResource( 3 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Door2/Door"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Doors/Door"]
 layer = 2
 
-[node name="ColorRect" type="ColorRect" parent="Door2/Door/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="Doors/Door/CanvasLayer"]
 margin_right = 320.0
 margin_bottom = 181.0
 mouse_filter = 1
@@ -1744,197 +1744,197 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="hutDoor0" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor0" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( -67.8363, 18.9394 )
 target_scene = "res://TownRoom1.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor0" index="0"]
+[node name="Sprite" parent="Doors/hutDoor0" index="0"]
 visible = false
 position = Vector2( 4.06586, -8.13173 )
 scale = Vector2( 1, 1.39775 )
 frame = 0
 
-[node name="CollisionShape2D" parent="Door2/hutDoor0" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor0" index="1"]
 position = Vector2( 7.0477, 7.0113 )
 shape = SubResource( 4 )
 
-[node name="hutDoor1" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor1" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( -126.238, 252.96 )
 target_scene = "res://Apartment.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor1" index="0"]
+[node name="Sprite" parent="Doors/hutDoor1" index="0"]
 visible = false
 position = Vector2( 171.567, -224.687 )
 scale = Vector2( 1, 1.24549 )
 
-[node name="CollisionShape2D" parent="Door2/hutDoor1" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor1" index="1"]
 position = Vector2( 178.311, -211.056 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor1" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor1" index="2"]
 anims/FadeToBlack = SubResource( 5 )
 anims/closedoor = SubResource( 6 )
 anims/opendoor = SubResource( 7 )
 
-[node name="ColorRect" parent="Door2/hutDoor1/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Doors/hutDoor1/ScreenTransition" index="0"]
 margin_top = 0.595276
 margin_bottom = 181.595
 
-[node name="hutDoor2" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor2" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 214.748, -198.76 )
 target_scene = "res://TownRoom2.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor2" index="0"]
+[node name="Sprite" parent="Doors/hutDoor2" index="0"]
 visible = false
 frame = 0
 
-[node name="CollisionShape2D" parent="Door2/hutDoor2" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor2" index="1"]
 position = Vector2( 9.05222, 8.68174 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor2" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor2" index="2"]
 anims/FadeToBlack = SubResource( 8 )
 anims/closedoor = SubResource( 9 )
 anims/opendoor = SubResource( 10 )
 
-[node name="hutDoor3" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor3" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 459.898, 52.4826 )
 target_scene = "res://TownRoom3.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor3" index="0"]
+[node name="Sprite" parent="Doors/hutDoor3" index="0"]
 visible = false
 position = Vector2( -6.34961, -11.7071 )
 frame = 0
 
-[node name="CollisionShape2D" parent="Door2/hutDoor3" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor3" index="1"]
 position = Vector2( 1.1161, -4.48576 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor3" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor3" index="2"]
 anims/FadeToBlack = SubResource( 11 )
 anims/closedoor = SubResource( 12 )
 anims/opendoor = SubResource( 13 )
 
-[node name="ColorRect" parent="Door2/hutDoor3/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Doors/hutDoor3/ScreenTransition" index="0"]
 margin_left = -222.518
 margin_top = -277.164
 margin_right = 706.482
 margin_bottom = 572.836
 
-[node name="hutDoor4" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor4" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 394.254, -83.615 )
 target_scene = "res://TownRoom4.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor4" index="0"]
+[node name="Sprite" parent="Doors/hutDoor4" index="0"]
 visible = false
 position = Vector2( -6.34961, -11.7071 )
 
-[node name="CollisionShape2D" parent="Door2/hutDoor4" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor4" index="1"]
 position = Vector2( 2.42612, -3.78566 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor4" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor4" index="2"]
 anims/FadeToBlack = SubResource( 14 )
 anims/closedoor = SubResource( 15 )
 anims/opendoor = SubResource( 16 )
 
-[node name="ColorRect" parent="Door2/hutDoor4/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Doors/hutDoor4/ScreenTransition" index="0"]
 margin_left = -221.677
 margin_top = -281.373
 margin_right = 707.323
 margin_bottom = 568.627
 
-[node name="hutDoor5" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor5" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 380.9, 342.837 )
 target_scene = "res://TownRoom5.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor5" index="0"]
+[node name="Sprite" parent="Doors/hutDoor5" index="0"]
 visible = false
 position = Vector2( -5.71893, -17.3831 )
 frame = 0
 
-[node name="CollisionShape2D" parent="Door2/hutDoor5" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor5" index="1"]
 position = Vector2( 1.4654, -9.75805 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor5" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor5" index="2"]
 anims/FadeToBlack = SubResource( 17 )
 anims/closedoor = SubResource( 18 )
 anims/opendoor = SubResource( 19 )
 
-[node name="ColorRect" parent="Door2/hutDoor5/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Doors/hutDoor5/ScreenTransition" index="0"]
 margin_left = -221.677
 margin_top = -281.373
 margin_right = 707.323
 margin_bottom = 568.627
 
-[node name="hutDoor6" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor6" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 52.7703, 291.054 )
 target_scene = "res://TownRoom6.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor6" index="0"]
+[node name="Sprite" parent="Doors/hutDoor6" index="0"]
 visible = false
 position = Vector2( -4.59332, -22.7407 )
 scale = Vector2( 1, 1.33146 )
 frame = 0
 
-[node name="CollisionShape2D" parent="Door2/hutDoor6" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor6" index="1"]
 position = Vector2( 1.4654, -9.75805 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor6" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor6" index="2"]
 anims/FadeToBlack = SubResource( 20 )
 anims/closedoor = SubResource( 21 )
 anims/opendoor = SubResource( 22 )
 
-[node name="ColorRect" parent="Door2/hutDoor6/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Doors/hutDoor6/ScreenTransition" index="0"]
 margin_left = -221.677
 margin_top = -279.782
 margin_right = 707.323
 margin_bottom = 570.218
 
-[node name="hutDoor7" parent="Door2" instance=ExtResource( 16 )]
+[node name="hutDoor7" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 549.017, 230.828 )
 target_scene = "res://TownRoom7.tscn"
 
-[node name="Sprite" parent="Door2/hutDoor7" index="0"]
+[node name="Sprite" parent="Doors/hutDoor7" index="0"]
 visible = false
 position = Vector2( -4.59332, -22.7407 )
 scale = Vector2( 1, 1.33146 )
 frame = 0
 
-[node name="CollisionShape2D" parent="Door2/hutDoor7" index="1"]
+[node name="CollisionShape2D" parent="Doors/hutDoor7" index="1"]
 position = Vector2( 4.14106, -14.6635 )
 shape = SubResource( 4 )
 
-[node name="AnimationPlayer" parent="Door2/hutDoor7" index="2"]
+[node name="AnimationPlayer" parent="Doors/hutDoor7" index="2"]
 anims/FadeToBlack = SubResource( 23 )
 anims/closedoor = SubResource( 24 )
 anims/opendoor = SubResource( 25 )
 
-[node name="ColorRect" parent="Door2/hutDoor7/ScreenTransition" index="0"]
+[node name="ColorRect" parent="Doors/hutDoor7/ScreenTransition" index="0"]
 margin_left = -259.539
 margin_top = -70.7365
 margin_right = 669.461
 margin_bottom = 779.264
 
-[connection signal="body_entered" from="Door2/Door" to="Door2/Door" method="_on_Door_body_entered"]
-[connection signal="animation_finished" from="Door2/Door/AnimationPlayer" to="Door2/Door" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="body_entered" from="Door2/hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="Door2/hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="Door2/hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="Door2/hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
-[connection signal="body_entered" from="Door2/hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Doors/Door" to="Doors/Door" method="_on_Door_body_entered"]
+[connection signal="animation_finished" from="Doors/Door/AnimationPlayer" to="Doors/Door" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="Doors/hutDoor3" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Doors/hutDoor4" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Doors/hutDoor5" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Doors/hutDoor6" to="YSort/Player" method="_on_hutDoor3_body_entered"]
+[connection signal="body_entered" from="Doors/hutDoor7" to="YSort/Player" method="_on_hutDoor3_body_entered"]
 
 [editable path="MainCamera"]
 [editable path="YSort/Player"]
 [editable path="YSort/Player/Gizmo/HitBox"]
 [editable path="YSort/Player/HurtBox"]
-[editable path="Door2/hutDoor0"]
-[editable path="Door2/hutDoor1"]
-[editable path="Door2/hutDoor2"]
-[editable path="Door2/hutDoor3"]
-[editable path="Door2/hutDoor4"]
-[editable path="Door2/hutDoor5"]
-[editable path="Door2/hutDoor6"]
-[editable path="Door2/hutDoor7"]
+[editable path="Doors/hutDoor0"]
+[editable path="Doors/hutDoor1"]
+[editable path="Doors/hutDoor2"]
+[editable path="Doors/hutDoor3"]
+[editable path="Doors/hutDoor4"]
+[editable path="Doors/hutDoor5"]
+[editable path="Doors/hutDoor6"]
+[editable path="Doors/hutDoor7"]
