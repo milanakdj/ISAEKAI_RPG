@@ -71,6 +71,7 @@ func save():
 	var save_dictionary = {
 		"filename" : get_filename(),
 		"parent" : get_parent().get_path(),
+		"parent_filename" : get_parent().get_filename(),
 		"parent'sparent": get_parent().get_parent().get_filename(),
 		"position_x": position.x,
 		"position_y": position.y

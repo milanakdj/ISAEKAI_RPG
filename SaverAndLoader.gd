@@ -30,6 +30,7 @@ func load_game():
 				if (property == "filename" 
 					or property == "parent"
 					or property == "parent'sparent"
+					or property == "parent_filename"
 					or property == "position_x"
 					or property == "position_y"
 					):
