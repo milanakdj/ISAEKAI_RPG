@@ -43,7 +43,11 @@ func _input(event):
 	if get_node_or_null('DialogNode') == null:
 		if event.is_action_pressed('ui_accept') and active and not quest_active:
 			get_tree().paused = true
-			var dialog = Dialogic.start('timeline-2')
+			var dialog
+			if MainInstances.player.quest_one_finished==false :
+				dialog = Dialogic.start('timeline-2')
+			else :
+				dialog = Dialogic.start('timeline-1')
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 			dialog.connect('timeline_end', self, 'unpause')
 			dialog.connect('dialogic_signal', self, 'quest_dialogic_event')
