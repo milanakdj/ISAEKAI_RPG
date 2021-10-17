@@ -18,6 +18,7 @@ enum {
 var state = MOVE
 var can_move = true
 
+var quest_one_finished = false
 onready var animationPlayer = $AnimationPlayer 
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -74,7 +75,8 @@ func save():
 		"parent_filename" : get_parent().get_filename(),
 		"parent'sparent": get_parent().get_parent().get_filename(),
 		"position_x": position.x,
-		"position_y": position.y
+		"position_y": position.y,
+		"quest_one_finished": quest_one_finished
 	}
 	return save_dictionary
 	

@@ -55,7 +55,7 @@ func unpause(timeline_name):
 	state = WANDER	
 	
 func quest_dialogic_event(param):
-	if( param == "quest_instance"):
+	if( param == "quest_instance" and MainInstances.player.quest_one_finished==false):
 		get_parent().get_parent().add_child(quest.instance())
 	
 func start_animations():

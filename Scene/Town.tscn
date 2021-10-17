@@ -1760,7 +1760,7 @@ position = Vector2( 7.0477, 7.0113 )
 shape = SubResource( 4 )
 
 [node name="hutDoor1" parent="Doors" instance=ExtResource( 16 )]
-position = Vector2( -126.238, 252.96 )
+position = Vector2( -126.8, 252.773 )
 target_scene = "res://Apartment.tscn"
 
 [node name="Sprite" parent="Doors/hutDoor1" index="0"]
@@ -1769,7 +1769,7 @@ position = Vector2( 171.567, -224.687 )
 scale = Vector2( 1, 1.24549 )
 
 [node name="CollisionShape2D" parent="Doors/hutDoor1" index="1"]
-position = Vector2( 178.311, -211.056 )
+position = Vector2( 184.866, -216.394 )
 shape = SubResource( 4 )
 
 [node name="AnimationPlayer" parent="Doors/hutDoor1" index="2"]

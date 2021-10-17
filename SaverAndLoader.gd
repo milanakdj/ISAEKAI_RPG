@@ -36,7 +36,8 @@ func load_game():
 					or property == "parent_filename"
 					or property == "position_x"
 					or property == "position_y"
-					):
+					#or property == "quest_one_finished"
+					):#skips these properties 
 						continue
 				newNode.set(property, current_line[property])		
 	save_game.close()

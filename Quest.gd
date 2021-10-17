@@ -7,7 +7,7 @@ extends Node2D
 
 var death_count = 0
 var valid_cells
-
+var MainInstances = ResourceLoader.MainInstances
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,7 +39,7 @@ func _ready():
 	for i in get_tree().get_root().get_node("Town").find_node("YSort").get_child(ysort.get_child_count()-1).get_children():
 		i.connect("death", self, "update_label")
 	
-	for i in get_tree().get_root().get_node("Town").find_node("Door2").get_children():
+	for i in get_tree().get_root().get_node("Town").find_node("Doors").get_children():
 		i.get_node("CollisionShape2D").set_deferred("disabled", true)
 	
 	for i in get_tree().get_root().get_node("Town").find_node("NPC").get_children():
@@ -57,11 +57,14 @@ func update_label():
 	$Quest_UI/Label.text = "Objective: " + String(death_count) + "of 10 completed"
 	
 	if death_count == 10:
-		for i in get_tree().get_root().get_node("Town").find_node("Door2").get_children():
+		for i in get_tree().get_root().get_node("Town").find_node("Doors").get_children():
 			i.get_node("CollisionShape2D").set_deferred("disabled", false)
 
 		for i in get_tree().get_root().get_node("Town").find_node("NPC").get_children():
 			i.quest_active  =  false
+			
+		var player =  MainInstances.player
+		player.quest_one_finished = true
 		self.queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
