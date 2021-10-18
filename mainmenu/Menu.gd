@@ -54,9 +54,9 @@ func _unhandled_input(event):
 			elif event.is_action_pressed("ui_accept"):
 				match selected_option:
 					0:
-						pass
+						_on_Load_Game_pressed()
 					1:
-						pass
+						_on_Save_Game_pressed()
 					2:
 						_on_Tutorial_pressed()
 					3:
