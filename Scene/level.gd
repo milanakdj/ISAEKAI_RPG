@@ -3,14 +3,15 @@ extends Node2D
 var cursor = load("res://cursor.png")
 
 func _ready():
-	MusicController.play_music()
+	if MusicController.playing == false:
+		MusicController.play_music()     	
 	Global.next_scene= "res://Scene/Town.tscn"
 	$YSort/Skeleton.visible = false
 	$YSort/Bat.visible = false
 	$YSort/Bat2.visible = false
 	if Global.spawn_position:
 		$YSort/Player.global_position = Global.spawn_position
-		$YSort/Cat.position = Global.spawn_position 
+		get_tree().get_root().get_node("level").find_node("YSort").find_node("Cat").position = Global.spawn_position 
 	Input.set_custom_mouse_cursor(cursor)
 	$CanvasLayer/DialogBox.connect("done",self,"_on_done")
 	if Global.new_game:

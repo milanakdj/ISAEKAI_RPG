@@ -1542,10 +1542,12 @@ layer = 5
 stream = ExtResource( 14 )
 pitch_scale = 0.56
 attenuation = 0.732043
+bus = "Walk"
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 15 )
 attenuation = 0.732043
+bus = "Walk"
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 update_rotation = false
