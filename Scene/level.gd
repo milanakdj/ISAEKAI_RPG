@@ -10,6 +10,7 @@ func _ready():
 	$YSort/Bat2.visible = false
 	if Global.spawn_position:
 		$YSort/Player.global_position = Global.spawn_position
+		$YSort/Cat.position = Global.spawn_position 
 	Input.set_custom_mouse_cursor(cursor)
 	$CanvasLayer/DialogBox.connect("done",self,"_on_done")
 	if Global.new_game:
