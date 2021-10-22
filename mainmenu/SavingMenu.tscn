@@ -84,16 +84,22 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/ScrollContainer"]
-margin_right = 12.0
-margin_bottom = 116.0
+margin_right = 150.0
+margin_bottom = 44.0
+rect_clip_content = true
 
 [node name="Button1" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
-margin_right = 12.0
+margin_right = 150.0
 margin_bottom = 20.0
+rect_min_size = Vector2( 150, 20 )
+size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="NinePatchRect/ScrollContainer/VBoxContainer/Button1"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 6.74238
+margin_top = 7.86612
+margin_right = 46.7424
+margin_bottom = 21.8661
+custom_fonts/font = ExtResource( 4 )
 text = "fdsfstssss"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,51 +107,15 @@ __meta__ = {
 
 [node name="Button2" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
 margin_top = 24.0
-margin_right = 12.0
+margin_right = 150.0
 margin_bottom = 44.0
 
 [node name="Label" type="Label" parent="NinePatchRect/ScrollContainer/VBoxContainer/Button2"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "fdsfstssss"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button3" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
-margin_top = 48.0
-margin_right = 12.0
-margin_bottom = 68.0
-
-[node name="Label" type="Label" parent="NinePatchRect/ScrollContainer/VBoxContainer/Button3"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "fdsfstssss"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button4" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
-margin_top = 72.0
-margin_right = 12.0
-margin_bottom = 92.0
-
-[node name="Label" type="Label" parent="NinePatchRect/ScrollContainer/VBoxContainer/Button4"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "fdsfstssss"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button5" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
-margin_top = 96.0
-margin_right = 12.0
-margin_bottom = 116.0
-
-[node name="Label" type="Label" parent="NinePatchRect/ScrollContainer/VBoxContainer/Button5"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 8.61527
+margin_top = 5.61865
+margin_right = 48.6153
+margin_bottom = 19.6187
+custom_fonts/font = ExtResource( 4 )
 text = "fdsfstssss"
 __meta__ = {
 "_edit_use_anchors_": false
