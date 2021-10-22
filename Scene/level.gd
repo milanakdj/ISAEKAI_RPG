@@ -52,7 +52,7 @@ func _input(event):
 func _on_Exit():
 	$Menu/Control.visible = false
 	$Menu/Control/backMusic.playing = false
-
+	
 
 
 
