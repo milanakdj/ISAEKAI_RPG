@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Tileset/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://MainCharacter/Player.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://MainCharacter/NPC_4.tscn" type="PackedScene" id=25]
 [ext_resource path="res://resources/doorOpen_1.ogg" type="AudioStream" id=26]
 [ext_resource path="res://resources/doorClose_4.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Particles2D.tscn" type="PackedScene" id=28]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
@@ -1200,6 +1201,110 @@ position = Vector2( 86.5414, 34.3766 )
 
 [node name="Tree11" parent="YSort/Trees" instance=ExtResource( 4 )]
 position = Vector2( 99.277, 177.465 )
+
+[node name="Particles" type="YSort" parent="YSort"]
+position = Vector2( 258.5, 97.5 )
+rotation = 2.8414
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Particles2D" parent="YSort/Particles" instance=ExtResource( 28 )]
+modulate = Color( 0.937255, 0.215686, 0.215686, 1 )
+
+[node name="Particles2D2" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 2863.31, 1943.62 )
+
+[node name="Particles2D3" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 4286.73, 498.215 )
+
+[node name="Particles2D4" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 2884.9, -2045.97 )
+
+[node name="Particles2D5" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 5927.93, -1011.67 )
+
+[node name="Particles2D6" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 7291.09, 847.903 )
+
+[node name="Particles2D7" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 7669.11, -841.98 )
+
+[node name="Particles2D8" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 7693.72, -2961.36 )
+
+[node name="Particles2D9" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 5736.09, -3401.17 )
+
+[node name="Particles2D10" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 5525.28, -5028.44 )
+
+[node name="Particles2D11" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 2710.14, -4952.69 )
+
+[node name="Particles2D12" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -1036.44, -7558.14 )
+
+[node name="Particles2D13" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -152.662, -4293.47 )
+
+[node name="Particles2D14" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -2120.8, -2659.4 )
+
+[node name="Particles2D15" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -2691.65, -1888.93 )
+
+[node name="Particles2D16" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -3873.36, -2204.88 )
+
+[node name="Particles2D17" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -3877.64, -4499.38 )
+
+[node name="Particles2D18" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -3018.64, -6576.49 )
+
+[node name="Particles2D19" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -5248.51, -6136.78 )
+
+[node name="Particles2D20" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -1106.11, -7762.48 )
+
+[node name="Particles2D21" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -6197.1, -2159.8 )
+
+[node name="Particles2D22" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -6197.1, -2159.8 )
+
+[node name="Particles2D23" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -7079.14, -2316.52 )
+
+[node name="Particles2D24" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -7836.76, 2600.28 )
+
+[node name="Particles2D25" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 234.906, 3902.44 )
+
+[node name="Particles2D26" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 2441.9, 8690.06 )
+
+[node name="Particles2D27" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 850.37, 9161.2 )
+
+[node name="Particles2D28" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 3366.93, 8278.5 )
+
+[node name="Particles2D29" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 1321.59, 7263.17 )
+
+[node name="Particles2D30" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 4856.64, 7975.27 )
+
+[node name="Particles2D31" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 3154.32, 6334.97 )
+
+[node name="Particles2D32" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 3154.32, 6334.97 )
+
+[node name="Particles2D33" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( 4349.07, 5159.42 )
 
 [node name="Bush" type="YSort" parent="YSort"]
 

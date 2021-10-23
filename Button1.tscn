@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/PixelFont.tres" type="DynamicFont" id=1]
+
+[node name="Button1" type="Button"]
+margin_right = 150.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 150, 20 )
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="."]
+margin_left = 6.74238
+margin_top = 7.86612
+margin_right = 46.7424
+margin_bottom = 21.8661
+custom_fonts/font = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

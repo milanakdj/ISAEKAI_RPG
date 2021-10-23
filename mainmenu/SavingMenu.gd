@@ -2,10 +2,11 @@ extends Control
 
 signal CloseGoalsMenu
 
+var button_load = preload("res://Button1.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$NinePatchRect/ScrollContainer/VBoxContainer/Button1/Label.text = "whatsss up"
+	#$NinePatchRect/ScrollContainer/VBoxContainer/Button1/Label.text = "whatsss up"
 	var i=0
 	var my_dict= PoolStringArray()
 	var current_line = {}
@@ -19,6 +20,10 @@ func _ready():
 		if current_line != null:
 			my_dict.push_back(current_line["filename"])
 			i=i+1
+	var j =i
+	while j!=0:		
+		$NinePatchRect/ScrollContainer/VBoxContainer.add_child(button_load.instance())
+		j=j-1
 	i=i-1
 	for buttons in $NinePatchRect/ScrollContainer/VBoxContainer.get_children():
 		if i != -1:
