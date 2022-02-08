@@ -4,4 +4,4 @@
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
-current_scene = "res://Scene/level.tscn"
+current_scene = "res://Scene/Town.tscn"

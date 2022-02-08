@@ -8,7 +8,7 @@ const SlotClass = preload("res://Inventory/Slot.gd")
 const ItemClass = preload("res://Inventory/Item.gd")
 
 var inventory = {
-
+	0: ["health_potion",2]
 }
 
 var equips = {

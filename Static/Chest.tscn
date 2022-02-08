@@ -87,6 +87,7 @@ __meta__ = {
 }
 
 [node name="LootUI" type="CanvasLayer" parent="."]
+layer = 3
 
 [node name="ChestLootUi" parent="LootUI" instance=ExtResource( 5 )]
 position = Vector2( 75.9112, 20.1133 )

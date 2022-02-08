@@ -5,6 +5,7 @@
 [ext_resource path="res://Assets/Music and Sounds/bookFlip3.ogg" type="AudioStream" id=4]
 
 [node name="UserInterface" type="CanvasLayer"]
+layer = 3
 script = ExtResource( 3 )
 
 [node name="Inventory" parent="." instance=ExtResource( 1 )]

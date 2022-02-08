@@ -54,6 +54,7 @@ tracks/0/keys = {
 }
 
 [node name="Menu" type="CanvasLayer"]
+layer = 3
 script = ExtResource( 7 )
 
 [node name="Control" type="Control" parent="."]

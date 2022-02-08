@@ -93,14 +93,20 @@ func move_state(delta):
 		animationTree.set("parameters/AttackOneHand/blend_position", input_vector)
 		animationState.travel("Walk")
 		if Input.is_action_pressed("run"):
-			ACCELERATION = 500#500
-			MAX_SPEED = 80#80
+			if PlayerStats.stamina > 0:
+				ACCELERATION = 500#500
+				MAX_SPEED = 80#80
+				PlayerStats.stamina -= 0.5
+				PlayerUI.on_stamina_updated(PlayerStats.stamina)
 		else:
 			ACCELERATION = 300#300
 			MAX_SPEED = 50#50
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
+		if PlayerStats.stamina <= 100:
+			PlayerStats.stamina += 0.3
+			PlayerUI.on_stamina_updated(PlayerStats.stamina)
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	move()
 	if Input.is_action_just_pressed("attack"):

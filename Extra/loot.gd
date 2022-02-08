@@ -7,7 +7,7 @@ var loot_item = {}
 onready var slots = $ScrollContainer/VBoxContainer.get_children()
 
 func _ready():
-	current_map = "Scene2"
+	current_map = "Town"
 	for i in range(slots.size()):
 		slots[i].connect("loot_pressed", self, "on_loot_pressed")
 	determine_loot_count()

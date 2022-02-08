@@ -7,6 +7,8 @@ onready var chest = $ChestSprite
 var isInteractable = false
 var empty = false
 
+signal opened
+
 onready var chest_loots = $LootUI/ChestLootUi
 
 func _ready():
@@ -15,6 +17,8 @@ func _ready():
 	chest.frame = 0
 	
 func _process(delta):
+	if empty:
+		emit_signal("opened")
 	if $Label.visible:
 		animationPlayer.play("LabelFloat")
 	if isInteractable:
@@ -22,6 +26,7 @@ func _process(delta):
 			chest.frame = 1
 			if chest_loots.loot_item.size() > 0:
 				$LootUI/ChestLootUi.visible = true
+			else:
 				empty = true
 
 func _on_Interact_body_entered(body):

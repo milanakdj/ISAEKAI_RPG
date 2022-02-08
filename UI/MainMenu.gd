@@ -1,6 +1,6 @@
 extends Control
 
-var start = preload("res://Scene/Town.tscn");
+var start = preload("res://Main.tscn");
 var MainInstances = ResourceLoader.MainInstances
 
 func _ready():

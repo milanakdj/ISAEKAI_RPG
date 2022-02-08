@@ -13,28 +13,28 @@ __meta__ = {
 }
 
 [node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2( 8.26487, 120.795 )
+position = Vector2( 3, 140.795 )
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 4 )
 passby_press = true
 action = "left"
 
 [node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2( 40, 120 )
+position = Vector2( 34.7351, 140 )
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 3 )
 passby_press = true
 action = "right"
 
 [node name="Up" type="TouchScreenButton" parent="."]
-position = Vector2( 24, 104 )
+position = Vector2( 18.7351, 124 )
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 2 )
 passby_press = true
 action = "up"
 
 [node name="Down" type="TouchScreenButton" parent="."]
-position = Vector2( 46.4108, 158.808 )
+position = Vector2( 41.1459, 178.808 )
 rotation = 3.14159
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 2 )
@@ -42,18 +42,19 @@ passby_press = true
 action = "down"
 
 [node name="Esc" type="TouchScreenButton" parent="."]
+position = Vector2( 288, 3 )
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 1 )
 action = "open_menu"
 
 [node name="Space" type="TouchScreenButton" parent="."]
-position = Vector2( 206.03, 127.542 )
+position = Vector2( 296, 155 )
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 5 )
 action = "equip_thor"
 
 [node name="Space2" type="TouchScreenButton" parent="."]
-position = Vector2( 161.435, 128.434 )
+position = Vector2( 262, 157 )
 scale = Vector2( 0.272, 0.272 )
 normal = ExtResource( 6 )
 action = "attack"

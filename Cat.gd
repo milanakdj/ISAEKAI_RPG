@@ -18,9 +18,12 @@ var velocity= Vector2.ZERO
 var can_move = true
 var state = IDLE
 var target_global_position: Vector2
+var player
 
+func _ready():
+	player = MainInstances.player
+	
 func _physics_process(delta):
-	var player =  MainInstances.player
 	call_deferred("player_position")
 	
 	if can_move:
@@ -50,12 +53,12 @@ func save():
 	return save_dictionary
 	
 func player_position():
-	var player =  MainInstances.player
+#	var player =  MainInstances.player
 	target_global_position = player.global_position
 	
 
 func move_state(delta, target_global_position):
-	var player =  MainInstances.player
+#	var player =  MainInstances.player
 	var input_vector = Vector2.ZERO
 	input_vector.x = target_global_position.x - global_position.x
 	input_vector.y = target_global_position.y - global_position.y

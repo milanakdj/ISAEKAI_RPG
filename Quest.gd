@@ -8,10 +8,12 @@ extends Node2D
 var death_count = 0
 var valid_cells
 var MainInstances = ResourceLoader.MainInstances
-
+var chest
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready():	
 	#get_valid_cells() # Compute the valid cells in the tilemap
+	chest = get_tree().get_root().get_node("Town").find_node("YSort").find_node("chest")
+	chest.connect("opened", self, "on_chest_open")
 	var rand = RandomNumberGenerator.new()
 	var enemyscene = load("res://Mobs/Bat.tscn")	
 	#var cells_to_use = valid_cells.duplicate() # Copy the cells
@@ -24,7 +26,7 @@ func _ready():
 	bat.name = "bat"
 	get_tree().get_root().get_node("Town").find_node("YSort").add_child(bat)
 	var ysort = get_tree().get_root().get_node("Town").find_node("YSort")
-	for i in range(0, 10):
+	for i in range(0, 5):
 		var enemy = enemyscene.instance()
 		#enemy.set_position(cells_to_use.pop_front() * cell_size + cell_size/2.0)
 		rand.randomize()
@@ -54,18 +56,24 @@ func _ready():
 
 func update_label():
 	death_count += 1
-	$Quest_UI/Label.text = "Objective: " + String(death_count) + "of 10 completed"
+	$Quest_UI/Label.text = "Objective: " + String(death_count) + "of 5 completed"
 	
-	if death_count == 10:
+	if death_count == 5:
 		for i in get_tree().get_root().get_node("Town").find_node("Doors").get_children():
 			i.get_node("CollisionShape2D").set_deferred("disabled", false)
 
 		for i in get_tree().get_root().get_node("Town").find_node("NPC").get_children():
 			i.quest_active  =  false
-			
-		var player =  MainInstances.player
-		player.quest_one_finished = true
-		self.queue_free()
+		
+		chest.visible = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func on_chest_open():
+	print("HELLO")
+	var player =  MainInstances.player	
+	player.quest_one_finished = true
+	chest.queue_free()
+	self.queue_free()
+	

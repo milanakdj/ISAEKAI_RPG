@@ -46,8 +46,8 @@ margin_left = 47.4694
 margin_top = 18.0109
 margin_right = 81.4694
 margin_bottom = 24.0109
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.441406, 0.327606, 0.213806, 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Inventory"
 
 [node name="GridContainer" type="GridContainer" parent="."]

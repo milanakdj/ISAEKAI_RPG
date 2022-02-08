@@ -1416,9 +1416,7 @@ radius = 15.9378
 
 [sub_resource type="CircleShape2D" id=42]
 
-[node name="Player" type="KinematicBody2D" groups=[
-"Persists",
-]]
+[node name="Player" type="KinematicBody2D" groups=["Persists"]]
 material = SubResource( 1 )
 collision_layer = 2
 script = ExtResource( 2 )
@@ -1518,7 +1516,6 @@ shape = SubResource( 42 )
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="PlayerHud" parent="UI" instance=ExtResource( 8 )]
-visible = false
 
 [node name="glasses" type="Sprite" parent="."]
 visible = false
@@ -1551,6 +1548,7 @@ attenuation = 0.732043
 bus = "Walk"
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+position = Vector2( 34, 18 )
 update_rotation = false
 update_scale = false
 

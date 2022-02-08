@@ -88,7 +88,7 @@ position = Vector2( 160, 90 )
 scale = Vector2( 0.0782014, 0.0656455 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 5
+frame = 13
 playing = true
 
 [node name="Particles2D2" parent="." instance=ExtResource( 14 )]

@@ -10,5 +10,21 @@
     "item2min_count": 1,
     "item2max_count": 1,
     "item2chance": 50
+  },
+  "Town": {
+    "min_loot": 3,
+    "max_loot": 3,
+    "item1name": "coin",
+    "item1min_count": 10,
+    "item1max_count": 20,
+    "item1chance": 50,
+    "item2name": "wooden_sword",
+    "item2min_count": 1,
+    "item2max_count": 1,
+    "item2chance": 60,
+    "item3name": "health_potion",
+    "item3min_count": 3,
+    "item3max_count": 5,
+    "item3chance": 30
   }
 }
