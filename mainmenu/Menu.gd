@@ -14,7 +14,9 @@ var screenLoaded = ScreenLoaded.NOTHING
 
 var selected_option: int = 0
 var MainInstances = ResourceLoader.MainInstances
+var player
 func _ready():
+	player = MainInstances.player
 	menu.visible = false 
 	selectedarrow.rect_position.y = 64 + (selected_option % 4) * 20
 	
@@ -23,7 +25,6 @@ func _unhandled_input(event):
 		ScreenLoaded.NOTHING:
 			if event.is_action_pressed("open_menu"):
 				MusicController.play_stop()
-				var player = MainInstances.player
 				player.set_physics_process(false)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(false)
@@ -36,7 +37,6 @@ func _unhandled_input(event):
 				emit_signal("CloseMenu")
 				screenLoaded = ScreenLoaded.NOTHING
 				MusicController.play_music()
-				var player = MainInstances.player
 				player.set_physics_process(true)
 				get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
 			
@@ -95,7 +95,6 @@ func _on_Load_Game_pressed():
 	emit_signal("CloseMenu")
 	screenLoaded = ScreenLoaded.NOTHING
 	MusicController.play_music()
-	var player = MainInstances.player
 	player.set_physics_process(true)
 	get_tree().get_root().get_node(currentScene).find_node("MainCamera").set_process_input(true)
 
