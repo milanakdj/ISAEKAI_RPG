@@ -121,6 +121,7 @@ remote_path = NodePath("../../../MainCamera")
 [node name="hutDoor" parent="." instance=ExtResource( 3 )]
 position = Vector2( 128.637, 414.422 )
 target_scene = "res://Scene/Town.tscn"
+current_scene = "TownRoom3"
 target_spawn_position = Vector2( 461, 95 )
 spawn_direction = Vector2( 461, 79 )
 

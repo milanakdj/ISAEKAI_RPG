@@ -10,13 +10,13 @@ _data = [ Vector2( 0, -72 ), 0.0, 0.0, 0, 0, Vector2( 0.802817, 78.5454 ), 0.0, 
 [sub_resource type="CurveTexture" id=2]
 curve = SubResource( 1 )
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.985916, 0.223864 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=6]
-curve = SubResource( 5 )
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=5]
 emission_shape = 2
 emission_box_extents = Vector3( 700, 500, 1 )
 flag_disable_z = true
@@ -28,8 +28,9 @@ linear_accel = 19.15
 linear_accel_random = 0.45
 angle_random = 0.31
 angle_curve = SubResource( 2 )
-scale_curve = SubResource( 6 )
+scale_curve = SubResource( 4 )
 
 [node name="Particles2D" type="Particles2D"]
-process_material = SubResource( 7 )
+lifetime = 2.0
+process_material = SubResource( 5 )
 texture = ExtResource( 1 )
