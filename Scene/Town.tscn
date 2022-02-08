@@ -1227,10 +1227,19 @@ position = Vector2( 5678.8, -689.979 )
 position = Vector2( 7291.09, 847.903 )
 
 [node name="Particles2D7" parent="YSort/Particles" instance=ExtResource( 28 )]
-position = Vector2( 7669.11, -841.98 )
+position = Vector2( 8061.25, -438.594 )
+rotation = 0.785397
 
 [node name="Particles2D8" parent="YSort/Particles" instance=ExtResource( 28 )]
 position = Vector2( 8041.03, -2379.05 )
+
+[node name="Particles2D35" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -111.891, 2055.2 )
+rotation = 0.785397
+
+[node name="Particles2D36" parent="YSort/Particles" instance=ExtResource( 28 )]
+position = Vector2( -1605.04, 2096.34 )
+rotation = 0.785397
 
 [node name="Particles2D34" parent="YSort/Particles" instance=ExtResource( 28 )]
 position = Vector2( 7400.92, -6190.99 )
@@ -1860,6 +1869,7 @@ __meta__ = {
 [node name="hutDoor0" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( -67.8363, 18.9394 )
 target_scene = "res://TownRoom1.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor0" index="0"]
 visible = false
@@ -1874,6 +1884,7 @@ shape = SubResource( 4 )
 [node name="hutDoor1" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( -126.8, 252.773 )
 target_scene = "res://Apartment.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor1" index="0"]
 visible = false
@@ -1896,6 +1907,7 @@ margin_bottom = 181.595
 [node name="hutDoor2" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 214.748, -198.76 )
 target_scene = "res://TownRoom2.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor2" index="0"]
 visible = false
@@ -1913,6 +1925,7 @@ anims/opendoor = SubResource( 10 )
 [node name="hutDoor3" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 459.898, 52.4826 )
 target_scene = "res://TownRoom3.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor3" index="0"]
 visible = false
@@ -1937,6 +1950,7 @@ margin_bottom = 572.836
 [node name="hutDoor4" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 394.254, -83.615 )
 target_scene = "res://TownRoom4.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor4" index="0"]
 visible = false
@@ -1960,6 +1974,7 @@ margin_bottom = 568.627
 [node name="hutDoor5" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 380.9, 342.837 )
 target_scene = "res://TownRoom5.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor5" index="0"]
 visible = false
@@ -1984,6 +1999,7 @@ margin_bottom = 568.627
 [node name="hutDoor6" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 52.7703, 291.054 )
 target_scene = "res://TownRoom6.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor6" index="0"]
 visible = false
@@ -2009,6 +2025,7 @@ margin_bottom = 570.218
 [node name="hutDoor7" parent="Doors" instance=ExtResource( 16 )]
 position = Vector2( 549.017, 230.828 )
 target_scene = "res://TownRoom7.tscn"
+current_scene = "Town"
 
 [node name="Sprite" parent="Doors/hutDoor7" index="0"]
 visible = false

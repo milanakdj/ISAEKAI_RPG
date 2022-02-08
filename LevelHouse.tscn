@@ -92,15 +92,9 @@ frame = 183
 parameters/playback = SubResource( 6 )
 parameters/Idle/blend_position = Vector2( -0.00536674, -0.378698 )
 
-[node name="Gizmo" parent="YSort/Player" index="5"]
-rotation = 1.5708
-
 [node name="CollisionShape2D" parent="YSort/Player/Gizmo/HitBox" index="0"]
 position = Vector2( 7, -4.76837e-07 )
 rotation = 6.27605
-
-[node name="glasses" parent="YSort/Player" index="11"]
-position = Vector2( 0, -6 )
 
 [node name="sword" parent="YSort/Player" index="12"]
 position = Vector2( 1.19209e-07, 3 )
@@ -113,7 +107,6 @@ target_spawn_position = Vector2( 1843.94, -402.23 )
 
 [node name="Sprite" parent="hutDoor" index="0"]
 position = Vector2( -1.79762, -21.9662 )
-frame = 2
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
 position = Vector2( 6.10799, -9.65881 )

@@ -147,6 +147,7 @@ remote_path = NodePath("../../MainCamera")
 visible = false
 position = Vector2( 130.402, 258.284 )
 target_scene = "res://Scene/Town.tscn"
+current_scene = "TownRoom1"
 target_spawn_position = Vector2( -56, 62 )
 
 [node name="CollisionShape2D" parent="hutDoor" index="1"]
